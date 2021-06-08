@@ -38,6 +38,7 @@ jobs:
           minimum-access-level: internal
           output: "./spc/documentation"
           format: "html"
+          base-url: "https://damuellen.github.io/SPC-Doc/"
           
       - run: sudo chown -R $USER:$USER ./spc/documentation
       
