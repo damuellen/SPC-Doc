@@ -36,10 +36,8 @@ jobs:
           output: "./documentation"
           format: "html"
           
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          target_branch: gh-pages
-          build_dir: ./documentation
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: ./documentation
