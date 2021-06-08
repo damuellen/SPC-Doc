@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - HCE</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#methods">Methods</a><ul><li class="function"><a href="#hce.radiationlossesold(_:insolation:)">radiation​Losses​Old(_:​insolation:​)</a></li><li class="function"><a href="#hce.radiationlossesnew(_:insolation:)">radiation​Losses​New(_:​insolation:​)</a></li><li class="function"><a href="#hce.heatlosses(inlet:outlet:insolation:ambient:)">heat​Losses(inlet:​outlet:​insolation:​ambient:​)</a></li><li class="function"><a href="#hce.temperatures(_:_:_:_:)">temperatures(_:​_:​_:​_:​)</a></li><li class="function"><a href="#hce.factorheatlosshtf(solarfield:infocus:)">factor​Heat​Loss​HTF(solar​Field:​in​Focus:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">HCE</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">enum</span> <span class="type">HCE</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>if Mode 1 then Actime has no meaning.
+if Mode 2 and massFlow == 0 SF calculates Actime the heat losses in the HCEs.
+if Actime &gt; 0 then HCE calculates the time of HTF being in HCEs minus Actime</p>
+
+</div>
+<div class="discussion">
+    <h1>HCE  Heat Collecting Element</h1>
+
+<ul>
+<li>
+<p>Mode 1:
+Calculate the right mass-flow to get maximum allowed HTF-outlet temp.
+of the HCE-loop, and the time of HTF being in the HCE-loop. defocus
+automatically not to overheat HCEs.</p>
+</li>
+<li>
+<p>Mode 2:
+Mass-flow is fixed outside. Calculate the HTF-outlet temp. of the HCE-loop
+and the time of HTF being in the HCE-loop. If mass-flow is set to 0,
+calculate by heat losses the HTF-temp. in the HCE after Actime minutes.</p>
+</li>
+</ul>
+
+<h2>Actime: [minutes]</h2>
+
+<h2>Actime: [sec]</h2>
+
+<p>if massFlow &gt; 0 then Actime is the time the HTF was in the HCEs.
+if Mode 2 and massFlow == 0 then Actime is the time the losses were
+calculated. Not necessary equal to Actime from input, cause calculation
+stops when temperature at outlet goes under
+freezeTemperature + Sim.deltaTemperaturefrzPump</p>
+
+</div>
+
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="hce.radiationlossesold(_:insolation:)">
+    <h3>
+        <code><a href="#hce.radiationlossesold(_:insolation:)">radiation​Losses​Old(_:​insolation:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">radiationLossesOld</span>(
+    <span class="keyword">_</span> <span class="variable">temperatures</span>: (<a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>), <span class="variable">insolation</span>: <span class="type">Double</span>)
+    -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="hce.radiationlossesnew(_:insolation:)">
+    <h3>
+        <code><a href="#hce.radiationlossesnew(_:insolation:)">radiation​Losses​New(_:​insolation:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">radiationLossesNew</span>(
+    <span class="keyword">_</span> <span class="variable">temperatures</span>: (<a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>), <span class="variable">insolation</span>: <span class="type">Double</span>)
+    -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="hce.heatlosses(inlet:outlet:insolation:ambient:)">
+    <h3>
+        <code><a href="#hce.heatlosses(inlet:outlet:insolation:ambient:)">heat​Losses(inlet:​outlet:​insolation:​ambient:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">heatLosses</span>(
+    <span class="variable">inlet</span>: <a href="./Temperature"><span class="type">Temperature</span></a>,
+    <span class="variable">outlet</span>: <a href="./Temperature"><span class="type">Temperature</span></a> = <span class="variable">SolarField</span>.<span class="variable">parameter</span>.<span class="type">HTF</span>.<span class="variable">maxTemperature</span>,
+    <span class="variable">insolation</span>: <span class="type">Double</span>,
+    <span class="variable">ambient</span>: <a href="./Temperature"><span class="type">Temperature</span></a>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="hce.temperatures(_:_:_:_:)">
+    <h3>
+        <code><a href="#hce.temperatures(_:_:_:_:)">temperatures(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">temperatures</span>(
+    <span class="keyword">_</span> <span class="variable">solarField</span>: <span class="keyword">inout</span> <a href="./SolarField"><span class="type">SolarField</span></a>,
+    <span class="keyword">_</span> <span class="variable">loop</span>: <a href="./SolarField"><span class="type">SolarField</span></a>.<span class="type">Loop</span>,
+    <span class="keyword">_</span> <span class="variable">insolation</span>: <span class="type">Double</span>,
+    <span class="keyword">_</span> <span class="variable">ambient</span>: <a href="./Temperature"><span class="type">Temperature</span></a>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>HTF temperature dependent on constant mass flow</p>
+
+</div>
+</div>
+<div role="article" class="function" id="hce.factorheatlosshtf(solarfield:infocus:)">
+    <h3>
+        <code><a href="#hce.factorheatlosshtf(solarfield:infocus:)">factor​Heat​Loss​HTF(solar​Field:​in​Focus:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">factorHeatLossHTF</span>(<span class="variable">solarField</span>: <span class="keyword">inout</span> <a href="./SolarField"><span class="type">SolarField</span></a>, <span class="variable">inFocus</span>: <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:30+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - Gnuplot</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#gnuplot.init(data:)">init(data:​)</a></li><li class="initializer"><a href="#gnuplot.init(temperatures:)">init(temperatures:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gnuplot.datablock">datablock</a></li><li class="variable"><a href="#gnuplot.plot">plot</a></li><li class="variable"><a href="#gnuplot.settings">settings</a></li><li class="variable"><a href="#gnuplot.settingssvg">settings​SVG</a></li><li class="variable"><a href="#gnuplot.settingspdf">settings​PDF</a></li><li class="variable"><a href="#gnuplot.temperatures">temperatures</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gnuplot.process()">process()</a></li><li class="function"><a href="#gnuplot.plot(_:)">plot(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Gnuplot</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Gnuplot</span>  </body></html></code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="./Gnuplot_Terminal">Gnuplot.Terminal</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="gnuplot.init(data:)">
+    <h3>
+        <code><a href="#gnuplot.init(data:)">init(data:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">data</span>: <span class="type">String</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="gnuplot.init(temperatures:)">
+    <h3>
+        <code><a href="#gnuplot.init(temperatures:)">init(temperatures:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">temperatures</span>: <span class="type">String</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="gnuplot.datablock">
+    <h3>
+        <code><a href="#gnuplot.datablock">datablock</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">datablock</span>: <span class="type">String</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.plot">
+    <h3>
+        <code><a href="#gnuplot.plot">plot</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">plot</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.settings">
+    <h3>
+        <code><a href="#gnuplot.settings">settings</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">settings</span> = [
+    <span class="string literal">"</span><span class="string literal">style line 11 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#0072bd'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 12 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#d95319'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 13 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#edb120'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 14 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#7e2f8e'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 15 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#77ac30'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 16 lt 1 lw 1 dashtype 3 lc rgb 'black'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 17 lt 0 lw 0.5 lc rgb 'black'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">label textcolor rgb 'black'</span><span class="string literal">"</span>
+  ] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.settingssvg">
+    <h3>
+        <code><a href="#gnuplot.settingssvg">settings​SVG</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">settingsSVG</span> = [<span class="string literal">"</span><span class="string literal">border 31 lw 0.5 lc rgb 'black'</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">grid ls 17</span><span class="string literal">"</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.settingspdf">
+    <h3>
+        <code><a href="#gnuplot.settingspdf">settings​PDF</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">settingsPDF</span> = [<span class="string literal">"</span><span class="string literal">border 31 lw 1 lc rgb 'black'</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">grid ls 16</span><span class="string literal">"</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.temperatures">
+    <h3>
+        <code><a href="#gnuplot.temperatures">temperatures</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">temperatures</span> = [
+    <span class="string literal">"</span><span class="string literal">xtics 10</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">ytics 10</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">key top left tc ls 16</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">title 'T-Q' textcolor rgb 'black'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">xlabel 'Q̇ [MW]' textcolor rgb 'black'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">ylabel 'Temperatures [°C]' textcolor rgb 'black'</span><span class="string literal">"</span>,
+  ] </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="gnuplot.process()">
+    <h3>
+        <code><a href="#gnuplot.process()">process()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">process</span>() -&gt; <span class="type">Process</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="gnuplot.plot(_:)">
+    <h3>
+        <code><a href="#gnuplot.plot(_:)">plot(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">plot</span>(<span class="keyword">_</span> <span class="variable">terminal</span>: <span class="type">Terminal</span>) <span class="keyword">throws</span> -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:29+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

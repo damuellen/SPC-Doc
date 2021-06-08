@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - Plant</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#plant.parameterdescriptions">parameter​Descriptions</a></li><li class="variable"><a href="#plant.heatflow">heat​Flow</a></li><li class="variable"><a href="#plant.electricity">electricity</a></li><li class="variable"><a href="#plant.fuelconsumption">fuel​Consumption</a></li><li class="variable"><a href="#plant.electricalparasitics">electrical​Parasitics</a></li><li class="variable"><a href="#plant.initialstate">initial​State</a></li><li class="variable"><a href="#plant.performance">performance</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#plant.setup()">setup()</a></li><li class="function"><a href="#plant.add(heater:)">add(heater:​)</a></li><li class="function"><a href="#plant.perform(_:ambient:)">perform(_:​ambient:​)</a></li><li class="function"><a href="#plant.storagemode(_:fuelavailable:)">storage​Mode(_:​fuel​Available:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Plant</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Plant</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A namespace for the main routines of the simulation.</p>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="plant.parameterdescriptions">
+    <h3>
+        <code><a href="#plant.parameterdescriptions">parameter​Descriptions</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">parameterDescriptions</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="plant.heatflow">
+    <h3>
+        <code><a href="#plant.heatflow">heat​Flow</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">heatFlow</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="plant.electricity">
+    <h3>
+        <code><a href="#plant.electricity">electricity</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">electricity</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="plant.fuelconsumption">
+    <h3>
+        <code><a href="#plant.fuelconsumption">fuel​Consumption</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">fuelConsumption</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="plant.electricalparasitics">
+    <h3>
+        <code><a href="#plant.electricalparasitics">electrical​Parasitics</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">electricalParasitics</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="plant.initialstate">
+    <h3>
+        <code><a href="#plant.initialstate">initial​State</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">initialState</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="plant.performance">
+    <h3>
+        <code><a href="#plant.performance">performance</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">performance</span>: <a href="./PlantPerformance"><span class="type">PlantPerformance</span></a>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="plant.setup()">
+    <h3>
+        <code><a href="#plant.setup()">setup()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">setup</span>() -&gt; <a href="./Plant"><span class="type">Plant</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Sets some component parameter</p>
+
+</div>
+</div>
+<div role="article" class="function" id="plant.add(heater:)">
+    <h3>
+        <code><a href="#plant.add(heater:)">add(heater:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">add</span>(<span class="variable">heater</span>: <span class="type">Performance</span>&lt;<a href="./Heater"><span class="type">Heater</span></a>&gt;)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="plant.perform(_:ambient:)">
+    <h3>
+        <code><a href="#plant.perform(_:ambient:)">perform(_:​ambient:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">perform</span>(<span class="keyword">_</span> <span class="variable">status</span>: <span class="keyword">inout</span> <a href="./Status"><span class="type">Status</span></a>, <span class="variable">ambient</span>: <a href="./Temperature"><span class="type">Temperature</span></a>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="plant.storagemode(_:fuelavailable:)">
+    <h3>
+        <code><a href="#plant.storagemode(_:fuelavailable:)">storage​Mode(_:​fuel​Available:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">storageMode</span>(<span class="keyword">_</span> <span class="variable">status</span>: <span class="keyword">inout</span> <a href="./Status"><span class="type">Status</span></a>, <span class="variable">fuelAvailable</span>: <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:30+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

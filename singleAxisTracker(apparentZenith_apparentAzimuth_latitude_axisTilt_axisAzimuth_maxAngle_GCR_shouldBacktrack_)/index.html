@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - singleAxisTracker(apparentZenith:apparentAzimuth:latitude:axisTilt:axisAzimuth:maxAngle:GCR:shouldBacktrack:)</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol/>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+<small>Function</small>
+<span class="name">single​Axis​Tracker(apparent​Zenith:​apparent​Azimuth:​latitude:​axis​Tilt:​axis​Azimuth:​max​Angle:​GCR:​should​Backtrack:​)</span>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">singleAxisTracker</span>(
+  <span class="variable">apparentZenith</span>: <span class="type">Double</span>, <span class="variable">apparentAzimuth</span>: <span class="type">Double</span>, <span class="variable">latitude</span>: <span class="type">Double</span>,
+  <span class="variable">axisTilt</span>: <span class="type">Double</span> = <span class="number literal">0</span>, <span class="variable">axisAzimuth</span>: <span class="type">Double</span> = <span class="number literal">180</span>, <span class="variable">maxAngle</span>: <span class="type">Double</span>,
+  <span class="variable">GCR</span>: <span class="type">Double</span>, <span class="variable">shouldBacktrack</span>: <span class="type">Bool</span> = <span class="keyword">true</span>
+) -&gt; (<span class="type">Double</span>, <span class="type">Double</span>, <span class="type">Double</span>, <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Determine the rotation angle of a single axis tracker using the
+equations in [1] when given a particular sun zenith and azimuth
+angle. backtracking may be specified, and if so, a ground coverage
+ratio is required.</p>
+
+</div>
+<div class="discussion">
+    <p>Rotation angle is determined in a panel-oriented coordinate system.
+The tracker azimuth axis_azimuth defines the positive y-axis; the
+positive x-axis is 90 degress clockwise from the y-axis and parallel
+to the earth surface, and the positive z-axis is normal and oriented
+towards the sun. Rotation angle tracker_theta indicates tracker
+position relative to horizontal: tracker_theta = 0 is horizontal,
+and positive tracker_theta is a clockwise rotation around the y axis
+in the x, y, z coordinate system. For example, if tracker azimuth
+axis_azimuth is 180 (oriented south), tracker_theta = 30 is a
+rotation of 30 degrees towards the west, and tracker_theta = -90 is
+a rotation to the vertical plane facing east.</p>
+
+<h2>References</h2>
+
+<p>[1] Lorenzo, E et al., 2011, &quot;Tracking and back-tracking&quot;, Prog. in
+Photovoltaics: Research and Applications, v. 19, pp. 747-753.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>apparent​Zenith</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Solar apparent zenith angles in decimal degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>apparent​Azimuth</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Solar apparent azimuth angles in decimal degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>axis​Tilt</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The tilt of the axis of rotation (i.e, the y-axis defined by axis_azimuth) with respect to horizontal, in decimal degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>axis​Azimuth</th>
+    <td><code class="type">Double</code></td>
+    <td><p>A value denoting the compass direction along which the axis of rotation lies. Measured in decimal degrees East of North.</p>
+</td>
+</tr>
+<tr>
+    <th>max​Angle</th>
+    <td><code class="type">Double</code></td>
+    <td><p>A value denoting the maximum rotation angle, in decimal degrees, of the one-axis tracker from its horizontal position (horizontal if axisTilt = 0). A max_angle of 90 degrees allows the tracker to rotate to a vertical position to point the panel towards a horizon. max_angle of 180 degrees allows for full rotation.</p>
+</td>
+</tr>
+<tr>
+    <th>GCR</th>
+    <td><code class="type">Double</code></td>
+    <td><p>A value denoting the ground coverage ratio of a tracker system which utilizes backtracking; i.e. the ratio between the PV array surface area to total ground area. A tracker system with modules 2 meters wide, centered on the tracking axis, with 6 meters between the tracking axes has a gcr of 2/6=0.333. if gcr is not provided, a gcr of 2/7 is default. gcr must be &lt;=1.</p>
+</td>
+</tr>
+<tr>
+    <th>should​Backtrack</th>
+    <td><code class="type">Bool</code></td>
+    <td><p>Controls whether the tracker has the capability to &quot;backtrack&quot; to avoid row-to-row shading. False denotes no backtrack capability. True denotes backtrack capability.</p>
+</td>
+</tr>
+<tr>
+    <th>Returns</th>
+    <td></td>
+    <td><p>The rotation angle of the tracker. tracker_theta = 0 is horizontal, and positive rotation angles are clockwise. The angle-of-incidence of direct irradiance onto the rotated panel surface. The angle between the panel surface and the earth surface, accounting for panel rotation. The azimuth of the rotated panel, determined by projecting the vector normal to the panel's surface to the earth's surface.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:29+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

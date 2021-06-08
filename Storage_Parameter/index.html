@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - Storage.Parameter</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#storage.parameter.init(file:)">init(file:​)</a></li><li class="initializer"><a href="#storage.parameter.init(from:)">init(from:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#storage.parameter.name">name</a></li><li class="variable"><a href="#storage.parameter.dischargetoturbine">discharge​ToTurbine</a></li><li class="variable"><a href="#storage.parameter.dischargetoheater">discharge​ToHeater</a></li><li class="variable"><a href="#storage.parameter.chargeto">charge​To</a></li><li class="variable"><a href="#storage.parameter.heatstoredrel">heat​Storedrel</a></li><li class="variable"><a href="#storage.parameter.stepsizeiteration">step​Size​Iteration</a></li><li class="variable"><a href="#storage.parameter.temperaturedischarge">temperature​Discharge</a></li><li class="variable"><a href="#storage.parameter.temperaturedischarge2">temperature​Discharge2</a></li><li class="variable"><a href="#storage.parameter.temperaturecharge">temperature​Charge</a></li><li class="variable"><a href="#storage.parameter.temperaturecharge2">temperature​Charge2</a></li><li class="variable"><a href="#storage.parameter.heatlosscst">heatloss​Cst</a></li><li class="variable"><a href="#storage.parameter.heatlossc0to1">heatloss​C0to1</a></li><li class="variable"><a href="#storage.parameter.pumpefficiency">pump​Efficiency</a></li><li class="variable"><a href="#storage.parameter.pressureloss">pressure​Loss</a></li><li class="variable"><a href="#storage.parameter.massflowshare">mass​Flow​Share</a></li><li class="variable"><a href="#storage.parameter.starttemperature">start​Temperature</a></li><li class="variable"><a href="#storage.parameter.startload">start​Load</a></li><li class="variable"><a href="#storage.parameter.type">type</a></li><li class="variable"><a href="#storage.parameter.strategy">strategy</a></li><li class="variable"><a href="#storage.parameter.prefchargetoturbine">pref​Charge​ToTurbine</a></li><li class="variable"><a href="#storage.parameter.exception">exception</a></li><li class="variable"><a href="#storage.parameter.htf">HTF</a></li><li class="variable"><a href="#storage.parameter.fp">FP</a></li><li class="variable"><a href="#storage.parameter.heatdiff">heatdiff</a></li><li class="variable"><a href="#storage.parameter.fc">FC</a></li><li class="variable"><a href="#storage.parameter.dsrise">dSRise</a></li><li class="variable"><a href="#storage.parameter.fixeddischargeload">fixed​Discharge​Load</a></li><li class="variable"><a href="#storage.parameter.mindischargeload">min​Discharge​Load</a></li><li class="variable"><a href="#storage.parameter.heattracingtime">heat​Tracing​Time</a></li><li class="variable"><a href="#storage.parameter.heattracingpower">heat​Tracing​Power</a></li><li class="variable"><a href="#storage.parameter.dischargeparasitcsfactor">discharge​Parasitcs​Factor</a></li><li class="variable"><a href="#storage.parameter.isvariable">is​Variable</a></li><li class="variable"><a href="#storage.parameter.heatexchangerrestrictedmin">heat​Exchanger​Restricted​Min</a></li><li class="variable"><a href="#storage.parameter.auxconsumptioncurve">aux​Consumption​Curve</a></li><li class="variable"><a href="#storage.parameter.heatexchangerrestrictedmax">heat​Exchanger​Restricted​Max</a></li><li class="variable"><a href="#storage.parameter.definedby">defined​By</a></li><li class="variable"><a href="#storage.parameter.designtemperature">design​Temperature</a></li><li class="variable"><a href="#storage.parameter.heatloss">heat​Loss</a></li><li class="variable"><a href="#storage.parameter.stopfossilcharging">stop​Fossil​Charging</a></li><li class="variable"><a href="#storage.parameter.startfossilcharging">start​Fossil​Charging</a></li><li class="variable"><a href="#storage.parameter.startfossilcharging2">start​Fossil​Charging2</a></li><li class="variable"><a href="#storage.parameter.stopfossilcharging2">stop​Fossil​Charging2</a></li><li class="variable"><a href="#storage.parameter.heatexchangerefficiency">heat​Exchanger​Efficiency</a></li><li class="variable"><a href="#storage.parameter.heatexchangercapacity">heat​Exchanger​Capacity</a></li><li class="variable"><a href="#storage.parameter.heatexchangermincapacity">heat​Exchanger​Min​Capacity</a></li><li class="variable"><a href="#storage.parameter.desauxin">Des​Aux​IN</a></li><li class="variable"><a href="#storage.parameter.desauxex">Des​Aux​EX</a></li><li class="variable"><a href="#storage.parameter.heatproductionload">heat​Production​Load</a></li><li class="variable"><a href="#storage.parameter.heatproductionloadwinter">heat​Production​Load​Winter</a></li><li class="variable"><a href="#storage.parameter.heatproductionloadsummer">heat​Production​Load​Summer</a></li><li class="variable"><a href="#storage.parameter.dischargewinter">discharge​Winter</a></li><li class="variable"><a href="#storage.parameter.dischargesummer">discharge​Summer</a></li><li class="variable"><a href="#storage.parameter.baddniwinter">bad​DNIwinter</a></li><li class="variable"><a href="#storage.parameter.baddnisummer">bad​DNIsummer</a></li><li class="variable"><a href="#storage.parameter.description">description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#storage.parameter.encode(to:)">encode(to:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Storage.​Parameter</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Parameter</span>  </body></html></code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        <figure>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %15 Pages: 1 -->
+<svg width="1088pt" height="242pt"
+ viewBox="0.00 0.00 1087.98 241.73" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 237.7326)">
+<title>%15</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-237.7326 1083.9813,-237.7326 1083.9813,4 -4,4"/>
+<!-- Storage.Parameter -->
+<g id="node1" class="node structure current">
+<title>Storage.Parameter</title>
+<g id="a_node1"><a xlink:href="./Storage_Parameter" xlink:title="Storage.Parameter">
+<path fill="none" stroke="#000000" stroke-width="3" d="M537.993,-143.6386C537.993,-143.6386 345.993,-143.6386 345.993,-143.6386 339.993,-143.6386 333.993,-137.6386 333.993,-131.6386 333.993,-131.6386 333.993,-119.6386 333.993,-119.6386 333.993,-113.6386 339.993,-107.6386 345.993,-107.6386 345.993,-107.6386 537.993,-107.6386 537.993,-107.6386 543.993,-107.6386 549.993,-113.6386 549.993,-119.6386 549.993,-119.6386 549.993,-131.6386 549.993,-131.6386 549.993,-137.6386 543.993,-143.6386 537.993,-143.6386"/>
+<text text-anchor="middle" x="441.993" y="-121.9386" font-family="Menlo" font-size="14.00" fill="#000000">Storage.Parameter</text>
+</a>
+</g>
+</g>
+<!-- Codable -->
+<g id="node2" class="node unknown">
+<title>Codable</title>
+<path fill="none" stroke="#000000" d="M1067.9813,-161.3055C1067.9813,-161.3055 875.9813,-161.3055 875.9813,-161.3055 869.9813,-161.3055 863.9813,-155.3055 863.9813,-149.3055 863.9813,-149.3055 863.9813,-137.3055 863.9813,-137.3055 863.9813,-131.3055 869.9813,-125.3055 875.9813,-125.3055 875.9813,-125.3055 1067.9813,-125.3055 1067.9813,-125.3055 1073.9813,-125.3055 1079.9813,-131.3055 1079.9813,-137.3055 1079.9813,-137.3055 1079.9813,-149.3055 1079.9813,-149.3055 1079.9813,-155.3055 1073.9813,-161.3055 1067.9813,-161.3055"/>
+<text text-anchor="middle" x="971.9813" y="-139.6055" font-family="Menlo" font-size="14.00" fill="#000000">Codable</text>
+</g>
+<!-- Storage.Parameter&#45;&gt;Codable -->
+<g id="edge3" class="edge conformsTo">
+<title>Storage.Parameter&#45;&gt;Codable</title>
+<path fill="none" stroke="#000000" d="M550.2028,-129.2457C638.4756,-132.1882 762.9928,-136.339 853.8473,-139.3675"/>
+<polygon fill="#000000" stroke="#000000" points="853.8083,-142.8681 863.9194,-139.7033 854.0415,-135.872 853.8083,-142.8681"/>
+</g>
+<!-- CustomStringConvertible -->
+<g id="node3" class="node unknown">
+<title>CustomStringConvertible</title>
+<path fill="none" stroke="#000000" d="M347.5678,-36C347.5678,-36 155.5678,-36 155.5678,-36 149.5678,-36 143.5678,-30 143.5678,-24 143.5678,-24 143.5678,-12 143.5678,-12 143.5678,-6 149.5678,0 155.5678,0 155.5678,0 347.5678,0 347.5678,0 353.5678,0 359.5678,-6 359.5678,-12 359.5678,-12 359.5678,-24 359.5678,-24 359.5678,-30 353.5678,-36 347.5678,-36"/>
+<text text-anchor="middle" x="251.5678" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">CustomStringConvertible</text>
+</g>
+<!-- Storage.Parameter&#45;&gt;CustomStringConvertible -->
+<g id="edge1" class="edge conformsTo">
+<title>Storage.Parameter&#45;&gt;CustomStringConvertible</title>
+<path fill="none" stroke="#000000" d="M410.1201,-107.6223C377.8522,-89.3828 327.8211,-61.1025 292.6069,-41.1975"/>
+<polygon fill="#000000" stroke="#000000" points="293.9725,-37.949 283.5447,-36.0751 290.5279,-44.0428 293.9725,-37.949"/>
+</g>
+<!-- TextConfigInitializable -->
+<g id="node4" class="node protocol">
+<title>TextConfigInitializable</title>
+<g id="a_node4"><a xlink:href="./TextConfigInitializable" xlink:title="TextConfigInitializable">
+<path fill="none" stroke="#000000" d="M204,-233.7326C204,-233.7326 12,-233.7326 12,-233.7326 6,-233.7326 0,-227.7326 0,-221.7326 0,-221.7326 0,-209.7326 0,-209.7326 0,-203.7326 6,-197.7326 12,-197.7326 12,-197.7326 204,-197.7326 204,-197.7326 210,-197.7326 216,-203.7326 216,-209.7326 216,-209.7326 216,-221.7326 216,-221.7326 216,-227.7326 210,-233.7326 204,-233.7326"/>
+<text text-anchor="middle" x="108" y="-212.0326" font-family="Menlo" font-size="14.00" fill="#000000">TextConfigInitializable</text>
+</a>
+</g>
+</g>
+<!-- Storage.Parameter&#45;&gt;TextConfigInitializable -->
+<g id="edge2" class="edge conformsTo">
+<title>Storage.Parameter&#45;&gt;TextConfigInitializable</title>
+<path fill="none" stroke="#000000" d="M375.2073,-143.6539C320.2308,-158.4837 242.2608,-179.516 184.7272,-195.0356"/>
+<polygon fill="#000000" stroke="#000000" points="183.6989,-191.6878 174.9556,-197.6715 185.5221,-198.4462 183.6989,-191.6878"/>
+</g>
+</g>
+</svg>
+
+
+    <figcaption hidden>Inheritance graph for Storage.Parameter.</figcaption>
+</figure>
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="./Storage_Parameter_Strategy">Storage.Parameter.Strategy</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="./TextConfigInitializable">TextConfigInitializable</a></code></dt>
+<dd></dd>
+<dt class="unknown"><code>Codable</code></dt>
+<dt class="unknown"><code>CustomStringConvertible</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="storage.parameter.init(file:)">
+    <h3>
+        <code><a href="#storage.parameter.init(file:)">init(file:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">file</span>: <a href="./TextConfigFile"><span class="type">TextConfigFile</span></a>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="storage.parameter.init(from:)">
+    <h3>
+        <code><a href="#storage.parameter.init(from:)">init(from:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">from</span> <span class="variable">decoder</span>: <span class="type">Decoder</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="storage.parameter.name">
+    <h3>
+        <code><a href="#storage.parameter.name">name</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">name</span>: <span class="type">String</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.dischargetoturbine">
+    <h3>
+        <code><a href="#storage.parameter.dischargetoturbine">discharge​ToTurbine</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">chargeTo</span>, <span class="variable">dischargeToTurbine</span>, <span class="variable">dischargeToHeater</span>: <a href="./Ratio"><span class="type">Ratio</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.dischargetoheater">
+    <h3>
+        <code><a href="#storage.parameter.dischargetoheater">discharge​ToHeater</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">chargeTo</span>, <span class="variable">dischargeToTurbine</span>, <span class="variable">dischargeToHeater</span>: <a href="./Ratio"><span class="type">Ratio</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.chargeto">
+    <h3>
+        <code><a href="#storage.parameter.chargeto">charge​To</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">chargeTo</span>, <span class="variable">dischargeToTurbine</span>, <span class="variable">dischargeToHeater</span>: <a href="./Ratio"><span class="type">Ratio</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatstoredrel">
+    <h3>
+        <code><a href="#storage.parameter.heatstoredrel">heat​Storedrel</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">stepSizeIteration</span>, <span class="variable">heatStoredrel</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.stepsizeiteration">
+    <h3>
+        <code><a href="#storage.parameter.stepsizeiteration">step​Size​Iteration</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">stepSizeIteration</span>, <span class="variable">heatStoredrel</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.temperaturedischarge">
+    <h3>
+        <code><a href="#storage.parameter.temperaturedischarge">temperature​Discharge</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">temperatureDischarge</span>, <span class="variable">temperatureDischarge2</span>: <a href="./Polynomial"><span class="type">Polynomial</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.temperaturedischarge2">
+    <h3>
+        <code><a href="#storage.parameter.temperaturedischarge2">temperature​Discharge2</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">temperatureDischarge</span>, <span class="variable">temperatureDischarge2</span>: <a href="./Polynomial"><span class="type">Polynomial</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.temperaturecharge">
+    <h3>
+        <code><a href="#storage.parameter.temperaturecharge">temperature​Charge</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">temperatureCharge</span>, <span class="variable">temperatureCharge2</span>: <a href="./Polynomial"><span class="type">Polynomial</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.temperaturecharge2">
+    <h3>
+        <code><a href="#storage.parameter.temperaturecharge2">temperature​Charge2</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">temperatureCharge</span>, <span class="variable">temperatureCharge2</span>: <a href="./Polynomial"><span class="type">Polynomial</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatlosscst">
+    <h3>
+        <code><a href="#storage.parameter.heatlosscst">heatloss​Cst</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">heatlossCst</span>, <span class="variable">heatlossC0to1</span>: <a href="./Polynomial"><span class="type">Polynomial</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatlossc0to1">
+    <h3>
+        <code><a href="#storage.parameter.heatlossc0to1">heatloss​C0to1</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">heatlossCst</span>, <span class="variable">heatlossC0to1</span>: <a href="./Polynomial"><span class="type">Polynomial</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.pumpefficiency">
+    <h3>
+        <code><a href="#storage.parameter.pumpefficiency">pump​Efficiency</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">pumpEfficiency</span>, <span class="variable">pressureLoss</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.pressureloss">
+    <h3>
+        <code><a href="#storage.parameter.pressureloss">pressure​Loss</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">pumpEfficiency</span>, <span class="variable">pressureLoss</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.massflowshare">
+    <h3>
+        <code><a href="#storage.parameter.massflowshare">mass​Flow​Share</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">massFlowShare</span>: <a href="./Ratio"><span class="type">Ratio</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.starttemperature">
+    <h3>
+        <code><a href="#storage.parameter.starttemperature">start​Temperature</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">startTemperature</span>: (<span class="variable">cold</span>: <a href="./Temperature"><span class="type">Temperature</span></a>, <span class="variable">hot</span>: <a href="./Temperature"><span class="type">Temperature</span></a>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.startload">
+    <h3>
+        <code><a href="#storage.parameter.startload">start​Load</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">startLoad</span>: (<span class="variable">cold</span>: <span class="type">Double</span>, <span class="variable">hot</span>: <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.type">
+    <h3>
+        <code><a href="#storage.parameter.type">type</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">type</span>: <span class="type">TypeDir</span> = .<span class="variable">indirect</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.strategy">
+    <h3>
+        <code><a href="#storage.parameter.strategy">strategy</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">strategy</span>: <span class="type">Strategy</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.prefchargetoturbine">
+    <h3>
+        <code><a href="#storage.parameter.prefchargetoturbine">pref​Charge​ToTurbine</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">prefChargeToTurbine</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.exception">
+    <h3>
+        <code><a href="#storage.parameter.exception">exception</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">exception</span>: <span class="type">ClosedRange</span>&lt;<span class="type">Int</span>&gt;</body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.htf">
+    <h3>
+        <code><a href="#storage.parameter.htf">HTF</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">HTF</span>: <a href="./StorageMedium"><span class="type">StorageMedium</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.fp">
+    <h3>
+        <code><a href="#storage.parameter.fp">FP</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">FP</span>, <span class="variable">FC</span>, <span class="variable">heatdiff</span>, <span class="variable">dSRise</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatdiff">
+    <h3>
+        <code><a href="#storage.parameter.heatdiff">heatdiff</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">FP</span>, <span class="variable">FC</span>, <span class="variable">heatdiff</span>, <span class="variable">dSRise</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.fc">
+    <h3>
+        <code><a href="#storage.parameter.fc">FC</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">FP</span>, <span class="variable">FC</span>, <span class="variable">heatdiff</span>, <span class="variable">dSRise</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.dsrise">
+    <h3>
+        <code><a href="#storage.parameter.dsrise">dSRise</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">FP</span>, <span class="variable">FC</span>, <span class="variable">heatdiff</span>, <span class="variable">dSRise</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.fixeddischargeload">
+    <h3>
+        <code><a href="#storage.parameter.fixeddischargeload">fixed​Discharge​Load</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">minDischargeLoad</span>, <span class="variable">fixedDischargeLoad</span>: <a href="./Ratio"><span class="type">Ratio</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.mindischargeload">
+    <h3>
+        <code><a href="#storage.parameter.mindischargeload">min​Discharge​Load</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">minDischargeLoad</span>, <span class="variable">fixedDischargeLoad</span>: <a href="./Ratio"><span class="type">Ratio</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heattracingtime">
+    <h3>
+        <code><a href="#storage.parameter.heattracingtime">heat​Tracing​Time</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatTracingTime</span>, <span class="variable">heatTracingPower</span>: [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heattracingpower">
+    <h3>
+        <code><a href="#storage.parameter.heattracingpower">heat​Tracing​Power</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatTracingTime</span>, <span class="variable">heatTracingPower</span>: [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.dischargeparasitcsfactor">
+    <h3>
+        <code><a href="#storage.parameter.dischargeparasitcsfactor">discharge​Parasitcs​Factor</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">dischargeParasitcsFactor</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.isvariable">
+    <h3>
+        <code><a href="#storage.parameter.isvariable">is​Variable</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">isVariable</span> = <span class="keyword">true</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatexchangerrestrictedmin">
+    <h3>
+        <code><a href="#storage.parameter.heatexchangerrestrictedmin">heat​Exchanger​Restricted​Min</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">heatExchangerRestrictedMin</span> = <span class="keyword">false</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.auxconsumptioncurve">
+    <h3>
+        <code><a href="#storage.parameter.auxconsumptioncurve">aux​Consumption​Curve</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">auxConsumptionCurve</span> = <span class="keyword">false</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatexchangerrestrictedmax">
+    <h3>
+        <code><a href="#storage.parameter.heatexchangerrestrictedmax">heat​Exchanger​Restricted​Max</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">heatExchangerRestrictedMax</span> = <span class="keyword">false</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.definedby">
+    <h3>
+        <code><a href="#storage.parameter.definedby">defined​By</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">definedBy</span>: <span class="type">Definition</span> = .<span class="variable">hours</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.designtemperature">
+    <h3>
+        <code><a href="#storage.parameter.designtemperature">design​Temperature</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">designTemperature</span>: (<span class="variable">cold</span>: <a href="./Temperature"><span class="type">Temperature</span></a>, <span class="variable">hot</span>: <a href="./Temperature"><span class="type">Temperature</span></a>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatloss">
+    <h3>
+        <code><a href="#storage.parameter.heatloss">heat​Loss</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatLoss</span>: (<span class="variable">hot</span>: <span class="type">Double</span>, <span class="variable">cold</span>: <span class="type">Double</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.stopfossilcharging">
+    <h3>
+        <code><a href="#storage.parameter.stopfossilcharging">stop​Fossil​Charging</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">startFossilCharging</span>, <span class="variable">stopFossilCharging</span>: (<span class="variable">day</span>: <span class="type">Int</span>, <span class="variable">month</span>: <span class="type">Int</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.startfossilcharging">
+    <h3>
+        <code><a href="#storage.parameter.startfossilcharging">start​Fossil​Charging</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">startFossilCharging</span>, <span class="variable">stopFossilCharging</span>: (<span class="variable">day</span>: <span class="type">Int</span>, <span class="variable">month</span>: <span class="type">Int</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.startfossilcharging2">
+    <h3>
+        <code><a href="#storage.parameter.startfossilcharging2">start​Fossil​Charging2</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">startFossilCharging2</span>, <span class="variable">stopFossilCharging2</span>: (<span class="variable">day</span>: <span class="type">Int</span>, <span class="variable">month</span>: <span class="type">Int</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.stopfossilcharging2">
+    <h3>
+        <code><a href="#storage.parameter.stopfossilcharging2">stop​Fossil​Charging2</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">startFossilCharging2</span>, <span class="variable">stopFossilCharging2</span>: (<span class="variable">day</span>: <span class="type">Int</span>, <span class="variable">month</span>: <span class="type">Int</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatexchangerefficiency">
+    <h3>
+        <code><a href="#storage.parameter.heatexchangerefficiency">heat​Exchanger​Efficiency</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatExchangerEfficiency</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatexchangercapacity">
+    <h3>
+        <code><a href="#storage.parameter.heatexchangercapacity">heat​Exchanger​Capacity</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatExchangerCapacity</span>: <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatexchangermincapacity">
+    <h3>
+        <code><a href="#storage.parameter.heatexchangermincapacity">heat​Exchanger​Min​Capacity</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatExchangerMinCapacity</span>: <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.desauxin">
+    <h3>
+        <code><a href="#storage.parameter.desauxin">Des​Aux​IN</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">DesAuxIN</span>: <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.desauxex">
+    <h3>
+        <code><a href="#storage.parameter.desauxex">Des​Aux​EX</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">DesAuxEX</span>: <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatproductionload">
+    <h3>
+        <code><a href="#storage.parameter.heatproductionload">heat​Production​Load</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">heatProductionLoad</span>: <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatproductionloadwinter">
+    <h3>
+        <code><a href="#storage.parameter.heatproductionloadwinter">heat​Production​Load​Winter</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatProductionLoadWinter</span>: <a href="./Ratio"><span class="type">Ratio</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Massflow to POB during Charge in Bad Days Winter</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.heatproductionloadsummer">
+    <h3>
+        <code><a href="#storage.parameter.heatproductionloadsummer">heat​Production​Load​Summer</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">heatProductionLoadSummer</span>: <a href="./Ratio"><span class="type">Ratio</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Massflow to POB during Charge in Bad Days Summer</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.dischargewinter">
+    <h3>
+        <code><a href="#storage.parameter.dischargewinter">discharge​Winter</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">dischargeWinter</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.dischargesummer">
+    <h3>
+        <code><a href="#storage.parameter.dischargesummer">discharge​Summer</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">dischargeSummer</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.baddniwinter">
+    <h3>
+        <code><a href="#storage.parameter.baddniwinter">bad​DNIwinter</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">badDNIwinter</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>DNI for Bad Days Winter</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.baddnisummer">
+    <h3>
+        <code><a href="#storage.parameter.baddnisummer">bad​DNIsummer</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">badDNIsummer</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>DNI for Bad Days Summer</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="storage.parameter.description">
+    <h3>
+        <code><a href="#storage.parameter.description">description</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">description</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="storage.parameter.encode(to:)">
+    <h3>
+        <code><a href="#storage.parameter.encode(to:)">encode(to:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">encode</span>(<span class="variable">to</span> <span class="variable">encoder</span>: <span class="type">Encoder</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:29+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

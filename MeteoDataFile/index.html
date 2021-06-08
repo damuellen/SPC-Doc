@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - MeteoDataFile</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#requirements">Requirements</a><ul><li class="variable"><a href="#meteodatafile.name">name</a></li><li class="function"><a href="#meteodatafile.fetchinfo()">fetch​Info()</a></li><li class="function"><a href="#meteodatafile.fetchdata()">fetch​Data()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Meteo​Data​File</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">protocol</span> <span class="type">MeteoDataFile</span>  </body></html></code></pre>
+</div>
+
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="variable" id="meteodatafile.name">
+    <h3>
+        <code>name</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">name</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="meteodatafile.fetchinfo()">
+    <h3>
+        <code>fetch​Info()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">fetchInfo</span>() <span class="keyword">throws</span> -&gt; (<span class="variable">year</span>: <span class="type">Int</span>, <span class="variable">location</span>: <a href="./Location"><span class="type">Location</span></a>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="meteodatafile.fetchdata()">
+    <h3>
+        <code>fetch​Data()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">fetchData</span>() <span class="keyword">throws</span> -&gt; [<a href="./MeteoData"><span class="type">MeteoData</span></a>] </body></html></code></pre>
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:30+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

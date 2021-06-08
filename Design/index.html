@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - Design</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#design.layout">layout</a></li><li class="variable"><a href="#design.hassolarfield">has​Solar​Field</a></li><li class="variable"><a href="#design.hasheater">has​Heater</a></li><li class="variable"><a href="#design.hasboiler">has​Boiler</a></li><li class="variable"><a href="#design.hasgasturbine">has​Gas​Turbine</a></li><li class="variable"><a href="#design.hasstorage">has​Storage</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Design</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Design</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Design of the plant</p>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="design.layout">
+    <h3>
+        <code><a href="#design.layout">layout</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">layout</span>: <a href="./Layout"><span class="type">Layout</span></a>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="design.hassolarfield">
+    <h3>
+        <code><a href="#design.hassolarfield">has​Solar​Field</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">hasSolarField</span> = <span class="variable">layout</span>.<span class="variable">solarField</span> &gt; <span class="number literal">0</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The design has a solar field</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="design.hasheater">
+    <h3>
+        <code><a href="#design.hasheater">has​Heater</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">hasHeater</span> = <span class="variable">layout</span>.<span class="variable">heater</span> &gt; <span class="number literal">0</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The design has a heater</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="design.hasboiler">
+    <h3>
+        <code><a href="#design.hasboiler">has​Boiler</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">hasBoiler</span> = <span class="variable">layout</span>.<span class="variable">boiler</span> &gt; <span class="number literal">0</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The design has a boiler</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="design.hasgasturbine">
+    <h3>
+        <code><a href="#design.hasgasturbine">has​Gas​Turbine</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">hasGasTurbine</span> = <span class="variable">layout</span>.<span class="variable">gasTurbine</span> &gt; <span class="number literal">0</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The design has a gas turbine</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="design.hasstorage">
+    <h3>
+        <code><a href="#design.hasstorage">has​Storage</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">hasStorage</span> = <span class="variable">layout</span>.<span class="variable">storage</span> &gt; <span class="number literal">0</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The design has a thermal storage</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:29+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - Location</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#location.init(longitude:latitude:elevation:timezone:)">init(longitude:​latitude:​elevation:​timezone:​)</a></li><li class="initializer"><a href="#location.init(_:timezone:)">init(_:​timezone:​)</a></li><li class="initializer"><a href="#location.init(data:)">init(data:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#location.longitude">longitude</a></li><li class="variable"><a href="#location.latitude">latitude</a></li><li class="variable"><a href="#location.elevation">elevation</a></li><li class="variable"><a href="#location.timezone">timezone</a></li><li class="variable"><a href="#location.coordinates">coordinates</a></li><li class="variable"><a href="#location.primemeridian">prime​Meridian</a></li><li class="variable"><a href="#location.data">data</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Location</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Location</span>  </body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="location.init(longitude:latitude:elevation:timezone:)">
+    <h3>
+        <code><a href="#location.init(longitude:latitude:elevation:timezone:)">init(longitude:​latitude:​elevation:​timezone:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">longitude</span>: <span class="type">Double</span>, <span class="variable">latitude</span>: <span class="type">Double</span>, <span class="variable">elevation</span>: <span class="type">Double</span>, <span class="variable">timezone</span>: <span class="type">Int</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="location.init(_:timezone:)">
+    <h3>
+        <code><a href="#location.init(_:timezone:)">init(_:​timezone:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">coords</span>: (<span class="type">Double</span>, <span class="type">Double</span>, <span class="type">Double</span>), <span class="variable">timezone</span>: <span class="type">Int</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="location.init(data:)">
+    <h3>
+        <code><a href="#location.init(data:)">init(data:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">data</span>: <span class="type">Data</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="location.longitude">
+    <h3>
+        <code><a href="#location.longitude">longitude</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">longitude</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="location.latitude">
+    <h3>
+        <code><a href="#location.latitude">latitude</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">latitude</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="location.elevation">
+    <h3>
+        <code><a href="#location.elevation">elevation</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">elevation</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="location.timezone">
+    <h3>
+        <code><a href="#location.timezone">timezone</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">timezone</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="location.coordinates">
+    <h3>
+        <code><a href="#location.coordinates">coordinates</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">coordinates</span>: (<span class="type">Double</span>, <span class="type">Double</span>, <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="location.primemeridian">
+    <h3>
+        <code><a href="#location.primemeridian">prime​Meridian</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">primeMeridian</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="location.data">
+    <h3>
+        <code><a href="#location.data">data</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">data</span>: <span class="type">Data</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:30+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - Atmosphere</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#atmosphere.altitude(pressure:)">altitude(pressure:​)</a></li><li class="function"><a href="#atmosphere.pressure(altitude:)">pressure(altitude:​)</a></li><li class="function"><a href="#atmosphere.absoluteairmass(airmassrelative:pressure:)">absolute​Air​Mass(airmass​Relative:​pressure:​)</a></li><li class="function"><a href="#atmosphere.relativeairmass(zenith:model:)">relative​Air​Mass(zenith:​model:​)</a></li><li class="function"><a href="#atmosphere.gueymard94_pw(tempair:relativehumidity:)">gueymard94_pw(temp​Air:​relative​Humidity:​)</a></li><li class="function"><a href="#atmosphere.firstsolarspectralcorrection(pw:airmassabsolute:moduletype:)">first​Solar​Spectral​Correction(pw:​airmass​Absolute:​module​Type:​)</a></li><li class="function"><a href="#atmosphere.birdhulstrom80_aod_bb(aod380:aod500:)">bird​Hulstrom80_aod_bb(aod380:​aod500:​)</a></li><li class="function"><a href="#atmosphere.kasten96_lt(airmassabsolute:precipitablewater:aodbb:)">kasten96_lt(airmass​Absolute:​precipitable​Water:​aod​Bb:​)</a></li><li class="function"><a href="#atmosphere.angstromaodatlambda(aod0:lambda0:alpha:lambda1:)">angstrom​Aod​AtLambda(aod0:​lambda0:​alpha:​lambda1:​)</a></li><li class="function"><a href="#atmosphere.angstromalpha(aod1:lambda1:aod2:lambda2:)">angstrom​Alpha(aod1:​lambda1:​aod2:​lambda2:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Atmosphere</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Atmosphere</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The Atmosphere enum contains public static methods to calculate relative and
+absolute airmass and to determine pressure from altitude or vice versa.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="./Atmosphere_Model">Atmosphere.Model</a></code></dt>
+<dd></dd>
+<dt class="enumeration"><code><a href="./Atmosphere_ModuleType">Atmosphere.ModuleType</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="atmosphere.altitude(pressure:)">
+    <h3>
+        <code><a href="#atmosphere.altitude(pressure:)">altitude(pressure:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">altitude</span>(<span class="variable">pressure</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Determine altitude from site pressure.</p>
+
+</div>
+<div class="discussion">
+    <h2>Note:</h2>
+
+<p>The following assumptions are made</p>
+
+<ul>
+<li>
+<p>Base pressure                  101325 Pa</p>
+</li>
+<li>
+<p>Temperature at zero altitude   288.15 K</p>
+</li>
+<li>
+<p>Gravitational acceleration     9.80665 m/s^2</p>
+</li>
+<li>
+<p>Lapse rate                     -6.5E-3 K/m</p>
+</li>
+<li>
+<p>Gas constant for air           287.053 J/(kgK)</p>
+</li>
+<li>
+<p>Relative Humidity              0%</p>
+</li>
+</ul>
+
+<h2>References:</h2>
+
+<p>[1] &quot;A Quick Derivation relating altitude to air pressure&quot; from
+Portland State Aerospace Society, Version 1.03, 12/22/2004.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>pressure</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Atmospheric pressure (Pascals)</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>Altitude in meters above sea level</p>
+
+</div>
+<div role="article" class="function" id="atmosphere.pressure(altitude:)">
+    <h3>
+        <code><a href="#atmosphere.pressure(altitude:)">pressure(altitude:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">pressure</span>(<span class="variable">altitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Determine site pressure from altitude.</p>
+
+</div>
+<div class="discussion">
+    <h2>Note:</h2>
+
+<p>The following assumptions are made</p>
+
+<ul>
+<li>
+<p>Base pressure                  101325 Pa</p>
+</li>
+<li>
+<p>Temperature at zero altitude   288.15 K</p>
+</li>
+<li>
+<p>Gravitational acceleration     9.80665 m/s^2</p>
+</li>
+<li>
+<p>Lapse rate                     -6.5E-3 K/m</p>
+</li>
+<li>
+<p>Gas constant for air           287.053 J/(kgK)</p>
+</li>
+<li>
+<p>Relative Humidity              0%</p>
+</li>
+</ul>
+
+<h2>References:</h2>
+
+<p>[1] &quot;A Quick Derivation relating altitude to air pressure&quot; from
+Portland State Aerospace Society, Version 1.03, 12/22/2004.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>altitude</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Altitude in meters above sea level</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>Atmospheric pressure (Pascals)</p>
+
+</div>
+<div role="article" class="function" id="atmosphere.absoluteairmass(airmassrelative:pressure:)">
+    <h3>
+        <code><a href="#atmosphere.absoluteairmass(airmassrelative:pressure:)">absolute​Air​Mass(airmass​Relative:​pressure:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">absoluteAirMass</span>(
+    <span class="variable">airmassRelative</span>: <span class="type">Double</span>, <span class="variable">pressure</span>: <span class="type">Double</span> = <span class="number literal">101_325.0</span>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Determine absolute (pressure corrected) airmass from relative
+airmass and pressure</p>
+
+</div>
+<div class="discussion">
+    <p>Gives the airmass for locations not at sea-level (i.e. not at
+standard pressure). The input argument &quot;AMrelative&quot; is the relative
+airmass. The input argument &quot;pressure&quot; is the pressure (in Pascals)
+at the location of interest and must be greater than 0. The
+calculation for absolute airmass is</p>
+
+<p><code>absolute airmass = (relative airmass)*pressure/101325</code></p>
+
+<h2>References:</h2>
+
+<p>[1] C. Gueymard, &quot;Critical analysis and performance assessment of
+clear sky solar irradiance models using theoretical and measured
+data,&quot; Solar Energy, vol. 51, pp. 121-138, 1993.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>airmass​Relative</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The airmass at sea-level.</p>
+</td>
+</tr>
+<tr>
+    <th>pressure</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The site pressure in Pascal. default 101325</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>Absolute (pressure corrected) airmass</p>
+
+</div>
+<div role="article" class="function" id="atmosphere.relativeairmass(zenith:model:)">
+    <h3>
+        <code><a href="#atmosphere.relativeairmass(zenith:model:)">relative​Air​Mass(zenith:​model:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">relativeAirMass</span>(
+    <span class="variable">zenith</span>: <span class="type">Double</span>, <span class="variable">model</span>: <span class="type">Model</span> = .<span class="variable">kastenyoung1989</span>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Gives the relative (not pressure-corrected) airmass.</p>
+
+</div>
+<div class="discussion">
+    <p>Gives the airmass at sea-level when given a sun zenith angle (in
+degrees). The <code>model</code> variable allows selection of different
+airmass models (described below). If <code>model</code> is not included or is
+not valid, the default model is 'kastenyoung1989'.</p>
+
+<ul>
+<li>
+<p>simple - secant(apparent zenith angle) -
+Note that this gives -inf at zenith=90</p>
+</li>
+<li>
+<p>kasten1966 - See reference [1] -
+requires apparent sun zenith</p>
+</li>
+<li>
+<p>youngirvine1967 - See reference [2] -
+requires true sun zenith</p>
+</li>
+<li>
+<p>kastenyoung1989 - See reference [3] -
+requires apparent sun zenith</p>
+</li>
+<li>
+<p>gueymard1993 - See reference [4] -
+requires apparent sun zenith</p>
+</li>
+<li>
+<p>young1994 - See reference [5] -
+requries true sun zenith</p>
+</li>
+<li>
+<p>pickering2002 - See reference [6] -
+requires apparent sun zenith</p>
+</li>
+</ul>
+
+<h2>References:</h2>
+
+<p>[1] Fritz Kasten. &quot;A New Table and Approximation Formula for the
+Relative Optical Air Mass&quot;. Technical Report 136, Hanover, N.H.:
+U.S. Army Material Command, CRREL.</p>
+
+<p>[2] A. T. Young and W. M. Irvine, &quot;Multicolor Photoelectric
+Photometry of the Brighter Planets,&quot; The Astronomical Journal, vol.
+72, pp. 945-950, 1967.</p>
+
+<p>[3] Fritz Kasten and Andrew Young. &quot;Revised optical air mass tables
+and approximation formula&quot;. Applied Optics 28:4735-4738</p>
+
+<p>[4] C. Gueymard, &quot;Critical analysis and performance assessment of
+clear sky solar irradiance models using theoretical and measured
+data,&quot; Solar Energy, vol. 51, pp. 121-138, 1993.</p>
+
+<p>[5] A. T. Young, &quot;AIR-MASS AND REFRACTION,&quot; Applied Optics, vol. 33,
+pp. 1108-1110, Feb 1994.</p>
+
+<p>[6] Keith A. Pickering. &quot;The Ancient Star Catalog&quot;. DIO 12:1, 20,</p>
+
+<p>[7] Matthew J. Reno, Clifford W. Hansen and Joshua S. Stein, &quot;Global
+Horizontal Irradiance Clear Sky Models: Implementation and Analysis&quot;
+Sandia Report, (2012).</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>zenith</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Zenith angle of the sun in degrees. Note that some models use the apparent (refraction corrected) zenith angle, and some models use the true (not refraction-corrected) zenith angle. See model descriptions to determine which type of zenith angle is required. Apparent zenith angles must be calculated at sea level.</p>
+</td>
+</tr>
+<tr>
+    <th>model</th>
+    <td><code class="type">Model</code></td>
+    <td><p>default kastenyoung1989 Available models include the following:</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>Relative airmass at sea level. Will return NaN values for any zenith angle greater than 90 degrees.</p>
+
+</div>
+<div role="article" class="function" id="atmosphere.gueymard94_pw(tempair:relativehumidity:)">
+    <h3>
+        <code><a href="#atmosphere.gueymard94_pw(tempair:relativehumidity:)">gueymard94_pw(temp​Air:​relative​Humidity:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">gueymard94_pw</span>(<span class="variable">tempAir</span>: <span class="type">Double</span>, <span class="variable">relativeHumidity</span>: <span class="type">Double</span>)
+    -&gt; <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates precipitable water (cm) from ambient air temperature (C)
+and relatively humidity (%) using an empirical model. The
+accuracy of this method is approximately 20% for moderate PW (1-3
+cm) and less accurate otherwise.</p>
+
+</div>
+<div class="discussion">
+    <p>The model was developed by expanding Eq. 1 in [2]_:</p>
+
+<p><code>w = 0.1 H_v \rho_v</code></p>
+
+<p>using Eq. 2 in [2]_</p>
+
+<p><code>rho_v = 216.7 R_H e_s /T</code></p>
+
+<p><code>H_v</code> is the apparant water vapor scale height (km). The
+expression for :math:<code>H_v</code> is Eq. 4 in [2]_:</p>
+
+<p>H_v = 0.4976 + 1.5265<em>T/273.15 + \exp(13.6897</em>T/273.15 - 14.9188*(T/273.15)^3)</p>
+
+<p><code>rho_v</code> is the surface water vapor density (g/m^3). In the
+expression :math:<code>\rho_v</code>, :math:<code>e_s</code> is the saturation water vapor
+pressure (millibar). The
+expression for :math:<code>e_s</code> is Eq. 1 in [3]_</p>
+
+<p><code>e_s = \exp(22.330 - 49.140*(100/T) - 10.922*(100/T)^2 - 0.39015*T/100)</code></p>
+
+<h2>References</h2>
+
+<p>.. [1] W. M. Keogh and A. W. Blakers, Accurate Measurement, Using Natural
+Sunlight, of Silicon Solar Cells, Prog. in Photovoltaics: Res.
+and Appl. 2004, vol 12, pp. 1-19 (:doi:<code>10.1002/pip.517</code>)</p>
+
+<p>.. [2] C. Gueymard, Analysis of Monthly Average Atmospheric Precipitable
+Water and Turbidity in Canada and Northern United States,
+Solar Energy vol 53(1), pp. 57-71, 1994.</p>
+
+<p>.. [3] C. Gueymard, Assessment of the Accuracy and Computing Speed of
+simplified saturation vapor equations using a new reference
+dataset, J. of Applied Meteorology 1993, vol. 32(7), pp.
+1294-1300.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>temp​Air</th>
+    <td><code class="type">Double</code></td>
+    <td><p>ambient air temperature at the surface (C)</p>
+</td>
+</tr>
+<tr>
+    <th>relative​Humidity</th>
+    <td><code class="type">Double</code></td>
+    <td><p>relative humidity at the surface (%)</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>precipitable water (cm)</p>
+
+</div>
+<div role="article" class="function" id="atmosphere.firstsolarspectralcorrection(pw:airmassabsolute:moduletype:)">
+    <h3>
+        <code><a href="#atmosphere.firstsolarspectralcorrection(pw:airmassabsolute:moduletype:)">first​Solar​Spectral​Correction(pw:​airmass​Absolute:​module​Type:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">firstSolarSpectralCorrection</span>(
+    <span class="variable">pw</span>: <span class="type">Double</span>, <span class="variable">airmassAbsolute</span>: <span class="type">Double</span>, <span class="variable">moduleType</span>: <span class="type">ModuleType</span>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Spectral mismatch modifier based on precipitable water and absolute
+(pressure corrected) airmass.</p>
+
+</div>
+<div class="discussion">
+    <p>Estimates a spectral mismatch modifier M representing the effect on
+module short circuit current of variation in the spectral
+irradiance. M is estimated from absolute (pressure currected) air
+mass, AMa, and precipitable water, Pwat, using the following
+function:</p>
+
+<p><code>M = c_1 + c_2*AMa + c_3*Pwat + c_4*AMa^.5 + c_5*Pwat^.5 + c_6*AMa/Pwat^.5</code></p>
+
+<p>Default coefficients are determined for several cell types with
+known quantum efficiency curves, by using the Simple Model of the
+Atmospheric Radiative Transfer of Sunshine (SMARTS) [1]_. Using
+SMARTS, spectrums are simulated with all combinations of AMa and
+Pwat where:</p>
+
+<ul>
+<li>
+<p>0.5 cm &lt;= Pwat &lt;= 5 cm</p>
+</li>
+<li>
+<p>1.0 &lt;= AMa &lt;= 5.0</p>
+</li>
+<li>
+<p>Spectral range is limited to that of CMP11 (280 nm to 2800 nm)</p>
+</li>
+<li>
+<p>spectrum simulated on a plane normal to the sun</p>
+</li>
+<li>
+<p>All other parameters fixed at G173 standard</p>
+</li>
+</ul>
+
+<p>From these simulated spectra, M is calculated using the known
+quantum efficiency curves. Multiple linear regression is then
+applied to fit Eq. 1 to determine the coefficients for each module.</p>
+
+<p>Based on the PVLIB Matlab function <code>pvl_FSspeccorr</code> by Mitchell
+Lee and Alex Panchula, at First Solar, 2016 [2]_.</p>
+
+<ul>
+<li>
+<p>cdte' - First Solar Series 4-2 CdTe modules.</p>
+</li>
+<li>
+<p>monosi, xsi - First Solar TetraSun modules.</p>
+</li>
+<li>
+<p>multisi, polysi - multi-crystalline silicon modules.</p>
+</li>
+<li>
+<p>cigs - anonymous copper indium gallium selenide PV module</p>
+</li>
+<li>
+<p>asi - anonymous amorphous silicon PV module</p>
+</li>
+</ul>
+
+<p>The module used to calculate the spectral correction
+coefficients corresponds to the Mult-crystalline silicon
+Manufacturer 2 Model C from [3]<em>. Spectral Response (SR) of CIGS
+and a-Si modules used to derive coefficients can be found in [4]</em></p>
+
+<h2>References:</h2>
+
+<p>.. [1] Gueymard, Christian. SMARTS2: a simple model of the atmospheric
+radiative transfer of sunshine: algorithms and performance
+assessment. Cocoa, FL: Florida Solar Energy Center, 1995.
+.. [2] Lee, Mitchell, and Panchula, Alex. &quot;Spectral Correction for
+Photovoltaic Module Performance Based on Air Mass and Precipitable
+Water.&quot; IEEE Photovoltaic Specialists Conference, Portland, 2016
+.. [3] Marion, William F., et al. User's Manual for Data for Validating
+Models for PV Module Performance. National Renewable Energy
+Laboratory, 2014. http://www.nrel.gov/docs/fy14osti/61610.pdf
+.. [4] Schweiger, M. and Hermann, W, Influence of Spectral Effects
+on Energy Yield of Different PV Modules: Comparison of Pwat and
+MMF Approach, TUV Rheinland Energy GmbH report 21237296.003,
+January 2017</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>pw</th>
+    <td><code class="type">Double</code></td>
+    <td><p>atmospheric precipitable water (cm).</p>
+</td>
+</tr>
+<tr>
+    <th>airmass​Absolute</th>
+    <td><code class="type">Double</code></td>
+    <td><p>absolute (pressure corrected) airmass.</p>
+</td>
+</tr>
+<tr>
+    <th>module​Type</th>
+    <td><code class="type">Module​Type</code></td>
+    <td><p>a enum case specifying a cell type.</p>
+</td>
+</tr>
+<tr>
+    <th>coefficients</th>
+    <td></td>
+    <td><p>allows for entry of user funcined spectral correction coefficients. Coefficients must be of length 6. Derivation of coefficients requires use of SMARTS and PV module quantum efficiency curve. Useful for modeling PV module types which are not included as defaults, or to fine tune the spectral correction to a particular mono-Si, multi-Si, or CdTe PV module. Note that the parameters for modules with very similar QE should be similar, in most cases limiting the need for module specific coefficients.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>spectral mismatch factor (unitless) which is can be multiplied with broadband irradiance reaching a module's cells to estimate effective irradiance, i.e., the irradiance that is converted to electrical current.</p>
+
+</div>
+<div role="article" class="function" id="atmosphere.birdhulstrom80_aod_bb(aod380:aod500:)">
+    <h3>
+        <code><a href="#atmosphere.birdhulstrom80_aod_bb(aod380:aod500:)">bird​Hulstrom80_aod_bb(aod380:​aod500:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">birdHulstrom80_aod_bb</span>(<span class="variable">aod380</span>: <span class="type">Double</span>, <span class="variable">aod500</span>: <span class="type">Double</span>)
+    -&gt; <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Approximate broadband aerosol optical depth.</p>
+
+</div>
+<div class="discussion">
+    <p>Bird and Hulstrom developed a correlation for broadband aerosol optical
+depth (AOD) using two wavelengths, 380 nm and 500 nm.</p>
+
+<aside class="see also" title="See Also">
+    <p>kasten96_lt</p>
+
+</aside>
+<h2>References:</h2>
+
+<p>[1] Bird and Hulstrom, &quot;Direct Insolation Models&quot; (1980)
+<code>SERI/TR-335-344 &lt;http://www.nrel.gov/docs/legosti/old/344.pdf&gt;</code>_</p>
+
+<p>[2] R. E. Bird and R. L. Hulstrom, &quot;Review, Evaluation, and Improvement of
+Direct Irradiance Models&quot;, Journal of Solar Energy Engineering 103(3),
+pp. 182-192 (1981)
+:doi:<code>10.1115/1.3266239</code></p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>aod380</th>
+    <td><code class="type">Double</code></td>
+    <td><p>AOD measured at 380 nm</p>
+</td>
+</tr>
+<tr>
+    <th>aod500</th>
+    <td><code class="type">Double</code></td>
+    <td><p>AOD measured at 500 nm</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>broadband AOD</p>
+
+</div>
+<div role="article" class="function" id="atmosphere.kasten96_lt(airmassabsolute:precipitablewater:aodbb:)">
+    <h3>
+        <code><a href="#atmosphere.kasten96_lt(airmassabsolute:precipitablewater:aodbb:)">kasten96_lt(airmass​Absolute:​precipitable​Water:​aod​Bb:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">kasten96_lt</span>(
+    <span class="variable">airmassAbsolute</span>: <span class="type">Double</span>, <span class="variable">precipitableWater</span>: <span class="type">Double</span>, <span class="variable">aodBb</span>: <span class="type">Double</span>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Calculate Linke turbidity factor using Kasten pyrheliometric formula.</p>
+
+</div>
+<div class="discussion">
+    <p>Note that broadband aerosol optical depth (AOD) can be approximated by AOD
+measured at 700 nm according to Molineaux [4] . Bird and Hulstrom offer an
+alternate approximation using AOD measured at 380 nm and 500 nm.</p>
+
+<p>Based on original implementation by Armel Oumbe.</p>
+
+<aside class="warning" title="Warning">
+    <p>These calculations are only valid for air mass less than 5 atm and precipitable water less than 5 cm.</p>
+
+</aside>
+<h2>References</h2>
+
+<p>[1] F. Linke, &quot;Transmissions-Koeffizient und Trubungsfaktor&quot;, Beitrage
+zur Physik der Atmosphare, Vol 10, pp. 91-103 (1922)</p>
+
+<p>[2] F. Kasten, &quot;A simple parameterization of the pyrheliometric formula for
+determining the Linke turbidity factor&quot;, Meteorologische Rundschau 33,
+pp. 124-127 (1980)</p>
+
+<p>[3] Kasten, &quot;The Linke turbidity factor based on improved values of the
+integral Rayleigh optical thickness&quot;, Solar Energy, Vol. 56, No. 3,
+pp. 239-244 (1996)
+:doi:<code>10.1016/0038-092X(95)00114-7</code></p>
+
+<p>[4] B. Molineaux, P. Ineichen, N. O'Neill, &quot;Equivalence of pyrheliometric
+and monochromatic aerosol optical depths at a single key wavelength&quot;,
+Applied Optics Vol. 37, issue 10, 7008-7018 (1998)
+:doi:<code>10.1364/AO.37.007008</code></p>
+
+<p>[5] P. Ineichen, &quot;Conversion function between the Linke turbidity and the
+atmospheric water vapor and aerosol content&quot;, Solar Energy 82,
+pp. 1095-1097 (2008)
+:doi:<code>10.1016/j.solener.2008.04.010</code></p>
+
+<p>[6] P. Ineichen and R. Perez, &quot;A new airmass independent formulation for
+the Linke Turbidity coefficient&quot;, Solar Energy, Vol. 73, no. 3, pp. 151-157
+(2002)
+:doi:<code>10.1016/S0038-092X(02)00045-2</code></p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>airmass​Absolute</th>
+    <td><code class="type">Double</code></td>
+    <td><p>airmass, pressure corrected in atmospheres</p>
+</td>
+</tr>
+<tr>
+    <th>precipitable​Water</th>
+    <td><code class="type">Double</code></td>
+    <td><p>precipitable water or total column water vapor in centimeters</p>
+</td>
+</tr>
+<tr>
+    <th>aod​Bb</th>
+    <td><code class="type">Double</code></td>
+    <td><p>broadband AOD</p>
+</td>
+</tr>
+<tr>
+    <th>Returns</th>
+    <td></td>
+    <td><p>Linke turbidity</p>
+</td>
+</tr>
+<tr>
+    <th>See​Also</th>
+    <td></td>
+    <td><p>bird_hulstrom80_aod_bb</p>
+</td>
+</tr>
+<tr>
+    <th>See​Also</th>
+    <td></td>
+    <td><p>angstrom_aod_at_lambda</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="atmosphere.angstromaodatlambda(aod0:lambda0:alpha:lambda1:)">
+    <h3>
+        <code><a href="#atmosphere.angstromaodatlambda(aod0:lambda0:alpha:lambda1:)">angstrom​Aod​AtLambda(aod0:​lambda0:​alpha:​lambda1:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">angstromAodAtLambda</span>(
+    <span class="variable">aod0</span>: <span class="type">Double</span>, <span class="variable">lambda0</span>: <span class="type">Double</span>, <span class="variable">alpha</span>: <span class="type">Double</span>, <span class="variable">lambda1</span>: <span class="type">Double</span> = <span class="number literal">700.0</span>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Get AOD at specified wavelength using Angstrom turbidity model.</p>
+
+</div>
+<div class="discussion">
+    <p>References:
+----------/
+[1] Anders Angstrom, &quot;On the Atmospheric Transmission of Sun Radiation and
+On Dust in the Air&quot;, Geografiska Annaler Vol. 11, pp. 156-166 (1929) JSTOR
+:doi:<code>10.2307/519399</code></p>
+
+<p>[2] Anders Angstrom, &quot;Techniques of Determining the Turbidity of the
+Atmosphere&quot;, Tellus 13:2, pp. 214-223 (1961) Taylor &amp; Francis
+:doi:<code>10.3402/tellusa.v13i2.9493</code> and Co-Action Publishing
+:doi:<code>10.1111/j.2153-3490.1961.tb00078.x</code></p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>aod0</th>
+    <td><code class="type">Double</code></td>
+    <td><p>aerosol optical depth (AOD) measured at known wavelength</p>
+</td>
+</tr>
+<tr>
+    <th>lambda0</th>
+    <td><code class="type">Double</code></td>
+    <td><p>wavelength in nanometers corresponding to <code>aod0</code></p>
+</td>
+</tr>
+<tr>
+    <th>alpha</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Angstrom α exponent corresponding to <code>aod0</code></p>
+</td>
+</tr>
+<tr>
+    <th>lambda1</th>
+    <td><code class="type">Double</code></td>
+    <td><p>desired wavelength in nanometers</p>
+</td>
+</tr>
+<tr>
+    <th>Returns</th>
+    <td></td>
+    <td><p>AOD at desired wavelength, <code>lambda1</code></p>
+</td>
+</tr>
+<tr>
+    <th>See​Also</th>
+    <td></td>
+    <td><p>angstrom_alpha</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="atmosphere.angstromalpha(aod1:lambda1:aod2:lambda2:)">
+    <h3>
+        <code><a href="#atmosphere.angstromalpha(aod1:lambda1:aod2:lambda2:)">angstrom​Alpha(aod1:​lambda1:​aod2:​lambda2:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">angstromAlpha</span>(
+    <span class="variable">aod1</span>: <span class="type">Double</span>, <span class="variable">lambda1</span>: <span class="type">Double</span>, <span class="variable">aod2</span>: <span class="type">Double</span>, <span class="variable">lambda2</span>: <span class="type">Double</span>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Calculate Angstrom alpha exponent.</p>
+
+</div>
+<div class="discussion">
+    <aside class="see also" title="See Also">
+    <p>angstrom_aod_at_lambda</p>
+
+</aside>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>aod1</th>
+    <td><code class="type">Double</code></td>
+    <td><p>first aerosol optical depth</p>
+</td>
+</tr>
+<tr>
+    <th>lambda1</th>
+    <td><code class="type">Double</code></td>
+    <td><p>wavelength in nanometers corresponding to <code>aod1</code></p>
+</td>
+</tr>
+<tr>
+    <th>aod2</th>
+    <td><code class="type">Double</code></td>
+    <td><p>second aerosol optical depth</p>
+</td>
+</tr>
+<tr>
+    <th>lambda2</th>
+    <td><code class="type">Double</code></td>
+    <td><p>wavelength in nanometers corresponding to <code>aod2</code></p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>Angstrom: α exponent for AOD in <code>(lambda1, lambda2)</code></p>
+
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:30+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

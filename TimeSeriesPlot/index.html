@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackBoxModel - TimeSeriesPlot</title>
+    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="./">
+            <strong>
+                BlackBoxModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#timeseriesplot.init(y1:y2:range:style:)">init(y1:​y2:​range:​style:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#timeseriesplot.gnuplot">gnuplot</a></li><li class="variable"><a href="#timeseriesplot.y1">y1</a></li><li class="variable"><a href="#timeseriesplot.y2">y2</a></li><li class="variable"><a href="#timeseriesplot.range">range</a></li><li class="variable"><a href="#timeseriesplot.y1titles">y1Titles</a></li><li class="variable"><a href="#timeseriesplot.y2titles">y2Titles</a></li><li class="variable"><a href="#timeseriesplot.y1label">y1Label</a></li><li class="variable"><a href="#timeseriesplot.y2label">y2Label</a></li><li class="variable"><a href="#timeseriesplot.settings">settings</a></li><li class="variable"><a href="#timeseriesplot.datablock">datablock</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#timeseriesplot.plot(code:)">plot(code:​)</a></li><li class="function"><a href="#timeseriesplot.callasfunction(tofile:)">call​AsFunction(to​File:​)</a></li><li class="function"><a href="#timeseriesplot.plot()">plot()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Time​Series​Plot</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">TimeSeriesPlot</span>  </body></html></code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="./TimeSeriesPlot_Style">TimeSeriesPlot.Style</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="timeseriesplot.init(y1:y2:range:style:)">
+    <h3>
+        <code><a href="#timeseriesplot.init(y1:y2:range:style:)">init(y1:​y2:​range:​style:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">y1</span>: [[<span class="type">Double</span>]], <span class="variable">y2</span>: [[<span class="type">Double</span>]] = [], <span class="variable">range</span>: <span class="type">DateInterval</span>, <span class="variable">style</span>: <a href="./Style"><span class="type">Style</span></a> = .<span class="variable">lines</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="timeseriesplot.gnuplot">
+    <h3>
+        <code><a href="#timeseriesplot.gnuplot">gnuplot</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">gnuplot</span>: <span class="type">Process</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.y1">
+    <h3>
+        <code><a href="#timeseriesplot.y1">y1</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">y1</span>: [[<span class="type">Double</span>]] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.y2">
+    <h3>
+        <code><a href="#timeseriesplot.y2">y2</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">y2</span>: [[<span class="type">Double</span>]] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.range">
+    <h3>
+        <code><a href="#timeseriesplot.range">range</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">range</span>: <span class="type">DateInterval</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.y1titles">
+    <h3>
+        <code><a href="#timeseriesplot.y1titles">y1Titles</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">y1Titles</span>: [<span class="type">String</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.y2titles">
+    <h3>
+        <code><a href="#timeseriesplot.y2titles">y2Titles</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">y2Titles</span>: [<span class="type">String</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.y1label">
+    <h3>
+        <code><a href="#timeseriesplot.y1label">y1Label</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">y1Label</span>: <span class="type">String</span> = <span class="string literal">"</span><span class="string literal"/><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.y2label">
+    <h3>
+        <code><a href="#timeseriesplot.y2label">y2Label</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">y2Label</span>: <span class="type">String</span> = <span class="string literal">"</span><span class="string literal"/><span class="string literal">"</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.settings">
+    <h3>
+        <code><a href="#timeseriesplot.settings">settings</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">settings</span>: [<span class="type">String</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="timeseriesplot.datablock">
+    <h3>
+        <code><a href="#timeseriesplot.datablock">datablock</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">datablock</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="timeseriesplot.plot(code:)">
+    <h3>
+        <code><a href="#timeseriesplot.plot(code:)">plot(code:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">plot</span>(<span class="variable">code</span>: <span class="type">String</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="timeseriesplot.callasfunction(tofile:)">
+    <h3>
+        <code><a href="#timeseriesplot.callasfunction(tofile:)">call​AsFunction(to​File:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">callAsFunction</span>(<span class="variable">toFile</span>: <span class="type">String</span>? = <span class="keyword">nil</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="timeseriesplot.plot()">
+    <h3>
+        <code><a href="#timeseriesplot.plot()">plot()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">plot</span>() -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-08T14:34:30+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
