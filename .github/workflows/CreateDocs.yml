@@ -35,16 +35,14 @@ jobs:
       - name: Generate Documentation
         uses: SwiftDocOrg/swift-doc@master
         with:
-          inputs: ".spc/Sources"
+          inputs: "./spc/Sources"
           module-name: BlackBoxModel
           minimum-access-level: internal
           output: "doc"
-      
-      - uses: actions/checkout@v2
       
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
           path: "doc"
-        env:
+        env:          
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.MYPAT }}
