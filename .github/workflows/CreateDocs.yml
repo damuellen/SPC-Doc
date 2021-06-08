@@ -14,14 +14,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          path: doc
+
+      - name: Checkout SPC
+        uses: actions/checkout@v2
         with: 
           repository: damuellen/SPC
           token: ${{ secrets.MYPAT }}
+          path: spc
           
       - name: Update package dependencies
+        working-directory: ./spc
         run: swift package update
-
+        
       - name: Build Debug mode
+        working-directory: ./spc
         run: swift build -Xswiftc -suppress-warnings
 
       - name: Generate Documentation
