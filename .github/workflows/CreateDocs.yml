@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v2
         with: 
           repository: damuellen/SPC
-          token: ${{ secrets.GitHub_PAT }}
+          token: ${{ secrets.MYPAT }}
           
       - name: Update package dependencies
         run: swift package update
