@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlackBoxModel - **</title>
-    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+    <title>BlackBoxModel - |&gt;</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="./">
+        <a href="https://damuellen.github.io/SPC-Doc/">
             <strong>
                 BlackBoxModel
             </strong>
@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#implementations">Implementations</a><ul><li class="function"><a href="#double.**">Double ** Double</a></li></ul></li></ol>
+            <ol><li><a href="#implementations">Implementations</a><ul><li class="function"><a href="#|&gt;">T |&gt; ((T)-&gt; U)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -33,21 +33,21 @@
         <article>
             <h1>
     <small>Operator</small>
-    <code class="name">**</code>
+    <code class="name">|&gt;</code>
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="attribute">infix</span> <span class="keyword">operator</span> **: <a href="./ExponentiationPrecedence"><span class="type">ExponentiationPrecedence</span></a></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">infix</span> <span class="keyword">operator</span> |&gt;</body></html></code></pre>
 </div>
     <section id="implementations">
         <h2>Implementations</h2>
-        <div role="article" class="function" id="double.**">
+        <div role="article" class="function" id="|>">
     <h3>
-      <a href="#double.**">Double ** Double
+      <a href="#|>">T |&gt; ((T)-&gt; U)
       </a>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> ** (<span class="variable">lhs</span>: <span class="type">Double</span>, <span class="variable">rhs</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> |&gt; &lt;<span class="variable">T</span>, <span class="variable">U</span>&gt;(<span class="variable">value</span>: <span class="type">T</span>, <span class="variable">function</span>: ((<span class="type">T</span>)-&gt; <span class="type">U</span>)) -&gt; <span class="type">U</span>  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -56,7 +56,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-08T14:34:31+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-08T14:51:34+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

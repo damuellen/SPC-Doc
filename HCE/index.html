@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackBoxModel - HCE</title>
-    <link rel="stylesheet" type="text/css" href="./all.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="./">
+        <a href="https://damuellen.github.io/SPC-Doc/">
             <strong>
                 BlackBoxModel
             </strong>
@@ -84,7 +84,7 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">radiationLossesOld</span>(
-    <span class="keyword">_</span> <span class="variable">temperatures</span>: (<a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>), <span class="variable">insolation</span>: <span class="type">Double</span>)
+    <span class="keyword">_</span> <span class="variable">temperatures</span>: (<a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>), <span class="variable">insolation</span>: <span class="type">Double</span>)
     -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 </div>
@@ -94,7 +94,7 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">radiationLossesNew</span>(
-    <span class="keyword">_</span> <span class="variable">temperatures</span>: (<a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>, <a href="./Temperature"><span class="type">Temperature</span></a>), <span class="variable">insolation</span>: <span class="type">Double</span>)
+    <span class="keyword">_</span> <span class="variable">temperatures</span>: (<a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>), <span class="variable">insolation</span>: <span class="type">Double</span>)
     -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 </div>
@@ -104,10 +104,10 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">heatLosses</span>(
-    <span class="variable">inlet</span>: <a href="./Temperature"><span class="type">Temperature</span></a>,
-    <span class="variable">outlet</span>: <a href="./Temperature"><span class="type">Temperature</span></a> = <span class="variable">SolarField</span>.<span class="variable">parameter</span>.<span class="type">HTF</span>.<span class="variable">maxTemperature</span>,
+    <span class="variable">inlet</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>,
+    <span class="variable">outlet</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a> = <span class="variable">SolarField</span>.<span class="variable">parameter</span>.<span class="type">HTF</span>.<span class="variable">maxTemperature</span>,
     <span class="variable">insolation</span>: <span class="type">Double</span>,
-    <span class="variable">ambient</span>: <a href="./Temperature"><span class="type">Temperature</span></a>
+    <span class="variable">ambient</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>
   ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 </div>
@@ -117,10 +117,10 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">temperatures</span>(
-    <span class="keyword">_</span> <span class="variable">solarField</span>: <span class="keyword">inout</span> <a href="./SolarField"><span class="type">SolarField</span></a>,
-    <span class="keyword">_</span> <span class="variable">loop</span>: <a href="./SolarField"><span class="type">SolarField</span></a>.<span class="type">Loop</span>,
+    <span class="keyword">_</span> <span class="variable">solarField</span>: <span class="keyword">inout</span> <a href="https://damuellen.github.io/SPC-Doc/SolarField"><span class="type">SolarField</span></a>,
+    <span class="keyword">_</span> <span class="variable">loop</span>: <a href="https://damuellen.github.io/SPC-Doc/SolarField"><span class="type">SolarField</span></a>.<span class="type">Loop</span>,
     <span class="keyword">_</span> <span class="variable">insolation</span>: <span class="type">Double</span>,
-    <span class="keyword">_</span> <span class="variable">ambient</span>: <a href="./Temperature"><span class="type">Temperature</span></a>
+    <span class="keyword">_</span> <span class="variable">ambient</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>
   ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
@@ -133,7 +133,7 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
         <code><a href="#hce.factorheatlosshtf(solarfield:infocus:)">factor​Heat​Loss​HTF(solar​Field:​in​Focus:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">factorHeatLossHTF</span>(<span class="variable">solarField</span>: <span class="keyword">inout</span> <a href="./SolarField"><span class="type">SolarField</span></a>, <span class="variable">inFocus</span>: <span class="type">Double</span>)  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">factorHeatLossHTF</span>(<span class="variable">solarField</span>: <span class="keyword">inout</span> <a href="https://damuellen.github.io/SPC-Doc/SolarField"><span class="type">SolarField</span></a>, <span class="variable">inFocus</span>: <span class="type">Double</span>)  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -145,7 +145,7 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-08T14:34:30+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-08T14:51:34+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
