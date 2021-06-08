@@ -36,11 +36,13 @@ jobs:
           inputs: "./spc/Sources"
           module-name: BlackBoxModel
           minimum-access-level: internal
-          output: "./documentation"
+          output: "./spc/documentation"
           format: "html"
           
+      - run: sudo chown -R $USER:$USER ./spc/documentation
+      
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: ./documentation
+          folder: "./spc/documentation"
