@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarPerformanceCalc - PV</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://damuellen.github.io/SPC-Doc/">
+            <strong>
+                SolarPerformanceCalc
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.array">array</a></li><li class="variable"><a href="#pv.inverter">inverter</a></li><li class="variable"><a href="#pv.transformer">transformer</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#pv.watts(radiation:ambient:windspeed:)">watts(radiation:​ambient:​wind​Speed:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">PV</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">PV</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The PV_System struct wraps the functions of the pv system components.</p>
+
+</div>
+<div class="discussion">
+    <p>This simplifies the API by eliminating the need for a user to specify
+arguments such as module and inverter properties.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_Array">PV.Array</a></code></dt>
+<dd><p>Represents a group of modules with the same orientation and module type.</p>
+</dd>
+<dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_Transformer">PV.Transformer</a></code></dt>
+<dd><p>Represents a transformer with its losses.</p>
+</dd>
+<dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_Cell">PV.Cell</a></code></dt>
+<dd><p>Low-level functions for solving the single diode equation.</p>
+</dd>
+<dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_PowerPoint">PV.PowerPoint</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_Panel">PV.Panel</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="pv.array">
+    <h3>
+        <code><a href="#pv.array">array</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">array</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="pv.inverter">
+    <h3>
+        <code><a href="#pv.inverter">inverter</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">inverter</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="pv.transformer">
+    <h3>
+        <code><a href="#pv.transformer">transformer</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">transformer</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="pv.watts(radiation:ambient:windspeed:)">
+    <h3>
+        <code><a href="#pv.watts(radiation:ambient:windspeed:)">watts(radiation:​ambient:​wind​Speed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">watts</span>(<span class="variable">radiation</span> <span class="variable">effective</span>: <span class="type">Double</span>, <span class="variable">ambient</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <span class="variable">windSpeed</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-09T09:50:36+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

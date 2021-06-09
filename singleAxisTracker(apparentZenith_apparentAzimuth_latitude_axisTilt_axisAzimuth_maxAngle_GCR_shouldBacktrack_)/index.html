@@ -38,29 +38,31 @@
 
 <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">singleAxisTracker</span>(
-  <span class="variable">apparentZenith</span>: <span class="type">Double</span>, <span class="variable">apparentAzimuth</span>: <span class="type">Double</span>, <span class="variable">latitude</span>: <span class="type">Double</span>,
+  <span class="variable">apparentZenith</span>: <span class="type">Double</span>, <span class="variable">apparentAzimuth</span>: <span class="type">Double</span>, <span class="variable">latitude</span>: <span class="type">Double</span> = <span class="number literal">0</span>,
   <span class="variable">axisTilt</span>: <span class="type">Double</span> = <span class="number literal">0</span>, <span class="variable">axisAzimuth</span>: <span class="type">Double</span> = <span class="number literal">180</span>, <span class="variable">maxAngle</span>: <span class="type">Double</span>,
   <span class="variable">GCR</span>: <span class="type">Double</span>, <span class="variable">shouldBacktrack</span>: <span class="type">Bool</span> = <span class="keyword">true</span>
-) -&gt; (<span class="type">Double</span>, <span class="type">Double</span>, <span class="type">Double</span>, <span class="type">Double</span>)  </body></html></code></pre>
+) -&gt; (<span class="variable">trackerTheta</span>: <span class="type">Double</span>, <span class="variable">AOI</span>: <span class="type">Double</span>, <span class="variable">surfTilt</span>: <span class="type">Double</span>, <span class="variable">surfAz</span>: <span class="type">Double</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
+    <p>A function for single-axis trackers</p>
+
+</div>
+<div class="discussion">
     <p>Determine the rotation angle of a single axis tracker using the
 equations in [1] when given a particular sun zenith and azimuth
 angle. backtracking may be specified, and if so, a ground coverage
 ratio is required.</p>
 
-</div>
-<div class="discussion">
-    <p>Rotation angle is determined in a panel-oriented coordinate system.
+<p>Rotation angle is determined in a panel-oriented coordinate system.
 The tracker azimuth axis_azimuth defines the positive y-axis; the
 positive x-axis is 90 degress clockwise from the y-axis and parallel
 to the earth surface, and the positive z-axis is normal and oriented
-towards the sun. Rotation angle tracker_theta indicates tracker
-position relative to horizontal: tracker_theta = 0 is horizontal,
-and positive tracker_theta is a clockwise rotation around the y axis
+towards the sun. Rotation angle trackerTheta indicates tracker
+position relative to horizontal: trackerTheta = 0 is horizontal,
+and positive trackerTheta is a clockwise rotation around the y axis
 in the x, y, z coordinate system. For example, if tracker azimuth
-axis_azimuth is 180 (oriented south), tracker_theta = 30 is a
-rotation of 30 degrees towards the west, and tracker_theta = -90 is
+axis_azimuth is 180 (oriented south), trackerTheta = 30 is a
+rotation of 30 degrees towards the west, and trackerTheta = -90 is
 a rotation to the vertical plane facing east.</p>
 
 <h2>References</h2>
@@ -95,7 +97,7 @@ Photovoltaics: Research and Applications, v. 19, pp. 747-753.</p>
 <tr>
     <th>axis​Tilt</th>
     <td><code class="type">Double</code></td>
-    <td><p>The tilt of the axis of rotation (i.e, the y-axis defined by axis_azimuth) with respect to horizontal, in decimal degrees.</p>
+    <td><p>The tilt of the axis of rotation (i.e, the y-axis defined by axisAzimuth) with respect to horizontal, in decimal degrees.</p>
 </td>
 </tr>
 <tr>
@@ -125,7 +127,7 @@ Photovoltaics: Research and Applications, v. 19, pp. 747-753.</p>
 <tr>
     <th>Returns</th>
     <td></td>
-    <td><p>The rotation angle of the tracker. tracker_theta = 0 is horizontal, and positive rotation angles are clockwise. The angle-of-incidence of direct irradiance onto the rotated panel surface. The angle between the panel surface and the earth surface, accounting for panel rotation. The azimuth of the rotated panel, determined by projecting the vector normal to the panel's surface to the earth's surface.</p>
+    <td><p>The rotation angle of the tracker. trackerTheta = 0 is horizontal, and positive rotation angles are clockwise. The angle-of-incidence of direct irradiance onto the rotated panel surface. The angle between the panel surface and the earth surface, accounting for panel rotation. The azimuth of the rotated panel, determined by projecting the vector normal to the panel's surface to the earth's surface.</p>
 </td>
 </tr>
   </tbody>
@@ -135,7 +137,7 @@ Photovoltaics: Research and Applications, v. 19, pp. 747-753.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-08T15:20:59+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-09T09:50:36+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

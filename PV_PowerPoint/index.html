@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolarPerformanceCalc - Cell.PowerPoint</title>
+    <title>SolarPerformanceCalc - PV.PowerPoint</title>
     <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
 </head>
 <body>
@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#cell.powerpoint.init(current:voltage:)">init(current:​voltage:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#cell.powerpoint.current">current</a></li><li class="variable"><a href="#cell.powerpoint.voltage">voltage</a></li><li class="variable"><a href="#cell.powerpoint.power">power</a></li><li class="variable"><a href="#cell.powerpoint.zero">zero</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#pv.powerpoint.init(current:voltage:)">init(current:​voltage:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.powerpoint.current">current</a></li><li class="variable"><a href="#pv.powerpoint.voltage">voltage</a></li><li class="variable"><a href="#pv.powerpoint.power">power</a></li><li class="variable"><a href="#pv.powerpoint.zero">zero</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -33,19 +33,28 @@
         <article>
             <h1>
     <small>Structure</small>
-    <code class="name">Cell.​Power​Point</code>
+    <code class="name">PV.​Power​Point</code>
 </h1>
 
 <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">PowerPoint</span>  </body></html></code></pre>
 </div>
-
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV">PV</a></code></dt>
+<dd><p>The PV_System struct wraps the functions of the pv system components.</p>
+</dd>
+</dl>
+</section>
     <section id="initializers">
         <h2>Initializers</h2>
 
-        <div role="article" class="initializer" id="cell.powerpoint.init(current:voltage:)">
+        <div role="article" class="initializer" id="pv.powerpoint.init(current:voltage:)">
     <h3>
-        <code><a href="#cell.powerpoint.init(current:voltage:)">init(current:​voltage:​)</a></code>
+        <code><a href="#pv.powerpoint.init(current:voltage:)">init(current:​voltage:​)</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">init</span>(<span class="variable">current</span>: <span class="type">Double</span>, <span class="variable">voltage</span>: <span class="type">Double</span>)  </body></html></code></pre>
@@ -55,33 +64,33 @@
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="cell.powerpoint.current">
+        <div role="article" class="variable" id="pv.powerpoint.current">
     <h3>
-        <code><a href="#cell.powerpoint.current">current</a></code>
+        <code><a href="#pv.powerpoint.current">current</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">current</span>: <span class="type">Double</span></body></html></code></pre>
 </div>
 </div>
-<div role="article" class="variable" id="cell.powerpoint.voltage">
+<div role="article" class="variable" id="pv.powerpoint.voltage">
     <h3>
-        <code><a href="#cell.powerpoint.voltage">voltage</a></code>
+        <code><a href="#pv.powerpoint.voltage">voltage</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">voltage</span>: <span class="type">Double</span></body></html></code></pre>
 </div>
 </div>
-<div role="article" class="variable" id="cell.powerpoint.power">
+<div role="article" class="variable" id="pv.powerpoint.power">
     <h3>
-        <code><a href="#cell.powerpoint.power">power</a></code>
+        <code><a href="#pv.powerpoint.power">power</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">power</span>: <span class="type">Double</span></body></html></code></pre>
 </div>
 </div>
-<div role="article" class="variable" id="cell.powerpoint.zero">
+<div role="article" class="variable" id="pv.powerpoint.zero">
     <h3>
-        <code><a href="#cell.powerpoint.zero">zero</a></code>
+        <code><a href="#pv.powerpoint.zero">zero</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">zero</span>: <span class="type">PowerPoint</span>  </body></html></code></pre>
@@ -96,7 +105,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-08T15:20:57+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-09T09:50:36+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarPerformanceCalc - PV.Panel</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://damuellen.github.io/SPC-Doc/">
+            <strong>
+                SolarPerformanceCalc
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#pv.panel.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.panel.cell">cell</a></li><li class="variable"><a href="#pv.panel.nominalpower">nominal​Power</a></li><li class="variable"><a href="#pv.panel.area">area</a></li><li class="variable"><a href="#pv.panel.numberofcells">number​OfCells</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#pv.panel.voltage(radiation:temperature:current:)">voltage(radiation:​temperature:​current:​)</a></li><li class="function"><a href="#pv.panel.current(radiation:temperature:voltage:)">current(radiation:​temperature:​voltage:​)</a></li><li class="function"><a href="#pv.panel.maxpowerpoint(radiation:ambient:windspeed:)">max​Power​Point(radiation:​ambient:​wind​Speed:​)</a></li><li class="function"><a href="#pv.panel.maxpowerpoint(radiation:temperature:)">max​Power​Point(radiation:​temperature:​)</a></li><li class="function"><a href="#pv.panel.bisect(iph:io:a:rsh:)">bisect(Iph:​Io:​a:​Rsh:​)</a></li><li class="function"><a href="#pv.panel.imp_bisect(_:_:_:_:_:)">Imp_bisect(_:​_:​_:​_:​_:​)</a></li><li class="function"><a href="#pv.panel.g(_:_:_:_:_:_:)">g(_:​_:​_:​_:​_:​_:​)</a></li><li class="function"><a href="#pv.panel.phi_exact(_:_:_:_:_:)">phi_exact(_:​_:​_:​_:​_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">PV.​Panel</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Panel</span>  </body></html></code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV">PV</a></code></dt>
+<dd><p>The PV_System struct wraps the functions of the pv system components.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="pv.panel.init()">
+    <h3>
+        <code><a href="#pv.panel.init()">init()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>()  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="pv.panel.cell">
+    <h3>
+        <code><a href="#pv.panel.cell">cell</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">cell</span>: <span class="type">Cell</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="pv.panel.nominalpower">
+    <h3>
+        <code><a href="#pv.panel.nominalpower">nominal​Power</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">nominalPower</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Nominal power in Watts</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="pv.panel.area">
+    <h3>
+        <code><a href="#pv.panel.area">area</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">area</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Panel Area in m^2</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="pv.panel.numberofcells">
+    <h3>
+        <code><a href="#pv.panel.numberofcells">number​OfCells</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">numberOfCells</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Number of cells of the panel</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="pv.panel.voltage(radiation:temperature:current:)">
+    <h3>
+        <code><a href="#pv.panel.voltage(radiation:temperature:current:)">voltage(radiation:​temperature:​current:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">voltage</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">temperature</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <span class="variable">current</span>: <span class="type">Double</span>)
+      -&gt; <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.panel.current(radiation:temperature:voltage:)">
+    <h3>
+        <code><a href="#pv.panel.current(radiation:temperature:voltage:)">current(radiation:​temperature:​voltage:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">current</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">temperature</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <span class="variable">voltage</span>: <span class="type">Double</span>)
+      -&gt; <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.panel.maxpowerpoint(radiation:ambient:windspeed:)">
+    <h3>
+        <code><a href="#pv.panel.maxpowerpoint(radiation:ambient:windspeed:)">max​Power​Point(radiation:​ambient:​wind​Speed:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">maxPowerPoint</span>(
+      <span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">ambient</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <span class="variable">windSpeed</span>: <span class="type">Double</span>
+    ) -&gt; <span class="type">PowerPoint</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.panel.maxpowerpoint(radiation:temperature:)">
+    <h3>
+        <code><a href="#pv.panel.maxpowerpoint(radiation:temperature:)">max​Power​Point(radiation:​temperature:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">maxPowerPoint</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">temperature</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>)
+      -&gt; <span class="type">PowerPoint</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.panel.bisect(iph:io:a:rsh:)">
+    <h3>
+        <code><a href="#pv.panel.bisect(iph:io:a:rsh:)">bisect(Iph:​Io:​a:​Rsh:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">bisect</span>(<span class="variable">Iph</span>: <span class="type">Double</span>, <span class="variable">Io</span>: <span class="type">Double</span>, <span class="variable">a</span>: <span class="type">Double</span>, <span class="variable">Rsh</span>: <span class="type">Double</span>) -&gt; <span class="type">PowerPoint</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.panel.imp_bisect(_:_:_:_:_:)">
+    <h3>
+        <code><a href="#pv.panel.imp_bisect(_:_:_:_:_:)">Imp_bisect(_:​_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">Imp_bisect</span>(
+      <span class="keyword">_</span> <span class="variable">Iph</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Io</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">nVth</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Rs</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Rsh</span>: <span class="type">Double</span>
+    ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.panel.g(_:_:_:_:_:_:)">
+    <h3>
+        <code><a href="#pv.panel.g(_:_:_:_:_:_:)">g(_:​_:​_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">g</span>(
+      <span class="keyword">_</span> <span class="variable">I</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Iph</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Io</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">a</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Rs</span>: <span class="type">Double</span>,
+      <span class="keyword">_</span> <span class="variable">Rsh</span>: <span class="type">Double</span>
+    ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.panel.phi_exact(_:_:_:_:_:)">
+    <h3>
+        <code><a href="#pv.panel.phi_exact(_:_:_:_:_:)">phi_exact(_:​_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">phi_exact</span>(
+      <span class="keyword">_</span> <span class="variable">Imp</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">IL</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Io</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">a</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">Rsh</span>: <span class="type">Double</span>
+    ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-09T09:50:34+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

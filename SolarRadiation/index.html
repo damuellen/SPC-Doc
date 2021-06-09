@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#solarradiation.init()">init()</a></li><li class="initializer"><a href="#solarradiation.init(meteo:costheta:)">init(meteo:​cos​Theta:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#solarradiation.ico">ico</a></li><li class="variable"><a href="#solarradiation.dhi">dhi</a></li><li class="variable"><a href="#solarradiation.ghi">ghi</a></li><li class="variable"><a href="#solarradiation.dni">dni</a></li><li class="variable"><a href="#solarradiation.numericalform">numerical​Form</a></li><li class="variable"><a href="#solarradiation.columns">columns</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#solarradiation.totalize(_:fraction:)">totalize(_:​fraction:​)</a></li><li class="function"><a href="#solarradiation.zero()">zero()</a></li><li class="function"><a href="#solarradiation.perez(surfacetilt:incidence:diffuse:direct:hextra:sunzenith:am:)">perez(surface​Tilt:​incidence:​diffuse:​direct:​hExtra:​sun​Zenith:​AM:​)</a></li><li class="function"><a href="#solarradiation.beam(global:diffuse:incidence:zenith:)">beam(global:​diffuse:​incidence:​zenith:​)</a></li><li class="function"><a href="#solarradiation.normal(global:diffuse:zenith:)">normal(global:​diffuse:​zenith:​)</a></li><li class="function"><a href="#solarradiation.extra(date:)">extra(date:​)</a></li><li class="function"><a href="#solarradiation.grounddiffuse(surftilt:ghi:albedo:)">ground​Diffuse(surf​Tilt:​GHI:​albedo:​)</a></li></ul></li></ol>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#solarradiation.init()">init()</a></li><li class="initializer"><a href="#solarradiation.init(meteo:costheta:)">init(meteo:​cos​Theta:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#solarradiation.dhi">dhi</a></li><li class="variable"><a href="#solarradiation.ghi">ghi</a></li><li class="variable"><a href="#solarradiation.ico">ico</a></li><li class="variable"><a href="#solarradiation.dni">dni</a></li><li class="variable"><a href="#solarradiation.numericalform">numerical​Form</a></li><li class="variable"><a href="#solarradiation.columns">columns</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#solarradiation.totalize(_:fraction:)">totalize(_:​fraction:​)</a></li><li class="function"><a href="#solarradiation.zero()">zero()</a></li><li class="function"><a href="#solarradiation.effective(ghi:dhi:surftilt:incidence:zenith:doy:)">effective(ghi:​dhi:​surf​Tilt:​incidence:​zenith:​doy:​)</a></li><li class="function"><a href="#solarradiation.perez(surfacetilt:incidence:diffuse:direct:hextra:sunzenith:am:)">perez(surface​Tilt:​incidence:​diffuse:​direct:​hExtra:​sun​Zenith:​AM:​)</a></li><li class="function"><a href="#solarradiation.beam(global:diffuse:incidence:zenith:)">beam(global:​diffuse:​incidence:​zenith:​)</a></li><li class="function"><a href="#solarradiation.normal(global:diffuse:zenith:)">normal(global:​diffuse:​zenith:​)</a></li><li class="function"><a href="#solarradiation.extra(doy:)">extra(doy:​)</a></li><li class="function"><a href="#solarradiation.grounddiffuse(surftilt:ghi:albedo:)">ground​Diffuse(surf​Tilt:​GHI:​albedo:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -37,7 +37,7 @@
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">SolarRadiation</span>: <a href="https://damuellen.github.io/SPC-Doc/MeasurementsConvertible"><span class="type">MeasurementsConvertible</span></a>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">SolarRadiation</span>: <a href="https://damuellen.github.io/SPC-Doc/MeasurementsConvertible"><span class="type">MeasurementsConvertible</span></a>  </body></html></code></pre>
 </div>
 
     <section id="initializers">
@@ -63,15 +63,7 @@
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="solarradiation.ico">
-    <h3>
-        <code><a href="#solarradiation.ico">ico</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">dni</span>, <span class="variable">ghi</span>, <span class="variable">dhi</span>, <span class="variable">ico</span>: <span class="type">Double</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="solarradiation.dhi">
+        <div role="article" class="variable" id="solarradiation.dhi">
     <h3>
         <code><a href="#solarradiation.dhi">dhi</a></code>
     </h3>
@@ -82,6 +74,14 @@
 <div role="article" class="variable" id="solarradiation.ghi">
     <h3>
         <code><a href="#solarradiation.ghi">ghi</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">dni</span>, <span class="variable">ghi</span>, <span class="variable">dhi</span>, <span class="variable">ico</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="solarradiation.ico">
+    <h3>
+        <code><a href="#solarradiation.ico">ico</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">dni</span>, <span class="variable">ghi</span>, <span class="variable">dhi</span>, <span class="variable">ico</span>: <span class="type">Double</span></body></html></code></pre>
@@ -129,6 +129,17 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">zero</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="solarradiation.effective(ghi:dhi:surftilt:incidence:zenith:doy:)">
+    <h3>
+        <code><a href="#solarradiation.effective(ghi:dhi:surftilt:incidence:zenith:doy:)">effective(ghi:​dhi:​surf​Tilt:​incidence:​zenith:​doy:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">effective</span>(
+    <span class="variable">ghi</span>: <span class="type">Double</span>, <span class="variable">dhi</span>: <span class="type">Double</span>, <span class="variable">surfTilt</span>: <span class="type">Double</span>, <span class="variable">incidence</span>: <span class="type">Double</span>,
+    <span class="variable">zenith</span>: <span class="type">Double</span>, <span class="variable">doy</span>: <span class="type">Int</span>
+  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="function" id="solarradiation.perez(surfacetilt:incidence:diffuse:direct:hextra:sunzenith:am:)">
@@ -217,12 +228,12 @@
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">normal</span>(<span class="variable">global</span>: <span class="type">Double</span>, <span class="variable">diffuse</span>: <span class="type">Double</span>, <span class="variable">zenith</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="solarradiation.extra(date:)">
+<div role="article" class="function" id="solarradiation.extra(doy:)">
     <h3>
-        <code><a href="#solarradiation.extra(date:)">extra(date:​)</a></code>
+        <code><a href="#solarradiation.extra(doy:)">extra(doy:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">extra</span>(<span class="variable">date</span>: <a href="https://damuellen.github.io/SPC-Doc/DateTime"><span class="type">DateTime</span></a>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">extra</span>(<span class="variable">doy</span>: <span class="type">Int</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Extraterrestrial radiation from day of year</p>
@@ -241,7 +252,7 @@
   <tbody>
     <tr>
     <th>date</th>
-    <td><code class="type">Date​Time</code></td>
+    <td></td>
     <td><p>Date whose extraterrestial radiation will be calculated</param></p>
 </td>
 </tr>
@@ -268,7 +279,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-08T15:20:58+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-09T09:50:35+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

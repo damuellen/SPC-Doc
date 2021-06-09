@@ -40,15 +40,11 @@
 <pre class="highlight"><code><html><body><span class="keyword">enum</span> <span class="type">HCE</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>if Mode 1 then Actime has no meaning.
-if Mode 2 and massFlow == 0 SF calculates Actime the heat losses in the HCEs.
-if Actime &gt; 0 then HCE calculates the time of HTF being in HCEs minus Actime</p>
+    <p>Heat Collecting Element</p>
 
 </div>
 <div class="discussion">
-    <h1>HCE  Heat Collecting Element</h1>
-
-<ul>
+    <ul>
 <li>
 <p>Mode 1:
 Calculate the right mass-flow to get maximum allowed HTF-outlet temp.
@@ -64,6 +60,10 @@ calculate by heat losses the HTF-temp. in the HCE after Actime minutes.</p>
 </ul>
 
 <h2>Actime: [minutes]</h2>
+
+<p>if Mode 1 then Actime has no meaning.
+if Mode 2 and massFlow == 0 SF calculates Actime the heat losses in the HCEs.
+if Actime &gt; 0 then HCE calculates the time of HTF being in HCEs minus Actime</p>
 
 <h2>Actime: [sec]</h2>
 
@@ -145,7 +145,7 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-08T15:20:58+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-09T09:50:35+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

@@ -40,8 +40,8 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">SolarPosition</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>A table only containing values where the sun is above the horizon.
-To access values in the table use a date as a subscript.</p>
+    <p>A struct containing values where the sun is above the horizon.
+Look up values using date-based subscript. Otherwise returns nil.</p>
 
 </div>
 <section id="relationships">
@@ -54,7 +54,8 @@ To access values in the table use a date as a subscript.</p>
 <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/SolarPosition_OutputValues">SolarPosition.OutputValues</a></code></dt>
 <dd></dd>
 <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/SolarPosition_Location">SolarPosition.Location</a></code></dt>
-<dd></dd>
+<dd><p>A struct for latitude, longitude, timezone, and altitude data associated with a particular geographic location.</p>
+</dd>
 </dl>
 </section>
     <section id="initializers">
@@ -71,7 +72,7 @@ To access values in the table use a date as a subscript.</p>
   )  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Returns a table initialized with precalculated sun position
+    <p>Creates a struct with precalculated sun position
 for the given location and year at the predetermined times.</p>
 
 </div>
@@ -178,7 +179,7 @@ for the given location and year at the predetermined times.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-08T15:20:57+0000">June 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-09T09:50:36+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
