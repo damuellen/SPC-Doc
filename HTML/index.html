@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#html.init(body:)">init(body:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#html.body">body</a></li><li class="variable"><a href="#html.type">type</a></li><li class="variable"><a href="#html.meta">meta</a></li><li class="variable"><a href="#html.style">style</a></li><li class="variable"><a href="#html.raw">raw</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#html.pdf(tofile:)">pdf(to​File:​)</a></li></ul></li></ol>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#html.init(body:)">init(body:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#html.json">json</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#html.render()">render()</a></li><li class="function"><a href="#html.pdf(tofile:)">pdf(to​File:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -39,6 +39,14 @@
 <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">HTML</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A representation of an HTML document.</p>
+
+</div>
+<div class="discussion">
+    <p>Call the <code>render()</code> method to turn it into a string.</p>
+
+</div>
 
     <section id="initializers">
         <h2>Initializers</h2>
@@ -50,87 +58,53 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">body</span>: <span class="type">String</span>)  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Creates an HTML document with the given body.</p>
+
+</div>
 </div>
     </section>
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="html.body">
+        <div role="article" class="variable" id="html.json">
     <h3>
-        <code><a href="#html.body">body</a></code>
+        <code><a href="#html.json">json</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">body</span>: <span class="type">String</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">json</span>: <span class="type">String</span>? = <span class="keyword">nil</span></body></html></code></pre>
 </div>
-</div>
-<div role="article" class="variable" id="html.type">
-    <h3>
-        <code><a href="#html.type">type</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">type</span> = <span class="string literal">"</span><span class="string literal">&lt;!DOCTYPE html&gt;\n</span><span class="string literal">"</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="html.meta">
-    <h3>
-        <code><a href="#html.meta">meta</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">meta</span> = <span class="string literal">"</span><span class="string literal">&lt;meta charset=\"utf-8\"&gt;\n</span><span class="string literal">"</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="html.style">
-    <h3>
-        <code><a href="#html.style">style</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">style</span> = <span class="string literal">"""</span><span class="string literal">
-    &lt;style media="print"&gt;
-      svg { font-family: sans-serif; font-size: 16px;}
-    &lt;/style&gt;
-    &lt;style media="screen"&gt;
-      svg {
-        margin-top: 1%;
-        margin-left: 1%;
-        margin-right: auto;
-        padding-bottom: 2vh;
-        height: 95vh;
-        width: 98%;
-        font-family: sans-serif;
-        font-size: 16px;
-      }
-      tspan { font-family: sans-serif;}
-      body { background-color: rgb(247,247,247);}
-      @media (prefers-color-scheme: dark) {
-        svg { filter: drop-shadow(3px 3px 3px rgb(255, 255, 255)); }
-        body {
-          background-color: rgb(20,20,20);
-          background-image: radial-gradient(circle, rgb(50,50,50), rgb(20,20,20));
-          filter: invert(1);
-        }
-      }
-    &lt;/style&gt;
-    </span><span class="string literal">"""</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="html.raw">
-    <h3>
-        <code><a href="#html.raw">raw</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">raw</span>: <span class="type">String</span>  </body></html></code></pre>
+<div class="summary" role="doc-abstract">
+    <p>Optional json content to be rendered.</p>
+
 </div>
 </div>
     </section>
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="html.pdf(tofile:)">
+        <div role="article" class="function" id="html.render()">
+    <h3>
+        <code><a href="#html.render()">render()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">render</span>() -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Creates an html string from the document</p>
+
+</div>
+</div>
+<div role="article" class="function" id="html.pdf(tofile:)">
     <h3>
         <code><a href="#html.pdf(tofile:)">pdf(to​File:​)</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">pdf</span>(<span class="variable">toFile</span> <span class="variable">name</span>: <span class="type">String</span>) <span class="keyword">throws</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Create a pdf file from the document.</p>
+
 </div>
 </div>
     </section>
@@ -142,7 +116,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-09T09:50:35+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-11T10:19:09+0000">June 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

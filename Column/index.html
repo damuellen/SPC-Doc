@@ -48,9 +48,11 @@
         <code><a href="#column.init(title:value:width:align:truncate:formatter:)">init(title:​value:​width:​align:​truncate:​formatter:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">title</span>: <span class="type">String</span>, <span class="variable">value</span>: <span class="keyword">Any</span>, <span class="variable">width</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>,
-              <span class="variable">align</span>: <a href="https://damuellen.github.io/SPC-Doc/StringAlignment"><span class="type">StringAlignment</span></a> = .<span class="variable">left</span>, <span class="variable">truncate</span>: <a href="https://damuellen.github.io/SPC-Doc/Truncation"><span class="type">Truncation</span></a> = .<span class="variable">tail</span>,
-              <span class="variable">formatter</span>: <span class="type">Formatter</span>? = <span class="keyword">nil</span>)  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(
+    <span class="variable">title</span>: <span class="type">String</span>, <span class="variable">value</span>: <span class="keyword">Any</span>, <span class="variable">width</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>,
+    <span class="variable">align</span>: <a href="https://damuellen.github.io/SPC-Doc/StringAlignment"><span class="type">StringAlignment</span></a> = .<span class="variable">left</span>, <span class="variable">truncate</span>: <a href="https://damuellen.github.io/SPC-Doc/Truncation"><span class="type">Truncation</span></a> = .<span class="variable">tail</span>,
+    <span class="variable">formatter</span>: <span class="type">Formatter</span>? = <span class="keyword">nil</span>
+  )  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="initializer" id="column.init(_:width:align:truncate:formatter:)">
@@ -58,9 +60,11 @@
         <code><a href="#column.init(_:width:align:truncate:formatter:)">init(_:​width:​align:​truncate:​formatter:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">mapping</span>: <span class="attribute">@</span><span class="attribute">autoclosure</span> () -&gt; (<span class="type">String</span>, <span class="keyword">Any</span>), <span class="variable">width</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>,
-              <span class="variable">align</span>: <a href="https://damuellen.github.io/SPC-Doc/StringAlignment"><span class="type">StringAlignment</span></a> = .<span class="variable">left</span>, <span class="variable">truncate</span>: <a href="https://damuellen.github.io/SPC-Doc/Truncation"><span class="type">Truncation</span></a> = .<span class="variable">tail</span>,
-              <span class="variable">formatter</span>: <span class="type">Formatter</span>? = <span class="keyword">nil</span>)  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(
+    <span class="keyword">_</span> <span class="variable">mapping</span>: <span class="attribute">@</span><span class="attribute">autoclosure</span> () -&gt; (<span class="type">String</span>, <span class="keyword">Any</span>), <span class="variable">width</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>,
+    <span class="variable">align</span>: <a href="https://damuellen.github.io/SPC-Doc/StringAlignment"><span class="type">StringAlignment</span></a> = .<span class="variable">left</span>, <span class="variable">truncate</span>: <a href="https://damuellen.github.io/SPC-Doc/Truncation"><span class="type">Truncation</span></a> = .<span class="variable">tail</span>,
+    <span class="variable">formatter</span>: <span class="type">Formatter</span>? = <span class="keyword">nil</span>
+  )  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -132,7 +136,7 @@
         <code><a href="#column.string(for:)">string(for:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">string</span>(<span class="variable">for</span> <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/TextTableStyle"><span class="type">TextTableStyle</span></a>.<span class="type">Type</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">string</span>(<span class="variable">for</span> <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/TextTableStyle"><span class="type">TextTableStyle</span></a>.<span class="type">Type</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="function" id="column.headerstring(for:)">
@@ -140,7 +144,7 @@
         <code><a href="#column.headerstring(for:)">header​String(for:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">headerString</span>(<span class="variable">for</span> <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/TextTableStyle"><span class="type">TextTableStyle</span></a>.<span class="type">Type</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">headerString</span>(<span class="variable">for</span> <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/TextTableStyle"><span class="type">TextTableStyle</span></a>.<span class="type">Type</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="function" id="column.repeated(_:)">
@@ -148,7 +152,7 @@
         <code><a href="#column.repeated(_:)">repeated(_:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">repeated</span>(<span class="keyword">_</span> <span class="variable">string</span>: <span class="type">String</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">repeated</span>(<span class="keyword">_</span> <span class="variable">string</span>: <span class="type">String</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -160,7 +164,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-09T09:50:35+0000">June 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-11T10:19:10+0000">June 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
