@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#pv.array.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.array.panelsperstring">panels​Per​String</a></li><li class="variable"><a href="#pv.array.strings">strings</a></li><li class="variable"><a href="#pv.array.inverters">inverters</a></li><li class="variable"><a href="#pv.array.panel">panel</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#pv.array.pmp(radiation:ambient:windspeed:)">pmp(radiation:​ambient:​wind​Speed:​)</a></li><li class="function"><a href="#pv.array.pmp(radiation:cell:)">pmp(radiation:​cell:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#pv.array.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.array.panelsperstring">panels​Per​String</a></li><li class="variable"><a href="#pv.array.strings">strings</a></li><li class="variable"><a href="#pv.array.inverters">inverters</a></li><li class="variable"><a href="#pv.array.panel">panel</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#pv.array.callasfunction(radiation:ambient:windspeed:)">call​AsFunction(radiation:​ambient:​wind​Speed:​)</a></li><li class="function"><a href="#pv.array.callasfunction(voltage:radiation:cell:)">call​AsFunction(voltage:​radiation:​cell:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -73,7 +73,7 @@
         <code><a href="#pv.array.panelsperstring">panels​Per​String</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">panelsPerString</span>: <span class="type">Int</span> = <span class="number literal">27</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">panelsPerString</span>: <span class="type">Int</span></body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="pv.array.strings">
@@ -81,7 +81,7 @@
         <code><a href="#pv.array.strings">strings</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">strings</span>: <span class="type">Int</span> = <span class="number literal">295</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">strings</span>: <span class="type">Int</span></body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="pv.array.inverters">
@@ -89,7 +89,7 @@
         <code><a href="#pv.array.inverters">inverters</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">inverters</span>: <span class="type">Int</span> = <span class="number literal">1</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">inverters</span>: <span class="type">Int</span></body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="pv.array.panel">
@@ -97,27 +97,27 @@
         <code><a href="#pv.array.panel">panel</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">panel</span>: <span class="type">Panel</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">panel</span>: <span class="type">Panel</span></body></html></code></pre>
 </div>
 </div>
     </section>
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="pv.array.pmp(radiation:ambient:windspeed:)">
+        <div role="article" class="function" id="pv.array.callasfunction(radiation:ambient:windspeed:)">
     <h3>
-        <code><a href="#pv.array.pmp(radiation:ambient:windspeed:)">pmp(radiation:​ambient:​wind​Speed:​)</a></code>
+        <code><a href="#pv.array.callasfunction(radiation:ambient:windspeed:)">call​AsFunction(radiation:​ambient:​wind​Speed:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">pmp</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">ambient</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <span class="variable">windSpeed</span>: <span class="type">Double</span>) -&gt; <span class="type">PowerPoint</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">callAsFunction</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">ambient</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>, <span class="variable">windSpeed</span>: <span class="type">Double</span>) -&gt; <span class="type">PowerPoint</span>  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="pv.array.pmp(radiation:cell:)">
+<div role="article" class="function" id="pv.array.callasfunction(voltage:radiation:cell:)">
     <h3>
-        <code><a href="#pv.array.pmp(radiation:cell:)">pmp(radiation:​cell:​)</a></code>
+        <code><a href="#pv.array.callasfunction(voltage:radiation:cell:)">call​AsFunction(voltage:​radiation:​cell:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">pmp</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">cell</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>) -&gt; <span class="type">PowerPoint</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">callAsFunction</span>(<span class="variable">voltage</span>: <span class="type">Double</span>, <span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">cell</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>) -&gt; <span class="type">PowerPoint</span></body></html></code></pre>
 </div>
 </div>
     </section>
@@ -129,7 +129,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-11T10:19:09+0000">June 11, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-14T12:27:10+0000">June 14, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

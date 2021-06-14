@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarPerformanceCalc - PV.Inverter</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://damuellen.github.io/SPC-Doc/">
+            <strong>
+                SolarPerformanceCalc
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#pv.inverter.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.inverter.dc_power">dc_power</a></li><li class="variable"><a href="#pv.inverter.voltagelevels">voltage​Levels</a></li><li class="variable"><a href="#pv.inverter.maxvoltage">max​Voltage</a></li><li class="variable"><a href="#pv.inverter.nomvoltage">nom​Voltage</a></li><li class="variable"><a href="#pv.inverter.minvoltage">min​Voltage</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#pv.inverter.callasfunction(power:voltage:)">call​AsFunction(power:​voltage:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">PV.​Inverter</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Inverter</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Convert DC power and voltage to AC power</p>
+
+</div>
+<div class="discussion">
+    <p>Performance is described at three DC input voltage levels</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV">PV</a></code></dt>
+<dd><p>The PV_System struct wraps the functions of the pv system components.</p>
+</dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="pv.inverter.init()">
+    <h3>
+        <code><a href="#pv.inverter.init()">init()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>()  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="pv.inverter.dc_power">
+    <h3>
+        <code><a href="#pv.inverter.dc_power">dc_power</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">dc_power</span>: [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="pv.inverter.voltagelevels">
+    <h3>
+        <code><a href="#pv.inverter.voltagelevels">voltage​Levels</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">voltageLevels</span>: [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="pv.inverter.maxvoltage">
+    <h3>
+        <code><a href="#pv.inverter.maxvoltage">max​Voltage</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">maxVoltage</span>: [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="pv.inverter.nomvoltage">
+    <h3>
+        <code><a href="#pv.inverter.nomvoltage">nom​Voltage</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">nomVoltage</span>: [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="pv.inverter.minvoltage">
+    <h3>
+        <code><a href="#pv.inverter.minvoltage">min​Voltage</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">minVoltage</span>: [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="pv.inverter.callasfunction(power:voltage:)">
+    <h3>
+        <code><a href="#pv.inverter.callasfunction(power:voltage:)">call​AsFunction(power:​voltage:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">callAsFunction</span>(<span class="variable">power</span>: <span class="type">Double</span>, <span class="variable">voltage</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Determines the efficiency of an inverter given the DC power and DC voltage.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-06-14T12:27:09+0000">June 14, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
