@@ -25,19 +25,23 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#gnuplot.init(data:)">init(data:​)</a></li><li class="initializer"><a href="#gnuplot.init(temperatures:)">init(temperatures:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gnuplot.datablock">datablock</a></li><li class="variable"><a href="#gnuplot.plot">plot</a></li><li class="variable"><a href="#gnuplot.settings">settings</a></li><li class="variable"><a href="#gnuplot.settingssvg">settings​SVG</a></li><li class="variable"><a href="#gnuplot.settingspdf">settings​PDF</a></li><li class="variable"><a href="#gnuplot.temperatures">temperatures</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gnuplot.process()">process()</a></li><li class="function"><a href="#gnuplot.plot(_:)">plot(_:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#gnuplot.init(data:)">init(data:​)</a></li><li class="initializer"><a href="#gnuplot.init(temperatures:)">init(temperatures:​)</a></li><li class="initializer"><a href="#gnuplot.init(xys:titles:)">init(xys:​titles:​)</a></li><li class="initializer"><a href="#gnuplot.init(xy1s:xy2s:titles:)">init(xy1s:​xy2s:​titles:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gnuplot.datablock">datablock</a></li><li class="variable"><a href="#gnuplot.plot">plot</a></li><li class="variable"><a href="#gnuplot.settings">settings</a></li><li class="variable"><a href="#gnuplot.usersettings">user​Settings</a></li><li class="variable"><a href="#gnuplot.usercommand">user​Command</a></li><li class="variable"><a href="#gnuplot.svg">SVG</a></li><li class="variable"><a href="#gnuplot.pdf">PDF</a></li><li class="variable"><a href="#gnuplot.png">PNG</a></li><li class="variable"><a href="#gnuplot.temperatures">temperatures</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gnuplot.process()">process()</a></li><li class="function"><a href="#gnuplot.plot(_:)">plot(_:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
     <main>
         <article>
             <h1>
-    <small>Structure</small>
+    <small>Class</small>
     <code class="name">Gnuplot</code>
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Gnuplot</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Gnuplot</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Create graphs using gnuplot.</p>
+
 </div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
@@ -67,6 +71,24 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">temperatures</span>: <span class="type">String</span>)  </body></html></code></pre>
 </div>
 </div>
+<div role="article" class="initializer" id="gnuplot.init(xys:titles:)">
+    <h3>
+        <code><a href="#gnuplot.init(xys:titles:)">init(xys:​titles:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>&lt;<span class="variable">T</span>: <span class="type">FloatingPoint</span>&gt;(<span class="variable">xys</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">titles</span>: <span class="type">String</span>...)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="gnuplot.init(xy1s:xy2s:titles:)">
+    <h3>
+        <code><a href="#gnuplot.init(xy1s:xy2s:titles:)">init(xy1s:​xy2s:​titles:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>&lt;<span class="variable">T</span>: <span class="type">FloatingPoint</span>&gt;(
+    <span class="variable">xy1s</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">xy2s</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">titles</span>: <span class="type">String</span>...
+  )  </body></html></code></pre>
+</div>
+</div>
     </section>
     <section id="properties">
         <h2>Properties</h2>
@@ -84,7 +106,7 @@
         <code><a href="#gnuplot.plot">plot</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">plot</span>: <span class="type">String</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">plot</span>: <span class="type">String</span></body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="gnuplot.settings">
@@ -92,32 +114,68 @@
         <code><a href="#gnuplot.settings">settings</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">settings</span> = [
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">settings</span> = [
     <span class="string literal">"</span><span class="string literal">style line 11 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#0072bd'</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">style line 12 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#d95319'</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">style line 13 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#edb120'</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">style line 14 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#7e2f8e'</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">style line 15 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#77ac30'</span><span class="string literal">"</span>,
-    <span class="string literal">"</span><span class="string literal">style line 16 lt 1 lw 1 dashtype 3 lc rgb 'black'</span><span class="string literal">"</span>,
-    <span class="string literal">"</span><span class="string literal">style line 17 lt 0 lw 0.5 lc rgb 'black'</span><span class="string literal">"</span>,
-    <span class="string literal">"</span><span class="string literal">label textcolor rgb 'black'</span><span class="string literal">"</span>
+    <span class="string literal">"</span><span class="string literal">style line 16 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#4dbeee'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 17 lt 1 lw 3 pt 7 ps 0.5 lc rgb '#a2142f'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 21 lt 1 lw 3 pt 9 ps 0.8 lc rgb '#0072bd'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 22 lt 1 lw 3 pt 9 ps 0.8 lc rgb '#d95319'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 23 lt 1 lw 3 pt 9 ps 0.8 lc rgb '#edb120'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 24 lt 1 lw 3 pt 9 ps 0.8 lc rgb '#7e2f8e'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 25 lt 1 lw 3 pt 9 ps 0.8 lc rgb '#77ac30'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 26 lt 1 lw 3 pt 9 ps 0.8 lc rgb '#4dbeee'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 27 lt 1 lw 3 pt 9 ps 0.8 lc rgb '#a2142f'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 18 lt 1 lw 1 dashtype 3 lc rgb 'black'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">style line 19 lt 0 lw 0.5 lc rgb 'black'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">label textcolor rgb 'black'</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">key above tc ls 18</span><span class="string literal">"</span>,
   ] </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="variable" id="gnuplot.settingssvg">
+<div role="article" class="variable" id="gnuplot.usersettings">
     <h3>
-        <code><a href="#gnuplot.settingssvg">settings​SVG</a></code>
+        <code><a href="#gnuplot.usersettings">user​Settings</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">settingsSVG</span> = [<span class="string literal">"</span><span class="string literal">border 31 lw 0.5 lc rgb 'black'</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">grid ls 17</span><span class="string literal">"</span>] </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">userSettings</span>  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="variable" id="gnuplot.settingspdf">
+<div role="article" class="variable" id="gnuplot.usercommand">
     <h3>
-        <code><a href="#gnuplot.settingspdf">settings​PDF</a></code>
+        <code><a href="#gnuplot.usercommand">user​Command</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">settingsPDF</span> = [<span class="string literal">"</span><span class="string literal">border 31 lw 1 lc rgb 'black'</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">grid ls 16</span><span class="string literal">"</span>] </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">userCommand</span>: <span class="type">String</span>? = <span class="keyword">nil</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.svg">
+    <h3>
+        <code><a href="#gnuplot.svg">SVG</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">SVG</span> = [<span class="string literal">"</span><span class="string literal">border 31 lw 0.5 lc rgb 'black'</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">grid ls 19</span><span class="string literal">"</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.pdf">
+    <h3>
+        <code><a href="#gnuplot.pdf">PDF</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">PDF</span> = [<span class="string literal">"</span><span class="string literal">border 31 lw 1 lc rgb 'black'</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">grid ls 18</span><span class="string literal">"</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gnuplot.png">
+    <h3>
+        <code><a href="#gnuplot.png">PNG</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">PNG</span> = [
+    <span class="string literal">"</span><span class="string literal">object rectangle from graph 0,0 to graph 1,1 behind fillcolor rgb '#EBEBEB' fillstyle solid noborder</span><span class="string literal">"</span>
+  ] </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="gnuplot.temperatures">
@@ -125,11 +183,8 @@
         <code><a href="#gnuplot.temperatures">temperatures</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">temperatures</span> = [
-    <span class="string literal">"</span><span class="string literal">xtics 10</span><span class="string literal">"</span>,
-    <span class="string literal">"</span><span class="string literal">ytics 10</span><span class="string literal">"</span>,
-    <span class="string literal">"</span><span class="string literal">key top left tc ls 16</span><span class="string literal">"</span>,
-    <span class="string literal">"</span><span class="string literal">title 'T-Q' textcolor rgb 'black'</span><span class="string literal">"</span>,
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">temperatures</span> = [
+    <span class="string literal">"</span><span class="string literal">key top left tc ls 18</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">xtics 10</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">ytics 10</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">xlabel 'Q̇ [MW]' textcolor rgb 'black'</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">ylabel 'Temperatures [°C]' textcolor rgb 'black'</span><span class="string literal">"</span>,
   ] </body></html></code></pre>
@@ -152,7 +207,17 @@
         <code><a href="#gnuplot.plot(_:)">plot(_:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">plot</span>(<span class="keyword">_</span> <span class="variable">terminal</span>: <span class="type">Terminal</span>) <span class="keyword">throws</span> -&gt; <span class="type">String</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">plot</span>(<span class="keyword">_</span> <span class="variable">terminal</span>: <span class="type">Terminal</span>) <span class="keyword">throws</span> -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Execute and returns the plot commands.</p>
+
+</div>
+<div class="discussion">
+    <aside class="note" title="Note">
+    <p>If the svg terminal is used, the function returns the svg.</p>
+
+</aside>
 </div>
 </div>
     </section>
@@ -164,7 +229,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-14T12:27:08+0000">June 14, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-25T08:45:18+0000">June 25, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

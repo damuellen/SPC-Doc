@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#pv.cell.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.cell.radiation_at_st">radiation_at_ST</a></li><li class="variable"><a href="#pv.cell.temperature_at_st">temperature_at_ST</a></li><li class="variable"><a href="#pv.cell.k">k</a></li><li class="variable"><a href="#pv.cell.q">q</a></li><li class="variable"><a href="#pv.cell.isc">Isc</a></li><li class="variable"><a href="#pv.cell.rs">Rs</a></li><li class="variable"><a href="#pv.cell.rshref">Rsh​Ref</a></li><li class="variable"><a href="#pv.cell.rsh0">Rsh0</a></li><li class="variable"><a href="#pv.cell.muisc">mu​Isc</a></li><li class="variable"><a href="#pv.cell.ioref">Ioref</a></li><li class="variable"><a href="#pv.cell.gamma">gamma</a></li><li class="variable"><a href="#pv.cell.egap">Egap</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#pv.cell.temperature(radiation:ambient:windspeed:nominalpower:panelarea:)">temperature(radiation:​ambient:​wind​Speed:​nominal​Power:​panel​Area:​)</a></li><li class="function"><a href="#pv.cell.photocurrent(radiation:temperature:)">photocurrent(radiation:​temperature:​)</a></li><li class="function"><a href="#pv.cell.saturationcurrent(temperature:)">saturation​Current(temperature:​)</a></li><li class="function"><a href="#pv.cell.rshunt(radiation:temperature:)">Rshunt(radiation:​temperature:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#pv.cell.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#pv.cell.radiation_at_st">radiation_at_ST</a></li><li class="variable"><a href="#pv.cell.temperature_at_st">temperature_at_ST</a></li><li class="variable"><a href="#pv.cell.k">k</a></li><li class="variable"><a href="#pv.cell.q">q</a></li><li class="variable"><a href="#pv.cell.isc">Isc</a></li><li class="variable"><a href="#pv.cell.rs">Rs</a></li><li class="variable"><a href="#pv.cell.rshref">Rsh​Ref</a></li><li class="variable"><a href="#pv.cell.rsh0">Rsh0</a></li><li class="variable"><a href="#pv.cell.muisc">mu​Isc</a></li><li class="variable"><a href="#pv.cell.ioref">Ioref</a></li><li class="variable"><a href="#pv.cell.gamma">gamma</a></li><li class="variable"><a href="#pv.cell.egap">Egap</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#pv.cell.callasfunction(radiation:temperature:)">call​AsFunction(radiation:​temperature:​)</a></li><li class="function"><a href="#pv.cell.temperature(radiation:ambient:windspeed:nominalpower:panelarea:)">temperature(radiation:​ambient:​wind​Speed:​nominal​Power:​panel​Area:​)</a></li><li class="function"><a href="#pv.cell.photocurrent(radiation:temperature:)">photocurrent(radiation:​temperature:​)</a></li><li class="function"><a href="#pv.cell.saturationcurrent(temperature:)">saturation​Current(temperature:​)</a></li><li class="function"><a href="#pv.cell.rshunt(radiation:temperature:)">Rshunt(radiation:​temperature:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -91,6 +91,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">k</span> = <span class="number literal">1.3806488E-23</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Boltzman constant</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="pv.cell.q">
     <h3>
@@ -98,6 +102,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">q</span> = <span class="number literal">1.60217646E-19</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Electron charge in coulombs</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="pv.cell.isc">
@@ -192,7 +200,17 @@
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="pv.cell.temperature(radiation:ambient:windspeed:nominalpower:panelarea:)">
+        <div role="article" class="function" id="pv.cell.callasfunction(radiation:temperature:)">
+    <h3>
+        <code><a href="#pv.cell.callasfunction(radiation:temperature:)">call​AsFunction(radiation:​temperature:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">callAsFunction</span>(
+      <span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">temperature</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>
+    ) -&gt; (<span class="type">Double</span>, <span class="type">Double</span>, <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="pv.cell.temperature(radiation:ambient:windspeed:nominalpower:panelarea:)">
     <h3>
         <code><a href="#pv.cell.temperature(radiation:ambient:windspeed:nominalpower:panelarea:)">temperature(radiation:​ambient:​wind​Speed:​nominal​Power:​panel​Area:​)</a></code>
     </h3>
@@ -202,6 +220,10 @@
       <span class="variable">nominalPower</span>: <span class="type">Double</span>, <span class="variable">panelArea</span>: <span class="type">Double</span>
     ) -&gt; <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the temperature of the cell.</p>
+
+</div>
 </div>
 <div role="article" class="function" id="pv.cell.photocurrent(radiation:temperature:)">
     <h3>
@@ -209,6 +231,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">photocurrent</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">temperature</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the radiation equivalent current within the single diode model.</p>
+
 </div>
 </div>
 <div role="article" class="function" id="pv.cell.saturationcurrent(temperature:)">
@@ -218,6 +244,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">saturationCurrent</span>(<span class="variable">temperature</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the corrected saturation current of the diode within the single diode model.</p>
+
+</div>
 </div>
 <div role="article" class="function" id="pv.cell.rshunt(radiation:temperature:)">
     <h3>
@@ -225,6 +255,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">Rshunt</span>(<span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">temperature</span>: <a href="https://damuellen.github.io/SPC-Doc/Temperature"><span class="type">Temperature</span></a>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the corrected Rshunt of the single diode model.</p>
+
 </div>
 </div>
     </section>
@@ -236,7 +270,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-14T12:27:10+0000">June 14, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-06-25T08:45:18+0000">June 25, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

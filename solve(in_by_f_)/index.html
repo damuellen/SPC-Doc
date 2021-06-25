@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolarPerformanceCalc - time</title>
+    <title>SolarPerformanceCalc - solve(in:by:f:)</title>
     <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
 </head>
 <body>
@@ -32,12 +32,12 @@
     <main>
         <article>
             <h1>
-<small>Variable</small>
-<span class="name">time</span>
+<small>Function</small>
+<span class="name">solve(in:​by:​f:​)</span>
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">time</span> = <span class="variable">String</span>((<span class="variable">end</span> - <span class="variable">start</span>) / <span class="number literal">1_000_000</span>) +  <span class="string literal">"</span><span class="string literal"> ms</span><span class="string literal">"</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">inlinable</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">solve</span>(<span class="variable">in</span> <span class="variable">range</span>: <span class="type">ClosedRange</span>&lt;<span class="type">Double</span>&gt;, <span class="variable">by</span>: <span class="type">Double</span>, <span class="variable">f</span>: (<span class="type">Double</span>) -&gt; <span class="type">Double</span>) -&gt; [(<span class="type">Double</span>, <span class="type">Double</span>)]  </body></html></code></pre>
 </div>
         </article>
     </main>
