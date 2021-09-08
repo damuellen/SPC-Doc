@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarPerformanceCalc - SunOl</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://damuellen.github.io/SPC-Doc/">
+            <strong>
+                SolarPerformanceCalc
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#sunol.init(values:)">init(values:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#sunol.csp_loop_nr">CSP_Loop_Nr</a></li><li class="variable"><a href="#sunol.pv_dc_cap">PV_DC_Cap</a></li><li class="variable"><a href="#sunol.pv_ac_cap">PV_AC_Cap</a></li><li class="variable"><a href="#sunol.heater_cap">Heater_cap</a></li><li class="variable"><a href="#sunol.tes_full_load_hours">TES_Full_Load_Hours</a></li><li class="variable"><a href="#sunol.ey_nominal_elec_input">EY_Nominal_elec_input</a></li><li class="variable"><a href="#sunol.pb_nominal_gross_cap">PB_Nominal_gross_cap</a></li><li class="variable"><a href="#sunol.bess_cap">BESS_cap</a></li><li class="variable"><a href="#sunol.h2_storage_cap">H2_storage_cap</a></li><li class="variable"><a href="#sunol.meth_nominal_hourly_prod_cap">Meth_nominal_hourly_prod_cap</a></li><li class="variable"><a href="#sunol.el_boiler_cap">El_boiler_cap</a></li><li class="variable"><a href="#sunol.grid_max_export">grid_max_export</a></li><li class="variable"><a href="#sunol.grid_max_import">grid_max_import</a></li><li class="variable"><a href="#sunol.bess_max_charging_cap">BESS_max_Charging_cap</a></li><li class="variable"><a href="#sunol.results">results</a></li><li class="variable"><a href="#sunol.q_solar_before_dumping_sum">Q_solar_before_dumping_sum</a></li><li class="variable"><a href="#sunol.tes_total_thermal_input_sum">TES_total_thermal_input_sum</a></li><li class="variable"><a href="#sunol.q_solar_avail_sum">Q_solar_avail_sum</a></li><li class="variable"><a href="#sunol.gross_elec_from_pb_sum">gross_elec_from_PB_sum</a></li><li class="variable"><a href="#sunol.aux_steam_provided_by_pb_sf_sum">aux_steam_provided_by_PB_SF_sum</a></li><li class="variable"><a href="#sunol.elec_from_grid_sum">elec_from_grid_sum</a></li><li class="variable"><a href="#sunol.elec_to_grid_sum">elec_to_grid_sum</a></li><li class="variable"><a href="#sunol.h2_to_meth_production_effective_mtph_sum">H2_to_meth_production_effective_MTPH_sum</a></li><li class="variable"><a href="#sunol.q_sol_aux_steam_dumped_sum">Q_Sol_aux_steam_dumped_sum</a></li><li class="variable"><a href="#sunol.ey_aux_heatconsumption_sum">EY_aux_heat​Consumption_sum</a></li><li class="variable"><a href="#sunol.ey_aux_heatconsumption_covered_by_pb_sf_sum">EY_aux_heat​Consumption_covered_by_PB_SF_sum</a></li><li class="variable"><a href="#sunol.meth_plant_heatconsumption_sum">meth_plant_heat​Consumption_sum</a></li><li class="variable"><a href="#sunol.meth_plant_heatconsumption_covered_by_heat_from_pb_sf_sum">meth_plant_heat​Consumption_covered_by_heat_from_PB_SF_sum</a></li><li class="variable"><a href="#sunol.extracted_steam_sum">extracted_steam_sum</a></li><li class="variable"><a href="#sunol.meth_produced_mtph_sum">meth_produced_MTPH_sum</a></li><li class="variable"><a href="#sunol.avail_total_net_elec_sum">avail_total_net_elec_sum</a></li><li class="variable"><a href="#sunol.tes_thermal_capacity">TES_Thermal_capacity</a></li><li class="variable"><a href="#sunol.tes_salt_mass">TES_salt_mass</a></li><li class="variable"><a href="#sunol.pb_ratio_heat_input_vs_output">PB_Ratio_Heat_input_vs_output</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#sunol.callasfunction(_:_:_:_:)">call​AsFunction(_:​_:​_:​_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Sun​Ol</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">SunOl</span>  </body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="sunol.init(values:)">
+    <h3>
+        <code><a href="#sunol.init(values:)">init(values:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">init</span>(<span class="variable">values</span>: [<span class="type">Double</span>])  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="sunol.csp_loop_nr">
+    <h3>
+        <code><a href="#sunol.csp_loop_nr">CSP_Loop_Nr</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">CSP_Loop_Nr</span> = <span class="number literal">113.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.pv_dc_cap">
+    <h3>
+        <code><a href="#sunol.pv_dc_cap">PV_DC_Cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">PV_DC_Cap</span> = <span class="number literal">818.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.pv_ac_cap">
+    <h3>
+        <code><a href="#sunol.pv_ac_cap">PV_AC_Cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">PV_AC_Cap</span> = <span class="number literal">613.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.heater_cap">
+    <h3>
+        <code><a href="#sunol.heater_cap">Heater_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Heater_cap</span> = <span class="number literal">239.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.tes_full_load_hours">
+    <h3>
+        <code><a href="#sunol.tes_full_load_hours">TES_Full_Load_Hours</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">TES_Full_Load_Hours</span> = <span class="number literal">14.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.ey_nominal_elec_input">
+    <h3>
+        <code><a href="#sunol.ey_nominal_elec_input">EY_Nominal_elec_input</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">EY_Nominal_elec_input</span> = <span class="number literal">280.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.pb_nominal_gross_cap">
+    <h3>
+        <code><a href="#sunol.pb_nominal_gross_cap">PB_Nominal_gross_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">PB_Nominal_gross_cap</span> = <span class="number literal">250.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.bess_cap">
+    <h3>
+        <code><a href="#sunol.bess_cap">BESS_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">BESS_cap</span> = <span class="number literal">100.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.h2_storage_cap">
+    <h3>
+        <code><a href="#sunol.h2_storage_cap">H2_storage_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">H2_storage_cap</span> = <span class="number literal">100.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.meth_nominal_hourly_prod_cap">
+    <h3>
+        <code><a href="#sunol.meth_nominal_hourly_prod_cap">Meth_nominal_hourly_prod_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Meth_nominal_hourly_prod_cap</span> = <span class="number literal">14.8</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.el_boiler_cap">
+    <h3>
+        <code><a href="#sunol.el_boiler_cap">El_boiler_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">El_boiler_cap</span> = <span class="number literal">100.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.grid_max_export">
+    <h3>
+        <code><a href="#sunol.grid_max_export">grid_max_export</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">grid_max_export</span> = <span class="number literal">70.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.grid_max_import">
+    <h3>
+        <code><a href="#sunol.grid_max_import">grid_max_import</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">grid_max_import</span> = <span class="number literal">70.0</span>   </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.bess_max_charging_cap">
+    <h3>
+        <code><a href="#sunol.bess_max_charging_cap">BESS_max_Charging_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">BESS_max_Charging_cap</span> = <span class="number literal">50.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.results">
+    <h3>
+        <code><a href="#sunol.results">results</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">results</span>: <a href="https://damuellen.github.io/SPC-Doc/Results"><span class="type">Results</span></a></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.q_solar_before_dumping_sum">
+    <h3>
+        <code><a href="#sunol.q_solar_before_dumping_sum">Q_solar_before_dumping_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Q_solar_before_dumping_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.tes_total_thermal_input_sum">
+    <h3>
+        <code><a href="#sunol.tes_total_thermal_input_sum">TES_total_thermal_input_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">TES_total_thermal_input_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.q_solar_avail_sum">
+    <h3>
+        <code><a href="#sunol.q_solar_avail_sum">Q_solar_avail_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Q_solar_avail_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.gross_elec_from_pb_sum">
+    <h3>
+        <code><a href="#sunol.gross_elec_from_pb_sum">gross_elec_from_PB_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">gross_elec_from_PB_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.aux_steam_provided_by_pb_sf_sum">
+    <h3>
+        <code><a href="#sunol.aux_steam_provided_by_pb_sf_sum">aux_steam_provided_by_PB_SF_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">aux_steam_provided_by_PB_SF_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.elec_from_grid_sum">
+    <h3>
+        <code><a href="#sunol.elec_from_grid_sum">elec_from_grid_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">elec_from_grid_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.elec_to_grid_sum">
+    <h3>
+        <code><a href="#sunol.elec_to_grid_sum">elec_to_grid_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">elec_to_grid_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.h2_to_meth_production_effective_mtph_sum">
+    <h3>
+        <code><a href="#sunol.h2_to_meth_production_effective_mtph_sum">H2_to_meth_production_effective_MTPH_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">H2_to_meth_production_effective_MTPH_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.q_sol_aux_steam_dumped_sum">
+    <h3>
+        <code><a href="#sunol.q_sol_aux_steam_dumped_sum">Q_Sol_aux_steam_dumped_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Q_Sol_aux_steam_dumped_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.ey_aux_heatconsumption_sum">
+    <h3>
+        <code><a href="#sunol.ey_aux_heatconsumption_sum">EY_aux_heat​Consumption_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">EY_aux_heatConsumption_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.ey_aux_heatconsumption_covered_by_pb_sf_sum">
+    <h3>
+        <code><a href="#sunol.ey_aux_heatconsumption_covered_by_pb_sf_sum">EY_aux_heat​Consumption_covered_by_PB_SF_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">EY_aux_heatConsumption_covered_by_PB_SF_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.meth_plant_heatconsumption_sum">
+    <h3>
+        <code><a href="#sunol.meth_plant_heatconsumption_sum">meth_plant_heat​Consumption_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">meth_plant_heatConsumption_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.meth_plant_heatconsumption_covered_by_heat_from_pb_sf_sum">
+    <h3>
+        <code><a href="#sunol.meth_plant_heatconsumption_covered_by_heat_from_pb_sf_sum">meth_plant_heat​Consumption_covered_by_heat_from_PB_SF_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">meth_plant_heatConsumption_covered_by_heat_from_PB_SF_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.extracted_steam_sum">
+    <h3>
+        <code><a href="#sunol.extracted_steam_sum">extracted_steam_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">extracted_steam_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.meth_produced_mtph_sum">
+    <h3>
+        <code><a href="#sunol.meth_produced_mtph_sum">meth_produced_MTPH_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">meth_produced_MTPH_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.avail_total_net_elec_sum">
+    <h3>
+        <code><a href="#sunol.avail_total_net_elec_sum">avail_total_net_elec_sum</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">avail_total_net_elec_sum</span>: <span class="type">Float</span> = <span class="number literal">0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.tes_thermal_capacity">
+    <h3>
+        <code><a href="#sunol.tes_thermal_capacity">TES_Thermal_capacity</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">TES_Thermal_capacity</span> = <span class="number literal">0.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.tes_salt_mass">
+    <h3>
+        <code><a href="#sunol.tes_salt_mass">TES_salt_mass</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">TES_salt_mass</span> = <span class="number literal">0.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.pb_ratio_heat_input_vs_output">
+    <h3>
+        <code><a href="#sunol.pb_ratio_heat_input_vs_output">PB_Ratio_Heat_input_vs_output</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">PB_Ratio_Heat_input_vs_output</span> = <span class="number literal">0.0</span></body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="sunol.callasfunction(_:_:_:_:)">
+    <h3>
+        <code><a href="#sunol.callasfunction(_:_:_:_:)">call​AsFunction(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">callAsFunction</span>(
+    <span class="keyword">_</span> <span class="variable">pr_meth_plant_op</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], 
+    <span class="keyword">_</span> <span class="variable">Q_Sol_MW_thLoop</span>: [<span class="type">Double</span>], 
+    <span class="keyword">_</span> <span class="variable">Reference_PV_plant_power_at_inverter_inlet_DC</span>: [<span class="type">Double</span>], 
+    <span class="keyword">_</span> <span class="variable">Reference_PV_MV_power_at_transformer_outlet</span>: [<span class="type">Double</span>]
+    )  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-09-08T22:03:05+0000">September 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#gnuplot.init(data:)">init(data:​)</a></li><li class="initializer"><a href="#gnuplot.init(temperatures:)">init(temperatures:​)</a></li><li class="initializer"><a href="#gnuplot.init(xys:titles:)">init(xys:​titles:​)</a></li><li class="initializer"><a href="#gnuplot.init(xy1s:xy2s:titles:)">init(xy1s:​xy2s:​titles:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gnuplot.datablock">datablock</a></li><li class="variable"><a href="#gnuplot.plot">plot</a></li><li class="variable"><a href="#gnuplot.settings">settings</a></li><li class="variable"><a href="#gnuplot.usersettings">user​Settings</a></li><li class="variable"><a href="#gnuplot.usercommand">user​Command</a></li><li class="variable"><a href="#gnuplot.svg">SVG</a></li><li class="variable"><a href="#gnuplot.pdf">PDF</a></li><li class="variable"><a href="#gnuplot.png">PNG</a></li><li class="variable"><a href="#gnuplot.temperatures">temperatures</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gnuplot.process()">process()</a></li><li class="function"><a href="#gnuplot.plot(_:)">plot(_:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#gnuplot.init(data:)">init(data:​)</a></li><li class="initializer"><a href="#gnuplot.init(temperatures:)">init(temperatures:​)</a></li><li class="initializer"><a href="#gnuplot.init(xys:titles:style:)">init(xys:​titles:​style:​)</a></li><li class="initializer"><a href="#gnuplot.init(xs:ys:titles:style:)">init(xs:​ys:​titles:​style:​)</a></li><li class="initializer"><a href="#gnuplot.init(xys:titles:style:)">init(xys:​titles:​style:​)</a></li><li class="initializer"><a href="#gnuplot.init(xy1s:xy2s:titles:style:)">init(xy1s:​xy2s:​titles:​style:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gnuplot.datablock">datablock</a></li><li class="variable"><a href="#gnuplot.plot">plot</a></li><li class="variable"><a href="#gnuplot.settings">settings</a></li><li class="variable"><a href="#gnuplot.usersettings">user​Settings</a></li><li class="variable"><a href="#gnuplot.usercommand">user​Command</a></li><li class="variable"><a href="#gnuplot.svg">SVG</a></li><li class="variable"><a href="#gnuplot.pdf">PDF</a></li><li class="variable"><a href="#gnuplot.png">PNG</a></li><li class="variable"><a href="#gnuplot.temperatures">temperatures</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gnuplot.process()">process()</a></li><li class="function"><a href="#gnuplot.callasfunction(_:)">call​AsFunction(_:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -48,7 +48,9 @@
         
         <h3>Nested Types</h3>
 <dl>
-    <dt class="enumeration"><code><a href="https://damuellen.github.io/SPC-Doc/Gnuplot_Terminal">Gnuplot.Terminal</a></code></dt>
+    <dt class="enumeration"><code><a href="https://damuellen.github.io/SPC-Doc/Gnuplot_Style">Gnuplot.Style</a></code></dt>
+<dd></dd>
+<dt class="enumeration"><code><a href="https://damuellen.github.io/SPC-Doc/Gnuplot_Terminal">Gnuplot.Terminal</a></code></dt>
 <dd></dd>
 </dl>
 </section>
@@ -71,22 +73,39 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">temperatures</span>: <span class="type">String</span>)  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="initializer" id="gnuplot.init(xys:titles:)">
+<div role="article" class="initializer" id="gnuplot.init(xys:titles:style:)">
     <h3>
-        <code><a href="#gnuplot.init(xys:titles:)">init(xys:​titles:​)</a></code>
+        <code><a href="#gnuplot.init(xys:titles:style:)">init(xys:​titles:​style:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>&lt;<span class="variable">T</span>: <span class="type">FloatingPoint</span>&gt;(<span class="variable">xys</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">titles</span>: <span class="type">String</span>...)  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>&lt;<span class="variable">S</span>: <span class="type">Sequence</span>, <span class="variable">F</span>: <span class="type">FloatingPoint</span>&gt;(
+    <span class="variable">xys</span>: <span class="type">S</span>..., <span class="variable">titles</span>: <span class="type">String</span>..., <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/Style"><span class="type">Style</span></a> = .<span class="variable">linePoints</span>) <span class="keyword">where</span> <span class="type">S</span>.<span class="type">Element</span> == <span class="type">SIMD2</span>&lt;<span class="type">F</span>&gt;</body></html></code></pre>
 </div>
 </div>
-<div role="article" class="initializer" id="gnuplot.init(xy1s:xy2s:titles:)">
+<div role="article" class="initializer" id="gnuplot.init(xs:ys:titles:style:)">
     <h3>
-        <code><a href="#gnuplot.init(xy1s:xy2s:titles:)">init(xy1s:​xy2s:​titles:​)</a></code>
+        <code><a href="#gnuplot.init(xs:ys:titles:style:)">init(xs:​ys:​titles:​style:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>&lt;<span class="variable">S</span>: <span class="type">Sequence</span>, <span class="variable">F</span>: <span class="type">FloatingPoint</span>&gt;(
+    <span class="variable">xs</span>: <span class="type">S</span>..., <span class="variable">ys</span>: <span class="type">S</span>..., <span class="variable">titles</span>: <span class="type">String</span>..., <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/Style"><span class="type">Style</span></a> = .<span class="variable">linePoints</span>) <span class="keyword">where</span> <span class="type">S</span>.<span class="type">Element</span> == <span class="type">F</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="gnuplot.init(xys:titles:style:)">
+    <h3>
+        <code><a href="#gnuplot.init(xys:titles:style:)">init(xys:​titles:​style:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>&lt;<span class="variable">T</span>: <span class="type">FloatingPoint</span>&gt;(<span class="variable">xys</span>: [[(<span class="type">T</span>, <span class="type">T</span>)]], <span class="variable">titles</span>: [<span class="type">String</span>] = [], <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/Style"><span class="type">Style</span></a> = .<span class="variable">linePoints</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="gnuplot.init(xy1s:xy2s:titles:style:)">
+    <h3>
+        <code><a href="#gnuplot.init(xy1s:xy2s:titles:style:)">init(xy1s:​xy2s:​titles:​style:​)</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>&lt;<span class="variable">T</span>: <span class="type">FloatingPoint</span>&gt;(
-    <span class="variable">xy1s</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">xy2s</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">titles</span>: <span class="type">String</span>...
-  )  </body></html></code></pre>
+    <span class="variable">xy1s</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">xy2s</span>: [(<span class="type">T</span>, <span class="type">T</span>)]..., <span class="variable">titles</span>: <span class="type">String</span>..., <span class="variable">style</span>: <a href="https://damuellen.github.io/SPC-Doc/Style"><span class="type">Style</span></a> = .<span class="variable">linePoints</span>)  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -184,7 +203,7 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">temperatures</span> = [
-    <span class="string literal">"</span><span class="string literal">key top left tc ls 18</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">xtics 10</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">ytics 10</span><span class="string literal">"</span>,
+    <span class="string literal">"</span><span class="string literal">xtics 10</span><span class="string literal">"</span>, <span class="string literal">"</span><span class="string literal">ytics 10</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">xlabel 'Q̇ [MW]' textcolor rgb 'black'</span><span class="string literal">"</span>,
     <span class="string literal">"</span><span class="string literal">ylabel 'Temperatures [°C]' textcolor rgb 'black'</span><span class="string literal">"</span>,
   ] </body></html></code></pre>
@@ -202,12 +221,12 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">process</span>() -&gt; <span class="type">Process</span>  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="gnuplot.plot(_:)">
+<div role="article" class="function" id="gnuplot.callasfunction(_:)">
     <h3>
-        <code><a href="#gnuplot.plot(_:)">plot(_:​)</a></code>
+        <code><a href="#gnuplot.callasfunction(_:)">call​AsFunction(_:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">plot</span>(<span class="keyword">_</span> <span class="variable">terminal</span>: <span class="type">Terminal</span>) <span class="keyword">throws</span> -&gt; <span class="type">String</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">callAsFunction</span>(<span class="keyword">_</span> <span class="variable">terminal</span>: <span class="type">Terminal</span>) <span class="keyword">throws</span> -&gt; <span class="type">String</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Execute and returns the plot commands.</p>
@@ -229,7 +248,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-25T08:45:18+0000">June 25, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-09-08T22:03:06+0000">September 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

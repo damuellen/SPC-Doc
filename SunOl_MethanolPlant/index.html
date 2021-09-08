@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarPerformanceCalc - SunOl.MethanolPlant</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://damuellen.github.io/SPC-Doc/">
+            <strong>
+                SolarPerformanceCalc
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#sunol.methanolplant.h2_cons">H2_cons</a></li><li class="variable"><a href="#sunol.methanolplant.nominal_hourly_prod_cap">nominal_hourly_prod_cap</a></li><li class="variable"><a href="#sunol.methanolplant.prod_cap">prod_cap</a></li><li class="variable"><a href="#sunol.methanolplant.min_cap_perc">min_cap_perc</a></li><li class="variable"><a href="#sunol.methanolplant.nominal_heatconsumption">nominal_heat​Consumption</a></li><li class="variable"><a href="#sunol.methanolplant.nominal_aux_electr_cons">nominal_aux_electr_cons</a></li><li class="variable"><a href="#sunol.methanolplant.max_h2_cons">max_H2_Cons</a></li><li class="variable"><a href="#sunol.methanolplant.min_h2_cons">min_H2_Cons</a></li><li class="variable"><a href="#sunol.methanolplant.ref_meth_hourly_prod_cap">Ref_meth_hourly_prod_cap</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#sunol.methanolplant.proportion(nominal_hourly_prod_cap:)">proportion(nominal_hourly_prod_cap:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Sun​Ol.​Methanol​Plant</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">MethanolPlant</span>  </body></html></code></pre>
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="sunol.methanolplant.h2_cons">
+    <h3>
+        <code><a href="#sunol.methanolplant.h2_cons">H2_cons</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">H2_cons</span> = <span class="number literal">20000.0</span>, <span class="variable">prod_cap</span> = <span class="number literal">100_000.0</span>, <span class="variable">min_cap_perc</span> = <span class="number literal">0.5</span>, <span class="variable">nominal_hourly_prod_cap</span> = <span class="number literal">14.8</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.nominal_hourly_prod_cap">
+    <h3>
+        <code><a href="#sunol.methanolplant.nominal_hourly_prod_cap">nominal_hourly_prod_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">H2_cons</span> = <span class="number literal">20000.0</span>, <span class="variable">prod_cap</span> = <span class="number literal">100_000.0</span>, <span class="variable">min_cap_perc</span> = <span class="number literal">0.5</span>, <span class="variable">nominal_hourly_prod_cap</span> = <span class="number literal">14.8</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.prod_cap">
+    <h3>
+        <code><a href="#sunol.methanolplant.prod_cap">prod_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">H2_cons</span> = <span class="number literal">20000.0</span>, <span class="variable">prod_cap</span> = <span class="number literal">100_000.0</span>, <span class="variable">min_cap_perc</span> = <span class="number literal">0.5</span>, <span class="variable">nominal_hourly_prod_cap</span> = <span class="number literal">14.8</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.min_cap_perc">
+    <h3>
+        <code><a href="#sunol.methanolplant.min_cap_perc">min_cap_perc</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">H2_cons</span> = <span class="number literal">20000.0</span>, <span class="variable">prod_cap</span> = <span class="number literal">100_000.0</span>, <span class="variable">min_cap_perc</span> = <span class="number literal">0.5</span>, <span class="variable">nominal_hourly_prod_cap</span> = <span class="number literal">14.8</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.nominal_heatconsumption">
+    <h3>
+        <code><a href="#sunol.methanolplant.nominal_heatconsumption">nominal_heat​Consumption</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">lazy</span> <span class="keyword">var</span> <span class="variable">nominal_heatConsumption</span> = <span class="variable">nominal_hourly_prod_cap</span> / <span class="variable">Ref_meth_hourly_prod_cap</span> * <span class="number literal">10.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.nominal_aux_electr_cons">
+    <h3>
+        <code><a href="#sunol.methanolplant.nominal_aux_electr_cons">nominal_aux_electr_cons</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">lazy</span> <span class="keyword">var</span> <span class="variable">nominal_aux_electr_cons</span> = <span class="variable">nominal_hourly_prod_cap</span> / <span class="variable">Ref_meth_hourly_prod_cap</span> * <span class="number literal">10.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.max_h2_cons">
+    <h3>
+        <code><a href="#sunol.methanolplant.max_h2_cons">max_H2_Cons</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">lazy</span> <span class="keyword">var</span> <span class="variable">max_H2_Cons</span> = <span class="variable">nominal_hourly_prod_cap</span> / <span class="variable">prod_cap</span> * <span class="variable">H2_cons</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.min_h2_cons">
+    <h3>
+        <code><a href="#sunol.methanolplant.min_h2_cons">min_H2_Cons</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">lazy</span> <span class="keyword">var</span> <span class="variable">min_H2_Cons</span> = <span class="variable">min_cap_perc</span> * <span class="variable">nominal_hourly_prod_cap</span> / <span class="variable">prod_cap</span> * <span class="variable">H2_cons</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="sunol.methanolplant.ref_meth_hourly_prod_cap">
+    <h3>
+        <code><a href="#sunol.methanolplant.ref_meth_hourly_prod_cap">Ref_meth_hourly_prod_cap</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">lazy</span> <span class="keyword">var</span> <span class="variable">Ref_meth_hourly_prod_cap</span> = <span class="variable">prod_cap</span> / (<span class="number literal">334</span> * <span class="number literal">24</span>) </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="sunol.methanolplant.proportion(nominal_hourly_prod_cap:)">
+    <h3>
+        <code><a href="#sunol.methanolplant.proportion(nominal_hourly_prod_cap:)">proportion(nominal_hourly_prod_cap:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">proportion</span>(<span class="variable">nominal_hourly_prod_cap</span>: <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2021-09-08T22:03:07+0000">September 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

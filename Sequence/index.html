@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#sequence.length">length</a></li><li class="variable"><a href="#sequence.residencetime">residence​Time</a></li><li class="variable"><a href="#sequence.pressuredrop">pressure​Drop</a></li><li class="variable"><a href="#sequence.headloss">head​Loss</a></li><li class="variable"><a href="#sequence.heatloss">heat​Loss</a></li><li class="variable"><a href="#sequence.volume">volume</a></li><li class="variable"><a href="#sequence.volumecold">volume​Cold</a></li><li class="variable"><a href="#sequence.volumehot">volume​Hot</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#sequence.total(_:)">total(_:​)</a></li><li class="function"><a href="#sequence.total(_:)">total(_:​)</a></li></ul></li></ol>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#sequence.length">length</a></li><li class="variable"><a href="#sequence.residencetime">residence​Time</a></li><li class="variable"><a href="#sequence.pressuredrop">pressure​Drop</a></li><li class="variable"><a href="#sequence.headloss">head​Loss</a></li><li class="variable"><a href="#sequence.heatloss">heat​Loss</a></li><li class="variable"><a href="#sequence.volume">volume</a></li><li class="variable"><a href="#sequence.volumecold">volume​Cold</a></li><li class="variable"><a href="#sequence.volumehot">volume​Hot</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#sequence.write(_:)">write(_:​)</a></li><li class="function"><a href="#sequence.quotient(_:)">quotient(_:​)</a></li><li class="function"><a href="#sequence.product(_:)">product(_:​)</a></li><li class="function"><a href="#sequence.sum()">sum()</a></li><li class="function"><a href="#sequence.total(_:)">total(_:​)</a></li><li class="function"><a href="#sequence.total(_:)">total(_:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -138,12 +138,36 @@
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="sequence.total(_:)">
+        <div role="article" class="function" id="sequence.write(_:)">
     <h3>
-        <code><a href="#sequence.total(_:)">total(_:​)</a></code>
+        <code><a href="#sequence.write(_:)">write(_:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">total</span>(<span class="keyword">_</span> <span class="variable">keyPath</span>: <span class="type">KeyPath</span>&lt;<a href="https://damuellen.github.io/SPC-Doc/Branch"><span class="type">Branch</span></a>, <span class="type">Double</span>&gt;) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">write</span>(<span class="keyword">_</span> <span class="variable">count</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sequence.quotient(_:)">
+    <h3>
+        <code><a href="#sequence.quotient(_:)">quotient(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">quotient</span>(<span class="keyword">_</span> <span class="variable">divisor</span>: <span class="type">Double</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sequence.product(_:)">
+    <h3>
+        <code><a href="#sequence.product(_:)">product(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">product</span>(<span class="keyword">_</span> <span class="variable">factor</span>: <span class="type">Double</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="sequence.sum()">
+    <h3>
+        <code><a href="#sequence.sum()">sum()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>() -&gt; <span class="type">Element</span>  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="function" id="sequence.total(_:)">
@@ -154,13 +178,21 @@
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">total</span>(<span class="keyword">_</span> <span class="variable">keyPath</span>: <span class="type">KeyPath</span>&lt;<a href="https://damuellen.github.io/SPC-Doc/Collector"><span class="type">Collector</span></a>, <span class="type">Double</span>&gt;) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 </div>
+<div role="article" class="function" id="sequence.total(_:)">
+    <h3>
+        <code><a href="#sequence.total(_:)">total(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">total</span>(<span class="keyword">_</span> <span class="variable">keyPath</span>: <span class="type">KeyPath</span>&lt;<a href="https://damuellen.github.io/SPC-Doc/Branch"><span class="type">Branch</span></a>, <span class="type">Double</span>&gt;) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
     </section>
         </article>
     </main>
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-25T08:45:18+0000">June 25, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-09-08T22:03:05+0000">September 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
