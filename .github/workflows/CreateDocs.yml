@@ -11,7 +11,21 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v2
-        
+
+      - name: Checkout libxlsxwriter
+        uses: actions/checkout@v2
+        with: 
+          repository: jmcnamara/libxlsxwriter
+          ref: 'RELEASE_1.1.4'
+          path: libxlsxwriter
+
+      - name: Build libxlsxwriter
+        working-directory: ./libxlsxwriter
+        run: |
+          make
+          sudo make install
+          sudo ldconfig
+
       - name: Checkout SPC
         uses: actions/checkout@v2
         with: 
