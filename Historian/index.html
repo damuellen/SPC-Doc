@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarPerformanceCalc - Historian</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://damuellen.github.io/SPC-Doc/">
+            <strong>
+                SolarPerformanceCalc
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#historian.init(mode:)">init(mode:​)</a></li><li class="initializer"><a href="#historian.init(customname:custompath:outputmode:)">init(custom​Name:​custom​Path:​output​Mode:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#historian.mode">mode</a></li><li class="variable"><a href="#historian.startdate">start​Date</a></li><li class="variable"><a href="#historian.name">name</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#historian.clearresults()">clear​Results()</a></li><li class="function"><a href="#historian.printresult()">print​Result()</a></li><li class="function"><a href="#historian.callasfunction(_:meteo:status:energy:)">call​AsFunction(_:​meteo:​status:​energy:​)</a></li><li class="function"><a href="#historian.finish()">finish()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Historian</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Historian</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A class that creates a recording of performance data.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://damuellen.github.io/SPC-Doc/Historian_Mode">Historian.Mode</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="historian.init(mode:)">
+    <h3>
+        <code><a href="#historian.init(mode:)">init(mode:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">mode</span>: <span class="type">Mode</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="historian.init(customname:custompath:outputmode:)">
+    <h3>
+        <code><a href="#historian.init(customname:custompath:outputmode:)">init(custom​Name:​custom​Path:​output​Mode:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(
+    <span class="variable">customName</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">customPath</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">outputMode</span>: <span class="type">Mode</span>
+  )  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="historian.mode">
+    <h3>
+        <code><a href="#historian.mode">mode</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">mode</span>: <span class="type">Mode</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Specifies what the output is</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="historian.startdate">
+    <h3>
+        <code><a href="#historian.startdate">start​Date</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">startDate</span>: <span class="type">Date</span>? = <span class="variable">Simulation</span>.<span class="variable">time</span>.<span class="variable">firstDateOfOperation</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="historian.name">
+    <h3>
+        <code><a href="#historian.name">name</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">name</span> = <span class="string literal">"</span><span class="string literal">Results_</span><span class="string literal">"</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Common prefix of output</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="historian.clearresults()">
+    <h3>
+        <code><a href="#historian.clearresults()">clear​Results()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">clearResults</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="historian.printresult()">
+    <h3>
+        <code><a href="#historian.printresult()">print​Result()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">printResult</span>()  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="historian.callasfunction(_:meteo:status:energy:)">
+    <h3>
+        <code><a href="#historian.callasfunction(_:meteo:status:energy:)">call​AsFunction(_:​meteo:​status:​energy:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">callAsFunction</span>(
+    <span class="keyword">_</span> <span class="variable">ts</span>: <a href="https://damuellen.github.io/SPC-Doc/DateTime"><span class="type">DateTime</span></a>, <span class="variable">meteo</span>: <a href="https://damuellen.github.io/SPC-Doc/MeteoData"><span class="type">MeteoData</span></a>, <span class="variable">status</span>: <a href="https://damuellen.github.io/SPC-Doc/Status"><span class="type">Status</span></a>, <span class="variable">energy</span>: <a href="https://damuellen.github.io/SPC-Doc/PlantPerformance"><span class="type">PlantPerformance</span></a>
+  )  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="historian.finish()">
+    <h3>
+        <code><a href="#historian.finish()">finish()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">finish</span>() -&gt; <a href="https://damuellen.github.io/SPC-Doc/Recording"><span class="type">Recording</span></a>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-10-09T01:09:43+0000">October 9, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

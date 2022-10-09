@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarPerformanceCalc - Costs</title>
+    <link rel="stylesheet" type="text/css" href="https://damuellen.github.io/SPC-Doc/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://damuellen.github.io/SPC-Doc/">
+            <strong>
+                SolarPerformanceCalc
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#costs.init(_:)">init(_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#costs.plant_life">Plant_life</a></li><li class="variable"><a href="#costs.rate_of_return">Rate_of_return</a></li><li class="variable"><a href="#costs.fcr">FCR</a></li><li class="variable"><a href="#costs.elec_buy">Elec_buy</a></li><li class="variable"><a href="#costs.elec_sell">Elec_sell</a></li><li class="variable"><a href="#costs.total_capex">Total_CAPEX</a></li><li class="variable"><a href="#costs.total_opex">Total_OPEX</a></li><li class="variable"><a href="#costs.co2_cost">CO2_Cost</a></li><li class="variable"><a href="#costs.assembly_hall_cost">Assembly_hall_cost</a></li><li class="variable"><a href="#costs.csp_sf_cost_dedicated_to_methanol">CSP_SF_cost_dedicated_to_Methanol</a></li><li class="variable"><a href="#costs.pv_dc_cost">PV_DC_cost</a></li><li class="variable"><a href="#costs.pv_ac_cost">PV_AC_cost</a></li><li class="variable"><a href="#costs.heater_cost">Heater_cost</a></li><li class="variable"><a href="#costs.tes_storage_cost">TES_storage_cost</a></li><li class="variable"><a href="#costs.pb_cost">PB_cost</a></li><li class="variable"><a href="#costs.electrolysis_cost">Electrolysis_cost</a></li><li class="variable"><a href="#costs.hydrogen_storage_cost">Hydrogen_storage_cost</a></li><li class="variable"><a href="#costs.ccu_plant_cost">CCU_plant_cost</a></li><li class="variable"><a href="#costs.co2_storage_cost">CO2_storage_cost</a></li><li class="variable"><a href="#costs.methsynt_plant_cost">Meth​Synt_plant_cost</a></li><li class="variable"><a href="#costs.rawmeth_storage_cost">Raw​Meth_storage_cost</a></li><li class="variable"><a href="#costs.methdist_plant_cost">Meth​Dist_plant_cost</a></li><li class="variable"><a href="#costs.battery_storage_cost">Battery_storage_cost</a></li><li class="variable"><a href="#costs.electrical_boiler_cost">Electrical_boiler_cost</a></li><li class="variable"><a href="#costs.substation_cost">Substation_cost</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#costs.lcom(meth_produced_mtph:elec_from_grid:elec_to_grid:)">LCOM(meth_produced_MTPH:​elec_from_grid:​elec_to_grid:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Costs</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Costs</span>  </body></html></code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="costs.init(_:)">
+    <h3>
+        <code><a href="#costs.init(_:)">init(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">model</span>: <a href="https://damuellen.github.io/SPC-Doc/TunOl"><span class="type">TunOl</span></a>)  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="costs.plant_life">
+    <h3>
+        <code><a href="#costs.plant_life">Plant_life</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">Plant_life</span>: <span class="type">Double</span> = <span class="number literal">25.0</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.rate_of_return">
+    <h3>
+        <code><a href="#costs.rate_of_return">Rate_of_return</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">Rate_of_return</span>: <span class="type">Double</span> = <span class="number literal">0.07</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.fcr">
+    <h3>
+        <code><a href="#costs.fcr">FCR</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">FCR</span>: <span class="type">Double</span> = <span class="variable">Rate_of_return</span> * (<span class="number literal">1</span> + <span class="variable">Rate_of_return</span>) ** <span class="variable">Plant_life</span> / ((<span class="number literal">1</span> + <span class="variable">Rate_of_return</span>) ** <span class="variable">Plant_life</span> - <span class="number literal">1</span>) </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.elec_buy">
+    <h3>
+        <code><a href="#costs.elec_buy">Elec_buy</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">Elec_buy</span>: <span class="type">Double</span> = <span class="number literal">2</span> * <span class="number literal">0.098</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.elec_sell">
+    <h3>
+        <code><a href="#costs.elec_sell">Elec_sell</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">let</span> <span class="variable">Elec_sell</span>: <span class="type">Double</span> = <span class="number literal">0.33</span> * <span class="number literal">0.098</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.total_capex">
+    <h3>
+        <code><a href="#costs.total_capex">Total_CAPEX</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Total_CAPEX</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.total_opex">
+    <h3>
+        <code><a href="#costs.total_opex">Total_OPEX</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Total_OPEX</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.co2_cost">
+    <h3>
+        <code><a href="#costs.co2_cost">CO2_Cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">CO2_Cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.assembly_hall_cost">
+    <h3>
+        <code><a href="#costs.assembly_hall_cost">Assembly_hall_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Assembly_hall_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.csp_sf_cost_dedicated_to_methanol">
+    <h3>
+        <code><a href="#costs.csp_sf_cost_dedicated_to_methanol">CSP_SF_cost_dedicated_to_Methanol</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">CSP_SF_cost_dedicated_to_Methanol</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.pv_dc_cost">
+    <h3>
+        <code><a href="#costs.pv_dc_cost">PV_DC_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">PV_DC_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.pv_ac_cost">
+    <h3>
+        <code><a href="#costs.pv_ac_cost">PV_AC_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">PV_AC_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.heater_cost">
+    <h3>
+        <code><a href="#costs.heater_cost">Heater_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Heater_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.tes_storage_cost">
+    <h3>
+        <code><a href="#costs.tes_storage_cost">TES_storage_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">TES_storage_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.pb_cost">
+    <h3>
+        <code><a href="#costs.pb_cost">PB_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">PB_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.electrolysis_cost">
+    <h3>
+        <code><a href="#costs.electrolysis_cost">Electrolysis_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Electrolysis_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.hydrogen_storage_cost">
+    <h3>
+        <code><a href="#costs.hydrogen_storage_cost">Hydrogen_storage_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Hydrogen_storage_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.ccu_plant_cost">
+    <h3>
+        <code><a href="#costs.ccu_plant_cost">CCU_plant_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">CCU_plant_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.co2_storage_cost">
+    <h3>
+        <code><a href="#costs.co2_storage_cost">CO2_storage_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">CO2_storage_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.methsynt_plant_cost">
+    <h3>
+        <code><a href="#costs.methsynt_plant_cost">Meth​Synt_plant_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">MethSynt_plant_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.rawmeth_storage_cost">
+    <h3>
+        <code><a href="#costs.rawmeth_storage_cost">Raw​Meth_storage_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">RawMeth_storage_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.methdist_plant_cost">
+    <h3>
+        <code><a href="#costs.methdist_plant_cost">Meth​Dist_plant_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">MethDist_plant_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.battery_storage_cost">
+    <h3>
+        <code><a href="#costs.battery_storage_cost">Battery_storage_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Battery_storage_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.electrical_boiler_cost">
+    <h3>
+        <code><a href="#costs.electrical_boiler_cost">Electrical_boiler_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Electrical_boiler_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="costs.substation_cost">
+    <h3>
+        <code><a href="#costs.substation_cost">Substation_cost</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">Substation_cost</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="costs.lcom(meth_produced_mtph:elec_from_grid:elec_to_grid:)">
+    <h3>
+        <code><a href="#costs.lcom(meth_produced_mtph:elec_from_grid:elec_to_grid:)">LCOM(meth_produced_MTPH:​elec_from_grid:​elec_to_grid:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">LCOM</span>(<span class="variable">meth_produced_MTPH</span>: <span class="type">Double</span>, <span class="variable">elec_from_grid</span>: <span class="type">Double</span>, <span class="variable">elec_to_grid</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-10-09T01:09:44+0000">October 9, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

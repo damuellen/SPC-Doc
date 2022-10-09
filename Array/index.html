@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#array.concatenated">concatenated</a></li><li class="variable"><a href="#array.total">total</a></li><li class="variable"><a href="#array.concatenated">concatenated</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#array.total(_:)">total(_:​)</a></li><li class="function"><a href="#array.total(_:)">total(_:​)</a></li><li class="function"><a href="#array.sum(_:)">sum(_:​)</a></li></ul></li></ol>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#array.total">total</a></li><li class="variable"><a href="#array.nonzerocount">non​Zero​Count</a></li><li class="variable"><a href="#array.readable">readable</a></li><li class="variable"><a href="#array.concatenated">concatenated</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#array.sum(days:range:predicate:)">sum(days:​range:​predicate:​)</a></li><li class="function"><a href="#array.sum(days:range:into:at:)">sum(days:​range:​into:​at:​)</a></li><li class="function"><a href="#array.sumofranges(_:days:into:at:range1:condition:predicate:)">sum​OfRanges(_:​days:​into:​at:​range1:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sumof(_:days:into:at:condition:predicate:)">sum​Of(_:​days:​into:​at:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sumof(_:days:condition:predicate:)">sum​Of(_:​days:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sum(_:hours:condition:predicate:)">sum(_:​hours:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sum(_:hours:range2:condition:predicate:)">sum(_:​hours:​range2:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sum(hours:condition:predicate:)">sum(hours:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sum(hours:condition:)">sum(hours:​condition:​)</a></li><li class="function"><a href="#array.countof(_:condition:predicate:)">count​Of(_:​condition:​predicate:​)</a></li><li class="function"><a href="#array.countof(_:condition1:predicate1:condition2:predicate2:)">count​Of(_:​condition1:​predicate1:​condition2:​predicate2:​)</a></li><li class="function"><a href="#array.count(hours:range:predicate:)">count(hours:​range:​predicate:​)</a></li><li class="function"><a href="#array.randomvalues(count:)">random​Values(count:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -38,20 +38,28 @@
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="array.concatenated">
-    <h3>
-        <code><a href="#array.concatenated">concatenated</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">concatenated</span>: <span class="type">String</span>  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="array.total">
+        <div role="article" class="variable" id="array.total">
     <h3>
         <code><a href="#array.total">total</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">total</span>: <span class="type">Float</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="array.nonzerocount">
+    <h3>
+        <code><a href="#array.nonzerocount">non​Zero​Count</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">nonZeroCount</span>: <span class="type">Int</span>  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="array.readable">
+    <h3>
+        <code><a href="#array.readable">readable</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">readable</span>: [<span class="type">String</span>]  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="array.concatenated">
@@ -66,28 +74,108 @@
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="array.total(_:)">
+        <div role="article" class="function" id="array.sum(days:range:predicate:)">
     <h3>
-        <code><a href="#array.total(_:)">total(_:​)</a></code>
+        <code><a href="#array.sum(days:range:predicate:)">sum(days:​range:​predicate:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">total</span>(<span class="keyword">_</span> <span class="variable">keyPath</span>: <span class="type">KeyPath</span>&lt;<a href="https://damuellen.github.io/SPC-Doc/Connector"><span class="type">Connector</span></a>, <span class="type">Double</span>&gt;) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.total(_:)">
+<div role="article" class="function" id="array.sum(days:range:into:at:)">
     <h3>
-        <code><a href="#array.total(_:)">total(_:​)</a></code>
+        <code><a href="#array.sum(days:range:into:at:)">sum(days:​range:​into:​at:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">total</span>(<span class="keyword">_</span> <span class="variable">keyPath</span>: <span class="type">KeyPath</span>&lt;<a href="https://damuellen.github.io/SPC-Doc/SubField"><span class="type">SubField</span></a>, <span class="type">Double</span>&gt;) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.sum(_:)">
+<div role="article" class="function" id="array.sumofranges(_:days:into:at:range1:condition:predicate:)">
     <h3>
-        <code><a href="#array.sum(_:)">sum(_:​)</a></code>
+        <code><a href="#array.sumofranges(_:days:into:at:range1:condition:predicate:)">sum​OfRanges(_:​days:​into:​at:​range1:​condition:​predicate:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="keyword">_</span> <span class="variable">keyPath</span>: <span class="type">KeyPath</span>&lt;<a href="https://damuellen.github.io/SPC-Doc/SubField"><span class="type">SubField</span></a>, <span class="type">Int</span>&gt;) -&gt; <span class="type">Int</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sumOfRanges</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>, <span class="variable">range1</span>: [<span class="type">Double</span>], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.sumof(_:days:into:at:condition:predicate:)">
+    <h3>
+        <code><a href="#array.sumof(_:days:into:at:condition:predicate:)">sum​Of(_:​days:​into:​at:​condition:​predicate:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">inlinable</span> <span class="keyword">func</span> <span class="function">sumOf</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>, <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>)  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.sumof(_:days:condition:predicate:)">
+    <h3>
+        <code><a href="#array.sumof(_:days:condition:predicate:)">sum​Of(_:​days:​condition:​predicate:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sumOf</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.sum(_:hours:condition:predicate:)">
+    <h3>
+        <code><a href="#array.sum(_:hours:condition:predicate:)">sum(_:​hours:​condition:​predicate:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.sum(_:hours:range2:condition:predicate:)">
+    <h3>
+        <code><a href="#array.sum(_:hours:range2:condition:predicate:)">sum(_:​hours:​range2:​condition:​predicate:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">range2</span>: [<span class="type">Double</span>], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.sum(hours:condition:predicate:)">
+    <h3>
+        <code><a href="#array.sum(hours:condition:predicate:)">sum(hours:​condition:​predicate:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.sum(hours:condition:)">
+    <h3>
+        <code><a href="#array.sum(hours:condition:)">sum(hours:​condition:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.countof(_:condition:predicate:)">
+    <h3>
+        <code><a href="#array.countof(_:condition:predicate:)">count​Of(_:​condition:​predicate:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">countOf</span>(<span class="keyword">_</span> <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.countof(_:condition1:predicate1:condition2:predicate2:)">
+    <h3>
+        <code><a href="#array.countof(_:condition1:predicate1:condition2:predicate2:)">count​Of(_:​condition1:​predicate1:​condition2:​predicate2:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">countOf</span>(<span class="keyword">_</span> <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">condition1</span>: <span class="type">Int</span>, <span class="variable">predicate1</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>, <span class="variable">condition2</span>: <span class="type">Int</span>, <span class="variable">predicate2</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.count(hours:range:predicate:)">
+    <h3>
+        <code><a href="#array.count(hours:range:predicate:)">count(hours:​range:​predicate:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">count</span>(<span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.randomvalues(count:)">
+    <h3>
+        <code><a href="#array.randomvalues(count:)">random​Values(count:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">randomValues</span>(<span class="variable">count</span>: <span class="type">Int</span>) -&gt; [[<span class="type">Double</span>]]  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -96,7 +184,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-09-08T22:03:06+0000">September 8, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2022-10-09T01:09:44+0000">October 9, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
