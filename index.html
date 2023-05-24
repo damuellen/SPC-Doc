@@ -53,8 +53,8 @@
 
 </dd>
 <dt class="class">
-    <a href="https://damuellen.github.io/SPC-Doc/DateSequence" title="class - DateSequence">
-        Date​Sequence
+    <a href="https://damuellen.github.io/SPC-Doc/DateSeries" title="class - DateSeries">
+        Date​Series
     </a>
 </dt>
 <dd>
@@ -62,12 +62,12 @@
 
 </dd>
 <dt class="class">
-    <a href="https://damuellen.github.io/SPC-Doc/MeteoDataProvider" title="class - MeteoDataProvider">
-        Meteo​Data​Provider
+    <a href="https://damuellen.github.io/SPC-Doc/MeteoDataFileHandler" title="class - MeteoDataFileHandler">
+        Meteo​Data​File​Handler
     </a>
 </dt>
 <dd>
-    <p>A type that provides meteorological data for one year.</p>
+    <p>Handles the import of files with meteorological data.</p>
 
 </dd>
         </dl>
@@ -76,22 +76,6 @@
         <h2>Structures</h2>
         <dl>
             <dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/RepeatedElementsSequence" title="structure - RepeatedElementsSequence">
-        Repeated​Elements​Sequence
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/RepeatedElementsSequence_Iterator" title="structure - RepeatedElementsSequence.Iterator">
-        Repeated​Elements​Sequence.​Iterator
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
     <a href="https://damuellen.github.io/SPC-Doc/Cycle" title="structure - Cycle">
         Cycle
     </a>
@@ -174,6 +158,24 @@
     
 </dd>
 <dt class="structure">
+    <a href="https://damuellen.github.io/SPC-Doc/Collector" title="structure - Collector">
+        Collector
+    </a>
+</dt>
+<dd>
+    <p>This struct contains the state as well as the functions for mapping the collector</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://damuellen.github.io/SPC-Doc/Collector_Parameter" title="structure - Collector.Parameter">
+        Collector.​Parameter
+    </a>
+</dt>
+<dd>
+    <p>A struct with the assigned details of the collector.</p>
+
+</dd>
+<dt class="structure">
     <a href="https://damuellen.github.io/SPC-Doc/GasTurbine" title="structure - GasTurbine">
         Gas​Turbine
     </a>
@@ -244,42 +246,6 @@
 
 </dd>
 <dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/PowerBlock" title="structure - PowerBlock">
-        Power​Block
-    </a>
-</dt>
-<dd>
-    <p>This struct contains the state as well as the functions for mapping the power block</p>
-
-</dd>
-<dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/PowerBlock_Parameter" title="structure - PowerBlock.Parameter">
-        Power​Block.​Parameter
-    </a>
-</dt>
-<dd>
-    <p>A struct with the assigned details of the power block.</p>
-
-</dd>
-<dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/Collector" title="structure - Collector">
-        Collector
-    </a>
-</dt>
-<dd>
-    <p>This struct contains the state as well as the functions for mapping the collector</p>
-
-</dd>
-<dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/Collector_Parameter" title="structure - Collector.Parameter">
-        Collector.​Parameter
-    </a>
-</dt>
-<dd>
-    <p>A struct with the assigned details of the collector.</p>
-
-</dd>
-<dt class="structure">
     <a href="https://damuellen.github.io/SPC-Doc/PV_Cell" title="structure - PV.Cell">
         PV.​Cell
     </a>
@@ -338,6 +304,24 @@
 </dt>
 <dd>
     <p>Convert DC power and voltage to AC power</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://damuellen.github.io/SPC-Doc/PowerBlock" title="structure - PowerBlock">
+        Power​Block
+    </a>
+</dt>
+<dd>
+    <p>This struct contains the state as well as the functions for mapping the power block</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://damuellen.github.io/SPC-Doc/PowerBlock_Parameter" title="structure - PowerBlock.Parameter">
+        Power​Block.​Parameter
+    </a>
+</dt>
+<dd>
+    <p>A struct with the assigned details of the power block.</p>
 
 </dd>
 <dt class="structure">
@@ -556,8 +540,8 @@
     
 </dd>
 <dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/Simulation_Year" title="structure - Simulation.Year">
-        Simulation.​Year
+    <a href="https://damuellen.github.io/SPC-Doc/Simulation_Period" title="structure - Simulation.Period">
+        Simulation.​Period
     </a>
 </dt>
 <dd>
@@ -615,30 +599,12 @@ of the current time step available during a run.</p>
 
 </dd>
 <dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/Location" title="structure - Location">
-        Location
-    </a>
-</dt>
-<dd>
-    <p>A struct for latitude, longitude, timezone, and altitude data associated with a particular geographic location.</p>
-
-</dd>
-<dt class="structure">
     <a href="https://damuellen.github.io/SPC-Doc/MeteoData" title="structure - MeteoData">
         Meteo​Data
     </a>
 </dt>
 <dd>
     <p>Meteorological data</p>
-
-</dd>
-<dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/MeteoDataFileHandler" title="structure - MeteoDataFileHandler">
-        Meteo​Data​File​Handler
-    </a>
-</dt>
-<dd>
-    <p>Handles the import of files with meteorological data.</p>
 
 </dd>
 <dt class="structure">
@@ -756,22 +722,6 @@ of the current time step available during a run.</p>
     
 </dd>
 <dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/ExcelFormula" title="structure - ExcelFormula">
-        Excel​Formula
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/ExcelFormula_Token" title="structure - ExcelFormula.Token">
-        Excel​Formula.​Token
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="structure">
     <a href="https://damuellen.github.io/SPC-Doc/LocationInfo" title="structure - LocationInfo">
         Location​Info
     </a>
@@ -786,6 +736,15 @@ of the current time step available during a run.</p>
 </dt>
 <dd>
     
+</dd>
+<dt class="structure">
+    <a href="https://damuellen.github.io/SPC-Doc/Location" title="structure - Location">
+        Location
+    </a>
+</dt>
+<dd>
+    <p>A struct for latitude, longitude, timezone, and altitude data associated with a particular geographic location.</p>
+
 </dd>
 <dt class="structure">
     <a href="https://damuellen.github.io/SPC-Doc/SolarPosition" title="structure - SolarPosition">
@@ -811,15 +770,6 @@ of the current time step available during a run.</p>
 </dt>
 <dd>
     
-</dd>
-<dt class="structure">
-    <a href="https://damuellen.github.io/SPC-Doc/SolarPosition_Location" title="structure - SolarPosition.Location">
-        Solar​Position.​Location
-    </a>
-</dt>
-<dd>
-    <p>A struct for latitude, longitude, timezone, and altitude data associated with a particular geographic location.</p>
-
 </dd>
 <dt class="structure">
     <a href="https://damuellen.github.io/SPC-Doc/Costs" title="structure - Costs">
@@ -899,6 +849,14 @@ of the current time step available during a run.</p>
     
 </dd>
 <dt class="enumeration">
+    <a href="https://damuellen.github.io/SPC-Doc/Collector_Parameter_Absorber" title="enumeration - Collector.Parameter.Absorber">
+        Collector.​Parameter.​Absorber
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
     <a href="https://damuellen.github.io/SPC-Doc/DryCooling" title="enumeration - DryCooling">
         Dry​Cooling
     </a>
@@ -913,6 +871,15 @@ of the current time step available during a run.</p>
 </dt>
 <dd>
     
+</dd>
+<dt class="enumeration">
+    <a href="https://damuellen.github.io/SPC-Doc/HCE" title="enumeration - HCE">
+        HCE
+    </a>
+</dt>
+<dd>
+    <p>Heat Collecting Element</p>
+
 </dd>
 <dt class="enumeration">
     <a href="https://damuellen.github.io/SPC-Doc/HeatExchanger_Parameter_CodingKeys" title="enumeration - HeatExchanger.Parameter.CodingKeys">
@@ -937,23 +904,6 @@ of the current time step available during a run.</p>
 </dt>
 <dd>
     
-</dd>
-<dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/Collector_Parameter_Absorber" title="enumeration - Collector.Parameter.Absorber">
-        Collector.​Parameter.​Absorber
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/HCE" title="enumeration - HCE">
-        HCE
-    </a>
-</dt>
-<dd>
-    <p>Heat Collecting Element</p>
-
 </dd>
 <dt class="enumeration">
     <a href="https://damuellen.github.io/SPC-Doc/SolarField_Loop" title="enumeration - SolarField.Loop">
@@ -1158,8 +1108,8 @@ of the current time step available during a run.</p>
     
 </dd>
 <dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/DateSequence_Interval" title="enumeration - DateSequence.Interval">
-        Date​Sequence.​Interval
+    <a href="https://damuellen.github.io/SPC-Doc/DateSeries_Frequence" title="enumeration - DateSeries.Frequence">
+        Date​Series.​Frequence
     </a>
 </dt>
 <dd>
@@ -1192,6 +1142,14 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
     
 </dd>
 <dt class="enumeration">
+    <a href="https://damuellen.github.io/SPC-Doc/ClearSkyModel" title="enumeration - ClearSkyModel">
+        Clear​Sky​Model
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
     <a href="https://damuellen.github.io/SPC-Doc/Albedo" title="enumeration - Albedo">
         Albedo
     </a>
@@ -1208,30 +1166,6 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
     
 </dd>
 <dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/ClearSkyModel" title="enumeration - ClearSkyModel">
-        Clear​Sky​Model
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/ExcelFormula_TokenType" title="enumeration - ExcelFormula.TokenType">
-        Excel​Formula.​Token​Type
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/ExcelFormula_TokenSubtype" title="enumeration - ExcelFormula.TokenSubtype">
-        Excel​Formula.​Token​Subtype
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
     <a href="https://damuellen.github.io/SPC-Doc/Hours" title="enumeration - Hours">
         Hours
     </a>
@@ -1242,30 +1176,6 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
 <dt class="enumeration">
     <a href="https://damuellen.github.io/SPC-Doc/Days" title="enumeration - Days">
         Days
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/ANSIColor" title="enumeration - ANSIColor">
-        ANSIColor
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/ANSIStyle" title="enumeration - ANSIStyle">
-        ANSIStyle
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="enumeration">
-    <a href="https://damuellen.github.io/SPC-Doc/ANSI" title="enumeration - ANSI">
-        ANSI
     </a>
 </dt>
 <dd>
@@ -1301,16 +1211,16 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
     
 </dd>
 <dt class="protocol">
-    <a href="https://damuellen.github.io/SPC-Doc/Parameterizable" title="protocol - Parameterizable">
-        Parameterizable
+    <a href="https://damuellen.github.io/SPC-Doc/TextConfigInitializable" title="protocol - TextConfigInitializable">
+        Text​Config​Initializable
     </a>
 </dt>
 <dd>
     
 </dd>
 <dt class="protocol">
-    <a href="https://damuellen.github.io/SPC-Doc/TextConfigInitializable" title="protocol - TextConfigInitializable">
-        Text​Config​Initializable
+    <a href="https://damuellen.github.io/SPC-Doc/Parameterizable" title="protocol - Parameterizable">
+        Parameterizable
     </a>
 </dt>
 <dd>
@@ -1354,8 +1264,8 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
     
 </dd>
 <dt class="typealias">
-    <a href="https://damuellen.github.io/SPC-Doc/Interval" title="typealias - Interval">
-        Interval
+    <a href="https://damuellen.github.io/SPC-Doc/Frequence" title="typealias - Frequence">
+        Frequence
     </a>
 </dt>
 <dd>
@@ -1553,22 +1463,6 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
     
 </dd>
 <dt class="function">
-    <a href="https://damuellen.github.io/SPC-Doc/downsample(values_threshold_)" title="function - downsample(values:threshold:)">
-        downsample(values:​threshold:​)
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="function">
-    <a href="https://damuellen.github.io/SPC-Doc/foo1()" title="function - foo1()">
-        foo1()
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="function">
     <a href="https://damuellen.github.io/SPC-Doc/h_SS(__)" title="function - h_SS(_:)">
         h_SS(_:​)
     </a>
@@ -1726,14 +1620,6 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
     
 </dd>
 <dt class="variable">
-    <a href="https://damuellen.github.io/SPC-Doc/backgroundQueue" title="variable - backgroundQueue">
-        background​Queue
-    </a>
-</dt>
-<dd>
-    
-</dd>
-<dt class="variable">
     <a href="https://damuellen.github.io/SPC-Doc/h_261" title="variable - h_261">
         h_261
     </a>
@@ -1782,16 +1668,160 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
     
 </dd>
 <dt class="variable">
-    <a href="https://damuellen.github.io/SPC-Doc/now" title="variable - now">
-        now
+    <a href="https://damuellen.github.io/SPC-Doc/newLine" title="variable - newLine">
+        new​Line
     </a>
 </dt>
 <dd>
     
 </dd>
 <dt class="variable">
-    <a href="https://damuellen.github.io/SPC-Doc/time" title="variable - time">
-        time
+    <a href="https://damuellen.github.io/SPC-Doc/cr" title="variable - cr">
+        cr
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/comma" title="variable - comma">
+        comma
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/point" title="variable - point">
+        point
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/path" title="variable - path">
+        path
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/output" title="variable - output">
+        output
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/separator" title="variable - separator">
+        separator
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/lines" title="variable - lines">
+        lines
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/pvsyst" title="variable - pvsyst">
+        pvsyst
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/date" title="variable - date">
+        date
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/csv" title="variable - csv">
+        csv
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/buffer" title="variable - buffer">
+        buffer
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/goodData" title="variable - goodData">
+        good​Data
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/text" title="variable - text">
+        text
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/count" title="variable - count">
+        count
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/increment" title="variable - increment">
+        increment
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/c" title="variable - c">
+        c
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/c" title="variable - c">
+        c
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/fileURL" title="variable - fileURL">
+        file​URL
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="variable">
+    <a href="https://damuellen.github.io/SPC-Doc/fileHandle" title="variable - fileHandle">
+        file​Handle
     </a>
 </dt>
 <dd>
@@ -1868,11 +1898,11 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
 </dt>
 <dd></dd>
 <dt class="extension">
-    <a href="https://damuellen.github.io/SPC-Doc/OutputStream">OutputStream</a>
+    <a href="https://damuellen.github.io/SPC-Doc/Range">Range</a>
 </dt>
 <dd></dd>
 <dt class="extension">
-    <a href="https://damuellen.github.io/SPC-Doc/Range">Range</a>
+    <a href="https://damuellen.github.io/SPC-Doc/RangeReplaceableCollection">RangeReplaceableCollection</a>
 </dt>
 <dd></dd>
 <dt class="extension">
@@ -1894,7 +1924,7 @@ absolute airmass and to determine pressure from altitude or vice versa.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2023-02-24T19:38:53+0000">February 24, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-05-24T14:09:56+0000">May 24, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
