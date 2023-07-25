@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#insolation.init()">init()</a></li><li class="initializer"><a href="#insolation.init(meteo:)">init(meteo:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#insolation.diffuse">diffuse</a></li><li class="variable"><a href="#insolation.global">global</a></li><li class="variable"><a href="#insolation.direct">direct</a></li><li class="variable"><a href="#insolation.values">values</a></li><li class="variable"><a href="#insolation.measurements">measurements</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#insolation.zero()">zero()</a></li><li class="function"><a href="#insolation.effective(surftilt:incidence:zenith:doy:)">effective(surf​Tilt:​incidence:​zenith:​doy:​)</a></li><li class="function"><a href="#insolation.perez(surfacetilt:incidence:hextra:sunzenith:am:)">perez(surface​Tilt:​incidence:​hExtra:​sun​Zenith:​AM:​)</a></li><li class="function"><a href="#insolation.beam(incidence:zenith:)">beam(incidence:​zenith:​)</a></li><li class="function"><a href="#insolation.normal(zenith:)">normal(zenith:​)</a></li><li class="function"><a href="#insolation.extra(doy:)">extra(doy:​)</a></li><li class="function"><a href="#insolation.grounddiffuse(surftilt:albedo:)">ground​Diffuse(surf​Tilt:​albedo:​)</a></li></ul></li></ol>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#insolation.init()">init()</a></li><li class="initializer"><a href="#insolation.init(meteo:)">init(meteo:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#insolation.direct">direct</a></li><li class="variable"><a href="#insolation.diffuse">diffuse</a></li><li class="variable"><a href="#insolation.global">global</a></li><li class="variable"><a href="#insolation.values">values</a></li><li class="variable"><a href="#insolation.measurements">measurements</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#insolation.zero()">zero()</a></li><li class="function"><a href="#insolation.effective(surftilt:incidence:zenith:doy:)">effective(surf​Tilt:​incidence:​zenith:​doy:​)</a></li><li class="function"><a href="#insolation.perez(surfacetilt:incidence:hextra:sunzenith:am:)">perez(surface​Tilt:​incidence:​hExtra:​sun​Zenith:​AM:​)</a></li><li class="function"><a href="#insolation.beam(incidence:zenith:)">beam(incidence:​zenith:​)</a></li><li class="function"><a href="#insolation.normal(zenith:)">normal(zenith:​)</a></li><li class="function"><a href="#insolation.extra(doy:)">extra(doy:​)</a></li><li class="function"><a href="#insolation.grounddiffuse(surftilt:albedo:)">ground​Diffuse(surf​Tilt:​albedo:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -63,7 +63,15 @@
     <section id="properties">
         <h2>Properties</h2>
 
-        <div role="article" class="variable" id="insolation.diffuse">
+        <div role="article" class="variable" id="insolation.direct">
+    <h3>
+        <code><a href="#insolation.direct">direct</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">direct</span>, <span class="variable">global</span>, <span class="variable">diffuse</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="insolation.diffuse">
     <h3>
         <code><a href="#insolation.diffuse">diffuse</a></code>
     </h3>
@@ -74,14 +82,6 @@
 <div role="article" class="variable" id="insolation.global">
     <h3>
         <code><a href="#insolation.global">global</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">direct</span>, <span class="variable">global</span>, <span class="variable">diffuse</span>: <span class="type">Double</span></body></html></code></pre>
-</div>
-</div>
-<div role="article" class="variable" id="insolation.direct">
-    <h3>
-        <code><a href="#insolation.direct">direct</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">direct</span>, <span class="variable">global</span>, <span class="variable">diffuse</span>: <span class="type">Double</span></body></html></code></pre>
@@ -260,7 +260,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-05-24T14:09:57+0000">May 24, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-07-25T20:29:58+0000">July 25, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

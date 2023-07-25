@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#array.concatenated">concatenated</a></li><li class="variable"><a href="#array.total">total</a></li><li class="variable"><a href="#array.nonzerocount">non​Zero​Count</a></li><li class="variable"><a href="#array.readable">readable</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#array.randomvalues(count:)">random​Values(count:​)</a></li><li class="function"><a href="#array.interpolate(steps:)">interpolate(steps:​)</a></li><li class="function"><a href="#array.analyse(day:)">analyse(day:​)</a></li><li class="function"><a href="#array.range(for:)">range(for:​)</a></li><li class="function"><a href="#array.sum(days:range:predicate:)">sum(days:​range:​predicate:​)</a></li><li class="function"><a href="#array.sum(days:range:into:at:)">sum(days:​range:​into:​at:​)</a></li><li class="function"><a href="#array.sumofranges(_:days:into:at:range1:condition:predicate:)">sum​OfRanges(_:​days:​into:​at:​range1:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sumof(_:days:into:at:condition:predicate:)">sum​Of(_:​days:​into:​at:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sumof(_:days:into:at:condition1:predicate1:condition2:predicate2:)">sum​Of(_:​days:​into:​at:​condition1:​predicate1:​condition2:​predicate2:​)</a></li><li class="function"><a href="#array.sum(_:hours:condition:predicate:)">sum(_:​hours:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sum(_:hours:range2:condition:predicate:)">sum(_:​hours:​range2:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sum(hours:condition:predicate:)">sum(hours:​condition:​predicate:​)</a></li><li class="function"><a href="#array.sum(hours:condition:)">sum(hours:​condition:​)</a></li><li class="function"><a href="#array.countof(_:condition:predicate:)">count​Of(_:​condition:​predicate:​)</a></li><li class="function"><a href="#array.countof(_:condition1:predicate1:condition2:predicate2:)">count​Of(_:​condition1:​predicate1:​condition2:​predicate2:​)</a></li><li class="function"><a href="#array.count(hours:range:predicate:)">count(hours:​range:​predicate:​)</a></li></ul></li></ol>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#array.concatenated">concatenated</a></li><li class="variable"><a href="#array.total">total</a></li><li class="variable"><a href="#array.nonzerocount">non​Zero​Count</a></li><li class="variable"><a href="#array.readable">readable</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#array.interpolate(steps:)">interpolate(steps:​)</a></li><li class="function"><a href="#array.analyse(day:)">analyse(day:​)</a></li><li class="function"><a href="#array.range(for:)">range(for:​)</a></li><li class="function"><a href="#array.sumif(_:days:into:at:)">sumif(_:​days:​into:​at:​)</a></li><li class="function"><a href="#array.sumifs(_:days:into:at:range:criteria:)">sumifs(_:​days:​into:​at:​range:​criteria:​)</a></li><li class="function"><a href="#array.sumifs(_:days:into:at:range1:criteria1:range2:criteria2:)">sumifs(_:​days:​into:​at:​range1:​criteria1:​range2:​criteria2:​)</a></li><li class="function"><a href="#array.sumif(_:criteria:hours:)">sumif(_:​criteria:​hours:​)</a></li><li class="function"><a href="#array.countif(_:criteria:days:)">countif(_:​criteria:​days:​)</a></li><li class="function"><a href="#array.countif(range1:criteria1:range2:criteria2:days:)">countif(range1:​criteria1:​range2:​criteria2:​days:​)</a></li><li class="function"><a href="#array.countif(_:criteria:hours:)">countif(_:​criteria:​hours:​)</a></li><li class="function"><a href="#array.randomvalues(count:)">random​Values(count:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -74,15 +74,7 @@
     <section id="methods">
         <h2>Methods</h2>
 
-        <div role="article" class="function" id="array.randomvalues(count:)">
-    <h3>
-        <code><a href="#array.randomvalues(count:)">random​Values(count:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">randomValues</span>(<span class="variable">count</span>: <span class="type">Int</span>) -&gt; [[<span class="type">Double</span>]]  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="array.interpolate(steps:)">
+        <div role="article" class="function" id="array.interpolate(steps:)">
     <h3>
         <code><a href="#array.interpolate(steps:)">interpolate(steps:​)</a></code>
     </h3>
@@ -110,121 +102,80 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">range</span>(<span class="variable">for</span> <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>) -&gt; <span class="type">Range</span>&lt;<span class="type">Int</span>&gt;  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.sum(days:range:predicate:)">
+<div role="article" class="function" id="array.sumif(_:days:into:at:)">
     <h3>
-        <code><a href="#array.sum(days:range:predicate:)">sum(days:​range:​predicate:​)</a></code>
+        <code><a href="#array.sumif(_:days:into:at:)">sumif(_:​days:​into:​at:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>) -&gt; [<span class="type">Double</span>] </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sumif</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.sum(days:range:into:at:)">
+<div role="article" class="function" id="array.sumifs(_:days:into:at:range:criteria:)">
     <h3>
-        <code><a href="#array.sum(days:range:into:at:)">sum(days:​range:​into:​at:​)</a></code>
+        <code><a href="#array.sumifs(_:days:into:at:range:criteria:)">sumifs(_:​days:​into:​at:​range:​criteria:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>)  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sumifs</span>(
+      <span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>,
+      <span class="variable">range</span> <span class="variable">range1</span>: <span class="type">Int</span>, <span class="variable">criteria</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
+    )  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.sumofranges(_:days:into:at:range1:condition:predicate:)">
+<div role="article" class="function" id="array.sumifs(_:days:into:at:range1:criteria1:range2:criteria2:)">
     <h3>
-        <code><a href="#array.sumofranges(_:days:into:at:range1:condition:predicate:)">sum​OfRanges(_:​days:​into:​at:​range1:​condition:​predicate:​)</a></code>
+        <code><a href="#array.sumifs(_:days:into:at:range1:criteria1:range2:criteria2:)">sumifs(_:​days:​into:​at:​range1:​criteria1:​range2:​criteria2:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sumOfRanges</span>(
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sumifs</span>(
     <span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>,
-    <span class="variable">range1</span>: [<span class="type">Double</span>], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
+    <span class="variable">range1</span>: <span class="type">Int</span>, <span class="variable">criteria1</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>, <span class="variable">range2</span>: <span class="type">Int</span>,
+    <span class="variable">criteria2</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
   )  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.sumof(_:days:into:at:condition:predicate:)">
+<div role="article" class="function" id="array.sumif(_:criteria:hours:)">
     <h3>
-        <code><a href="#array.sumof(_:days:into:at:condition:predicate:)">sum​Of(_:​days:​into:​at:​condition:​predicate:​)</a></code>
+        <code><a href="#array.sumif(_:criteria:hours:)">sumif(_:​criteria:​hours:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">inlinable</span> <span class="keyword">func</span> <span class="function">sumOf</span>(
-    <span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>,
-    <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
-  )  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="array.sumof(_:days:into:at:condition1:predicate1:condition2:predicate2:)">
-    <h3>
-        <code><a href="#array.sumof(_:days:into:at:condition1:predicate1:condition2:predicate2:)">sum​Of(_:​days:​into:​at:​condition1:​predicate1:​condition2:​predicate2:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="attribute">@</span><span class="attribute">inlinable</span> <span class="keyword">func</span> <span class="function">sumOf</span>(
-    <span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">into</span> <span class="variable">array</span>: <span class="keyword">inout</span> [<span class="type">Double</span>], <span class="variable">at</span>: <span class="type">Int</span>,
-    <span class="variable">condition1</span>: <span class="type">Int</span>, <span class="variable">predicate1</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>, <span class="variable">condition2</span>: <span class="type">Int</span>,
-    <span class="variable">predicate2</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
-  )  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="array.sum(_:hours:condition:predicate:)">
-    <h3>
-        <code><a href="#array.sum(_:hours:condition:predicate:)">sum(_:​hours:​condition:​predicate:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(
-    <span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
-  ) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="array.sum(_:hours:range2:condition:predicate:)">
-    <h3>
-        <code><a href="#array.sum(_:hours:range2:condition:predicate:)">sum(_:​hours:​range2:​condition:​predicate:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(
-    <span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">range2</span>: [<span class="type">Double</span>], <span class="variable">condition</span>: <span class="type">Int</span>,
-    <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
-  ) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="array.sum(hours:condition:predicate:)">
-    <h3>
-        <code><a href="#array.sum(hours:condition:predicate:)">sum(hours:​condition:​predicate:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>)
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sumif</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">criteria</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span> = {<span class="keyword">_</span> <span class="keyword">in</span> <span class="keyword">true</span>}, <span class="variable">hours</span>: [[<span class="type">Int</span>]])
     -&gt; [<span class="type">Double</span>] </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.sum(hours:condition:)">
+<div role="article" class="function" id="array.countif(_:criteria:days:)">
     <h3>
-        <code><a href="#array.sum(hours:condition:)">sum(hours:​condition:​)</a></code>
+        <code><a href="#array.countif(_:criteria:days:)">countif(_:​criteria:​days:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">sum</span>(<span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="array.countof(_:condition:predicate:)">
-    <h3>
-        <code><a href="#array.countof(_:condition:predicate:)">count​Of(_:​condition:​predicate:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">countOf</span>(<span class="keyword">_</span> <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">condition</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>)
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">countif</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">criteria</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]])
     -&gt; [<span class="type">Double</span>] </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.countof(_:condition1:predicate1:condition2:predicate2:)">
+<div role="article" class="function" id="array.countif(range1:criteria1:range2:criteria2:days:)">
     <h3>
-        <code><a href="#array.countof(_:condition1:predicate1:condition2:predicate2:)">count​Of(_:​condition1:​predicate1:​condition2:​predicate2:​)</a></code>
+        <code><a href="#array.countif(range1:criteria1:range2:criteria2:days:)">countif(range1:​criteria1:​range2:​criteria2:​days:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">countOf</span>(
-    <span class="keyword">_</span> <span class="variable">days</span>: [[<span class="type">Int</span>]], <span class="variable">condition1</span>: <span class="type">Int</span>, <span class="variable">predicate1</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>,
-    <span class="variable">condition2</span>: <span class="type">Int</span>, <span class="variable">predicate2</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">countif</span>(<span class="variable">range1</span>: <span class="type">Int</span>, <span class="variable">criteria1</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>,
+    <span class="variable">range2</span>: <span class="type">Int</span>, <span class="variable">criteria2</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>, <span class="variable">days</span>: [[<span class="type">Int</span>]]
   ) -&gt; [<span class="type">Double</span>]  </body></html></code></pre>
 </div>
 </div>
-<div role="article" class="function" id="array.count(hours:range:predicate:)">
+<div role="article" class="function" id="array.countif(_:criteria:hours:)">
     <h3>
-        <code><a href="#array.count(hours:range:predicate:)">count(hours:​range:​predicate:​)</a></code>
+        <code><a href="#array.countif(_:criteria:hours:)">countif(_:​criteria:​hours:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">count</span>(<span class="variable">hours</span>: [[<span class="type">Int</span>]], <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">predicate</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>)
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">countif</span>(<span class="keyword">_</span> <span class="variable">range</span>: <span class="type">Int</span>, <span class="variable">criteria</span>: (<span class="type">Double</span>) -&gt; <span class="type">Bool</span>, <span class="variable">hours</span>: [[<span class="type">Int</span>]])
     -&gt; [<span class="type">Double</span>] </body></html></code></pre>
+</div>
+</div>
+<div role="article" class="function" id="array.randomvalues(count:)">
+    <h3>
+        <code><a href="#array.randomvalues(count:)">random​Values(count:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">randomValues</span>(<span class="variable">count</span>: <span class="type">Int</span>) -&gt; [[<span class="type">Double</span>]]  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -233,7 +184,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-05-24T14:09:57+0000">May 24, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-07-25T20:29:58+0000">July 25, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

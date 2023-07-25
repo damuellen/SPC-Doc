@@ -60,6 +60,8 @@ arguments such as module and inverter properties.</p>
 <dd></dd>
 <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_Panel">PV.Panel</a></code></dt>
 <dd></dd>
+<dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_InputValues">PV.InputValues</a></code></dt>
+<dd></dd>
 <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/PV_Array">PV.Array</a></code></dt>
 <dd><p>Represents a group of modules with the same orientation and module type.</p>
 </dd>
@@ -107,12 +109,15 @@ arguments such as module and inverter properties.</p>
         <code><a href="#pv.callasfunction(_:)">call​AsFunction(_:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">callAsFunction</span>(
-    <span class="keyword">_</span> <span class="variable">input</span>: (<span class="variable">solar</span>: <span class="type">Double</span>, <span class="variable">ambient</span>: <span class="type">Temperature</span>, <span class="variable">windSpeed</span>: <span class="type">Double</span>)
-  ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">callAsFunction</span>(<span class="keyword">_</span> <span class="variable">input</span>: <span class="type">InputValues</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Calculate net output of the pv system.</p>
+    <p>Calculates the net power output based on various input values.</p>
+
+</div>
+<div class="discussion">
+    <p>It takes into account factors such as solar radiation, ambient temperature,
+wind speed, and inverter specifications to determine the AC power output</p>
 
 </div>
 </div>
@@ -125,7 +130,7 @@ arguments such as module and inverter properties.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2023-05-24T14:09:56+0000">May 24, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-07-25T20:29:58+0000">July 25, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
