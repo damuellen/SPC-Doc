@@ -40,38 +40,28 @@
 <pre class="highlight"><code><html><body><span class="keyword">enum</span> <span class="type">HCE</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Enum representing HCE (Heat Collector Element)</p>
+    <p>Modes of operation for the Heat Collector Element (HCE).</p>
 
 </div>
 <div class="discussion">
     <ul>
 <li>
-<p>Mode 1:
-Calculate the right mass-flow to get maximum allowed HTF-outlet temp.
-of the HCE-loop, and the time of HTF being in the HCE-loop. defocus
-automatically not to overheat HCEs.</p>
+<p>Mode 1: Calculates the right mass-flow to get the maximum allowed HTF (Heat Transfer Fluid) outlet temperature of the HCE-loop.
+The time of HTF being in the HCE-loop is calculated, and defocus is automatically applied to prevent overheating HCEs.</p>
 </li>
 <li>
-<p>Mode 2:
-Mass-flow is fixed outside. Calculate the HTF-outlet temp. of the HCE-loop
-and the time of HTF being in the HCE-loop. If mass-flow is set to 0,
-calculate by heat losses the HTF-temp. in the HCE after Actime minutes.</p>
+<p>Mode 2: Mass-flow is fixed externally. It calculates the HTF outlet temperature of the HCE-loop and the time of HTF being in the HCE-loop.
+If mass-flow is set to 0, it calculates, by heat losses, the HTF temperature in the HCE after the specified Actime minutes.</p>
+</li>
+<li>
+<p>Actime: The time duration for certain calculations.</p>
+<ul>
+<li>If Mode 1 is active, Actime has no meaning.</li>
+<li>If Mode 2 is active and massFlow == 0, SF (Solar Field) calculates Actime based on the heat losses in the HCEs.</li>
+<li>If Actime &gt; 0 and Mode 2 is active, HCE calculates the time of HTF being in HCEs minus Actime.</li>
+</ul>
 </li>
 </ul>
-
-<h2>Actime: [minutes]</h2>
-
-<p>if Mode 1 then Actime has no meaning.
-if Mode 2 and massFlow == 0 SF calculates Actime the heat losses in the HCEs.
-if Actime &gt; 0 then HCE calculates the time of HTF being in HCEs minus Actime</p>
-
-<h2>Actime: [sec]</h2>
-
-<p>if massFlow &gt; 0 then Actime is the time the HTF was in the HCEs.
-if Mode 2 and massFlow == 0 then Actime is the time the losses were
-calculated. Not necessary equal to Actime from input, cause calculation
-stops when temperature at outlet goes under
-freezeTemperature + Sim.deltaTemperaturefrzPump</p>
 
 </div>
 
@@ -87,6 +77,38 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     <span class="keyword">_</span> <span class="variable">temperatures</span>: (<span class="type">Temperature</span>, <span class="type">Temperature</span>, <span class="type">Temperature</span>), <span class="variable">insolation</span>: <span class="type">Double</span>)
     -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates the radiation losses per square meter of Aperture considering the percentage of HCE that are broken, lost vacuum, and fluorescent.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>temperatures</th>
+    <td><code class="type">(Temperature, Temperature, Temperature)</code></td>
+    <td><p>A tuple containing the temperatures (inlet, outlet, ambient) in Kelvin.</p>
+</td>
+</tr>
+<tr>
+    <th>insolation</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The insolation in W/m2.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The radiation losses per square meter of Aperture in W/m2.</p>
+
 </div>
 <div role="article" class="function" id="hce.radiationlossesnew(_:insolation:)">
     <h3>
@@ -97,6 +119,38 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     <span class="keyword">_</span> <span class="variable">temperatures</span>: (<span class="type">Temperature</span>, <span class="type">Temperature</span>, <span class="type">Temperature</span>), <span class="variable">insolation</span>: <span class="type">Double</span>)
     -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates the radiation losses per square meter of Aperture considering the percentage of HCE that are broken, lost vacuum, and fluorescent.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>temperatures</th>
+    <td><code class="type">(Temperature, Temperature, Temperature)</code></td>
+    <td><p>A tuple containing the temperatures (inlet, outlet, ambient) in Kelvin.</p>
+</td>
+</tr>
+<tr>
+    <th>insolation</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The insolation in W/m2.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The radiation losses per square meter of Aperture in W/m2.</p>
+
 </div>
 <div role="article" class="function" id="hce.heatlosses(inlet:outlet:insolation:ambient:)">
     <h3>
@@ -110,6 +164,50 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     <span class="variable">ambient</span>: <span class="type">Temperature</span>
   ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates the heat losses through the Heat Collector Element (HCE).</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>inlet</th>
+    <td><code class="type">Temperature</code></td>
+    <td><p>The inlet temperature of the HCE in Kelvin.</p>
+</td>
+</tr>
+<tr>
+    <th>outlet</th>
+    <td><code class="type">Temperature</code></td>
+    <td><p>The outlet temperature of the HCE in Kelvin (default value: maximum allowed HTF temperature).</p>
+</td>
+</tr>
+<tr>
+    <th>insolation</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The insolation in W/m2.</p>
+</td>
+</tr>
+<tr>
+    <th>ambient</th>
+    <td><code class="type">Temperature</code></td>
+    <td><p>The ambient temperature in Kelvin.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The heat losses through the HCE in W/m2.</p>
+
 </div>
 <div role="article" class="function" id="hce.temperatures(_:_:_:_:)">
     <h3>
@@ -123,6 +221,50 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     <span class="keyword">_</span> <span class="variable">ambient</span>: <span class="type">Temperature</span>
   ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates the temperatures of the Heat Collector Element (HCE) based on fluid properties and other parameters.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>solar​Field</th>
+    <td><code class="type">inout Solar​Field</code></td>
+    <td><p>The solar field instance (inout) to be used for calculations.</p>
+</td>
+</tr>
+<tr>
+    <th>loop</th>
+    <td><code class="type">Solar​Field.​Loop</code></td>
+    <td><p>The loop of the solar field.</p>
+</td>
+</tr>
+<tr>
+    <th>insolation</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The insolation in W/m2.</p>
+</td>
+</tr>
+<tr>
+    <th>ambient</th>
+    <td><code class="type">Temperature</code></td>
+    <td><p>The ambient temperature in Kelvin.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The time interval for the iteration.</p>
+
 </div>
 <div role="article" class="function" id="hce.factorheatlosshtf(solarfield:infocus:)">
     <h3>
@@ -131,6 +273,35 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">func</span> <span class="function">factorHeatLossHTF</span>(<span class="variable">solarField</span>: <span class="keyword">inout</span> <a href="https://damuellen.github.io/SPC-Doc/SolarField"><span class="type">SolarField</span></a>, <span class="variable">inFocus</span>: <span class="type">Double</span>)  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Applies the heat loss factor for the Heat Transfer Fluid (HTF) based on the focus quotient and other parameters.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>solar​Field</th>
+    <td><code class="type">inout Solar​Field</code></td>
+    <td><p>The solar field instance (inout) to be used for calculations.</p>
+</td>
+</tr>
+<tr>
+    <th>in​Focus</th>
+    <td><code class="type">Double</code></td>
+    <td><p>The focus quotient.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
     </section>
 
@@ -141,7 +312,7 @@ freezeTemperature + Sim.deltaTemperaturefrzPump</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2023-07-31T15:56:22+0000">July 31, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-01T17:55:33+0000">August 1, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

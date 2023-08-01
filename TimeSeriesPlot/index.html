@@ -49,7 +49,8 @@
         <h3>Nested Types</h3>
 <dl>
     <dt class="enumeration"><code><a href="https://damuellen.github.io/SPC-Doc/TimeSeriesPlot_Style">TimeSeriesPlot.Style</a></code></dt>
-<dd></dd>
+<dd><p>Enumeration to specify the style of the time-series plot (steps or impulses).</p>
+</dd>
 </dl>
 </section>
     <section id="initializers">
@@ -60,8 +61,55 @@
         <code><a href="#timeseriesplot.init(y1:y2:range:yrange:style:)">init(y1:​y2:​range:​yRange:​style:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">y1</span>: [[<span class="type">Double</span>]], <span class="variable">y2</span>: [[<span class="type">Double</span>]] = [], <span class="variable">range</span>: <span class="type">DateInterval</span>, <span class="variable">yRange</span>: (<span class="type">Double</span>,<span class="type">Double</span>)? = <span class="keyword">nil</span>, <span class="variable">style</span>: <span class="type">Style</span> = .<span class="variable">steps</span>)  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">y1</span>: [[<span class="type">Double</span>]], <span class="variable">y2</span>: [[<span class="type">Double</span>]] = [], <span class="variable">range</span>: <span class="type">DateInterval</span>, <span class="variable">yRange</span>: (<span class="type">Double</span>, <span class="type">Double</span>)? = <span class="keyword">nil</span>, <span class="variable">style</span>: <span class="type">Style</span> = .<span class="variable">steps</span>)  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Initializer to set up the TimeSeriesPlot with provided data and options.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>y1</th>
+    <td><code class="type">[[Double]]</code></td>
+    <td><p>The data for primary Y-axis (mandatory).</p>
+</td>
+</tr>
+<tr>
+    <th>y2</th>
+    <td><code class="type">[[Double]]</code></td>
+    <td><p>The data for secondary Y-axis (optional, default is empty array).</p>
+</td>
+</tr>
+<tr>
+    <th>range</th>
+    <td><code class="type">Date​Interval</code></td>
+    <td><p>The time range for the X-axis.</p>
+</td>
+</tr>
+<tr>
+    <th>yRange</th>
+    <td><code class="type">(Double, Double)?</code></td>
+    <td><p>Optional custom range for Y-axes (min, max) if not provided, auto-calculated.</p>
+</td>
+</tr>
+<tr>
+    <th>style</th>
+    <td><code class="type">Style</code></td>
+    <td><p>The style of the time-series plot (steps or impulses, default is steps).</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
     </section>
     <section id="properties">
@@ -82,6 +130,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">y1</span>: [[<span class="type">Double</span>]] </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Arrays to hold the data for primary (y1) and secondary (y2) Y-axes.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="timeseriesplot.y2">
     <h3>
@@ -98,6 +150,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">let</span> <span class="variable">range</span>: <span class="type">DateInterval</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The time range for the X-axis.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="timeseriesplot.y1titles">
     <h3>
@@ -105,6 +161,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">y1Titles</span>: [<span class="type">String</span>] </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Arrays to hold the titles of Y1 and Y2 data series.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="timeseriesplot.y2titles">
@@ -121,6 +181,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">y1Label</span>: <span class="type">String</span> = <span class="string literal">"</span><span class="string literal"/><span class="string literal">"</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Labels for Y1 and Y2 axes.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="timeseriesplot.y2label">
@@ -174,6 +238,29 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">callAsFunction</span>(<span class="variable">toFile</span>: <span class="type">String</span>? = <span class="keyword">nil</span>) <span class="keyword">throws</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Main function to create the time-series chart and optionally save it to a file.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>to​File</th>
+    <td><code class="type">String?</code></td>
+    <td><p>The file name to save the chart as a PNG image (optional).</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="function" id="timeseriesplot.plot()">
     <h3>
@@ -192,7 +279,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-07-31T15:56:22+0000">July 31, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-01T17:55:33+0000">August 1, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
