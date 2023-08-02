@@ -39,6 +39,18 @@
 <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Simulation</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A collection of static properties and settings used for simulation.</p>
+
+</div>
+<div class="discussion">
+    <p>The <code>Simulation</code> enum defines a set of static properties and configurations
+that are used for simulation purposes. It includes properties related to
+initial values, time periods, tariffs, and various tolerances used in the
+simulation process. The enum is used as a container for these simulation
+settings to organize and manage them efficiently.</p>
+
+</div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
         
@@ -64,6 +76,16 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">isStart</span> = <span class="keyword">true</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean flag indicating whether the simulation is starting or not.</p>
+
+</div>
+<div class="discussion">
+    <p>This property is used to track the start of the simulation and control
+certain behaviors based on whether the simulation is in the initial
+state or has already started running.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="simulation.starttemperature">
     <h3>
@@ -73,6 +95,18 @@
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">startTemperature</span> =
    (<span class="variable">Simulation</span>.<span class="variable">initialValues</span>.<span class="variable">temperatureOfHTFinPipes</span>,
     <span class="variable">Simulation</span>.<span class="variable">initialValues</span>.<span class="variable">temperatureOfHTFinPipes</span>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Initial values used in the simulation.</p>
+
+</div>
+<div class="discussion">
+    <p>The <code>initialValues</code> property represents the initial values used in the
+simulation process. It includes properties such as the initial
+temperature of the heat transfer fluid (HTF) in pipes, the temperature
+of the HTF in the heat collector element (HCE), and the initial mass
+flow rate in the solar field.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="simulation.initialvalues">
@@ -90,6 +124,17 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">tariff</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The tariff plan for energy pricing during the simulation.</p>
+
+</div>
+<div class="discussion">
+    <p>The <code>tariff</code> property represents the tariff plan used to determine the
+pricing and rates for different energy consumption scenarios during
+the simulation. It includes information about various tariff structures
+and seasons applicable for different time periods.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="simulation.time">
     <h3>
@@ -97,6 +142,16 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">time</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Time-related parameters for the simulation.</p>
+
+</div>
+<div class="discussion">
+    <p>The <code>time</code> property defines various time-related parameters used in the
+simulation. It includes information about leap years, date intervals,
+holidays, and time steps used to model the simulation over time.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="simulation.parameter">
@@ -106,6 +161,17 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">parameter</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Parameters and tolerances used in the simulation.</p>
+
+</div>
+<div class="discussion">
+    <p>The <code>parameter</code> property represents various parameters and tolerances
+used during the simulation process. It includes values for parameters
+such as temperature, mass, insolation, and electrical tolerances,
+which are used to control and fine-tune the simulation behavior.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="simulation.adjustmentfactor">
     <h3>
@@ -113,6 +179,17 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">adjustmentFactor</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Adjustment factors used in the simulation.</p>
+
+</div>
+<div class="discussion">
+    <p>The <code>adjustmentFactor</code> property contains various adjustment factors
+used to modify and fine-tune the simulation model. These factors
+influence the efficiency and heat loss parameters of the simulation
+components, allowing for realistic and adjustable simulation results.</p>
+
 </div>
 </div>
     </section>
@@ -124,7 +201,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-01T17:55:33+0000">August 1, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-02T11:14:49+0000">August 2, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

@@ -43,6 +43,40 @@
     <p>A namespace for the main routines of the simulation.</p>
 
 </div>
+<div class="discussion">
+    <p>The <code>Plant</code> struct contains the core functionalities for simulating the behavior of a power plant or energy system. It takes into consideration various factors such as thermal and electrical parasitics, available power, efficiency, and the behavior of different components. The simulation aims to achieve the desired electrical demand while operating within specific constraints.</p>
+
+<p>The main function of the simulation is performed by the <code>perform</code> method. It takes the current status of the power plant or energy system and the ambient temperature as input parameters. The simulation iteratively calculates the behavior of the system until the electrical parasitics converge within a certain tolerance level. The number of iterations is limited to prevent excessive looping.</p>
+
+<p>The simulation process involves the following steps:</p>
+
+<ol>
+<li>Calculates the load required to meet the electrical demand based on the provided ambient temperature and the available power of the steam turbine.</li>
+<li>Calculates the required thermal power to meet the electricity demand.</li>
+<li>If there is a solar field, calculates the heat supplied by the solar field and updates the power block's mass flow accordingly.</li>
+<li>Attempts to use the heat exchanger and calculates the outlet temperature of the power block.</li>
+<li>If there is a storage system, calculates the heat flow rate of the storage.</li>
+<li>Checks if heating is necessary and performs freeze protection if required.</li>
+<li>Determines the right temperature for the inlet and outlet of the power block.</li>
+<li>Calculates heat flows, thermal demands, and efficiency factors.</li>
+<li>Integrates the boiler if available.</li>
+<li>Adjusts the steam turbine load based on constraints and updates the efficiency accordingly.</li>
+<li>Calculates the gross electrical power of the steam turbine.</li>
+<li>Considers predefined operation restrictions on the fuel strategy if applicable.</li>
+<li>Calculates the total electrical parasitics of the power block and updates the electrical demand.</li>
+</ol>
+
+<p>The simulation continues in an iterative manner until the electrical parasitics converge within a certain tolerance level. The tolerance level is influenced by the ambient temperature, and the number of iterations is limited to prevent excessive processing.</p>
+
+<p>The simulation process is supported by helper functions such as <code>loadCapacity</code>, which calculates the load capacity for the steam turbine based on certain conditions, and <code>powerBlockElectricalParasitics</code>, which calculates the electrical parasitics of the power block.</p>
+
+<p>The <code>determineStorageMode</code> function is used to determine the storage mode based on certain conditions and constraints. The electricity demand storage strategy is determined by the <code>demandStorageStrategy</code> function, which calculates the demand based on the storage strategy defined in the <code>Storage.parameter</code>.</p>
+
+<p>The <code>integrate</code> functions are used to integrate various components such as the heater, solar field, power block, steam turbine, and storage system, depending on their operation modes and states. The integration process involves updating the energy flows and performing calculations based on the current status of the system.</p>
+
+<p>This simulation is designed to efficiently evaluate the behavior of power plants or energy systems, considering various factors and constraints, to achieve the desired electrical demand while optimizing efficiency and minimizing parasitic losses.</p>
+
+</div>
 
     <section id="properties">
         <h2>Properties</h2>
@@ -54,6 +88,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">heatFlow</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Represents the thermal energy flow in the system.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="plant.electricity">
     <h3>
@@ -61,6 +99,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">electricity</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Represents the electrical power generation and consumption in the system.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="plant.fuelconsumption">
@@ -70,6 +112,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">fuelConsumption</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Tracks the fuel consumption in the system.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="plant.electricalparasitics">
     <h3>
@@ -77,6 +123,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">electricalParasitics</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Represents the electrical parasitics in the system.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="plant.initialstate">
@@ -97,6 +147,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">performance</span>: <a href="https://damuellen.github.io/SPC-Doc/PlantPerformance"><span class="type">PlantPerformance</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Provides access to the plant's performance</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="plant.parameterdescriptions">
@@ -126,9 +180,37 @@
 <pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">perform</span>(<span class="keyword">_</span> <span class="variable">status</span>: <span class="keyword">inout</span> <a href="https://damuellen.github.io/SPC-Doc/Status"><span class="type">Status</span></a>, <span class="variable">ambient</span>: <span class="type">Temperature</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>The main function to perform the simulation based on the provided status and ambient temperature.</p>
+    <p>This function is the core of the power plant simulation. It iteratively simulates
+the behavior of the system to achieve the desired electrical demand while
+considering various factors such as thermal and electrical parasitics,
+efficiency, and the behavior of different components.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>status</th>
+    <td><code class="type">inout Status</code></td>
+    <td><p>The current status of the power plant, which contains information about various components and their states.</p>
+</td>
+</tr>
+<tr>
+    <th>ambient</th>
+    <td><code class="type">Temperature</code></td>
+    <td><p>The ambient temperature at which the simulation is being performed.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="function" id="plant.determinestoragemode(_:)">
     <h3>
@@ -154,8 +236,24 @@ The function involves several condition checks and adjustments based on the stat
     <p>Sets up the parameters for the plant components.</p>
 
 </div>
+<div class="discussion">
+    <p>This function is responsible for initializing and configuring the parameters of various plant components in the power plant or energy system. It ensures that the components are set up properly with appropriate values for their maximum power, mass flow rates, and other relevant parameters. Once the setup is complete, it returns an instance of the <code>Plant</code> class, representing the power plant with all its configured components.</p>
+
+<p>The setup process involves the following steps:</p>
+
+<ol>
+<li>Sets the maximum power of the steam turbine if not already set. The maximum power is determined based on the layout of the power block and various electrical parasitics associated with the power block.</li>
+<li>Calculates the way lengths in the solar field based on the configuration of the solar collectors.</li>
+<li>Sets the heat flow in the heat exchanger using the current heat flow value.</li>
+<li>Adjusts waste heat recovery parameters if a gas turbine is present. The heat flow rate and recovery ratio are adjusted accordingly.</li>
+<li>Sets the maximum mass flow rate in the solar field based on the heat flow rate of the heat exchanger.</li>
+<li>Calculates edge factors for the solar field based on the arrangement of solar collectors.</li>
+<li>Adjusts the maximum mass flow rate in the solar field if storage is present. The mass flow rate is adjusted to account for the presence of the storage system.</li>
+</ol>
+
+</div>
   <h4>Returns</h4>
-  <p>An instance of the Plant after setting up the parameters.</p>
+  <p>An instance of the <code>Plant</code> class representing the power plant after setting up the parameters.</p>
 
 </div>
     </section>
@@ -167,7 +265,7 @@ The function involves several condition checks and adjustments based on the stat
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-01T17:55:33+0000">August 1, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-02T11:14:50+0000">August 2, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

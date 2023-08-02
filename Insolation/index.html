@@ -39,6 +39,10 @@
 <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Insolation</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A struct representing solar irradiance on a surface.</p>
+
+</div>
 
     <section id="properties">
         <h2>Properties</h2>
@@ -86,6 +90,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">values</span>: [<span class="type">Double</span>]  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Computed property that returns the irradiance values converted from W/m2 to kWh/m2 for better representation.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="insolation.measurements">
     <h3>
@@ -93,6 +101,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">measurements</span>: [(<span class="variable">name</span>: <span class="type">String</span>, <span class="variable">unit</span>: <span class="type">String</span>)]  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Static property providing an array of tuples representing the names and units of the insolation measurements.</p>
+
 </div>
 </div>
     </section>
@@ -106,6 +118,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zero</span>() -&gt; <a href="https://damuellen.github.io/SPC-Doc/Insolation"><span class="type">Insolation</span></a>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Static method that creates and returns an <code>Insolation</code> instance with all irradiance values set to zero.</p>
+
+</div>
 </div>
 <div role="article" class="function" id="insolation.effective(surftilt:incidence:zenith:doy:)">
     <h3>
@@ -117,9 +133,50 @@
   ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Calculates the global tilted irradiance in watts per square meter (W/m2).</p>
+    <p>Calculates the global tilted irradiance in watts per square meter (W/m2) on a surface
+with the given tilt angle, solar incidence angle, solar zenith angle, and day of the year (doy).</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>surf​Tilt</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Surface tilt angle in degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>incidence</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Solar incidence angle in degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>zenith</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Solar zenith angle in degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>doy</th>
+    <td><code class="type">Int</code></td>
+    <td><p>Day of the year.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The effective irradiance in watts per square meter (W/m2).</p>
+
 </div>
 <div role="article" class="function" id="insolation.perez(surfacetilt:incidence:hextra:sunzenith:am:)">
     <h3>
@@ -130,7 +187,7 @@
   ) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Determine diffuse irradiance from the sky on a tilted surface using the Perez model</p>
+    <p>Determines the diffuse irradiance from the sky on a tilted surface using the Perez model.</p>
 
 </div>
 <h4>Parameters</h4>
@@ -147,47 +204,38 @@
     <tr>
     <th>surface​Tilt</th>
     <td><code class="type">Angle</code></td>
-    <td><p>Surf tilted angle in degrees</p>
+    <td><p>Surface tilt angle in degrees.</p>
 </td>
 </tr>
 <tr>
     <th>incidence</th>
     <td><code class="type">Angle</code></td>
-    <td><p>Angle of incidence of the sun to the surface in degrees</p>
-</td>
-</tr>
-<tr>
-    <th>diffuse</th>
-    <td></td>
-    <td><p>Diffuse horizontal irradiance</p>
-</td>
-</tr>
-<tr>
-    <th>direct</th>
-    <td></td>
-    <td><p>Direct normal irradiance</p>
+    <td><p>Solar incidence angle in degrees.</p>
 </td>
 </tr>
 <tr>
     <th>hExtra</th>
     <td><code class="type">Double</code></td>
-    <td><p>Extraterrestial normal irradiance</p>
+    <td><p>Extraterrestrial normal irradiance.</p>
 </td>
 </tr>
 <tr>
     <th>sun​Zenith</th>
     <td><code class="type">Angle</code></td>
-    <td><p>Sun zenith angle in degrees</p>
+    <td><p>Solar zenith angle in degrees.</p>
 </td>
 </tr>
 <tr>
     <th>AM</th>
     <td><code class="type">Double</code></td>
-    <td><p>Relative airmass</p>
+    <td><p>Relative air mass.</p>
 </td>
 </tr>
   </tbody>
 </table>
+  <h4>Returns</h4>
+  <p>The diffuse irradiance in watts per square meter (W/m2).</p>
+
 </div>
 <div role="article" class="function" id="insolation.beam(incidence:zenith:)">
     <h3>
@@ -196,24 +244,8 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">beam</span>(<span class="variable">incidence</span>: <span class="type">Double</span>, <span class="variable">zenith</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
-</div>
-<div role="article" class="function" id="insolation.normal(zenith:)">
-    <h3>
-        <code><a href="#insolation.normal(zenith:)">normal(zenith:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">normal</span>(<span class="variable">zenith</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="function" id="insolation.extra(doy:)">
-    <h3>
-        <code><a href="#insolation.extra(doy:)">extra(doy:​)</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">extra</span>(<span class="variable">doy</span>: <span class="type">Int</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
-</div>
 <div class="summary" role="doc-abstract">
-    <p>Extraterrestrial radiation from day of year</p>
+    <p>Calculates the beam irradiance in watts per square meter (W/m2) based on the solar incidence angle and solar zenith angle.</p>
 
 </div>
 <h4>Parameters</h4>
@@ -228,15 +260,89 @@
   </thead>
   <tbody>
     <tr>
-    <th>date</th>
-    <td></td>
-    <td><p>Date whose extraterrestial radiation will be calculated</p>
+    <th>incidence</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Solar incidence angle in degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>zenith</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Solar zenith angle in degrees.</p>
 </td>
 </tr>
   </tbody>
 </table>
   <h4>Returns</h4>
-  <p>Extraterrestial radiation</p>
+  <p>The beam irradiance in watts per square meter (W/m2).</p>
+
+</div>
+<div role="article" class="function" id="insolation.normal(zenith:)">
+    <h3>
+        <code><a href="#insolation.normal(zenith:)">normal(zenith:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">normal</span>(<span class="variable">zenith</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates the direct normal irradiance in watts per square meter (W/m2) based on the solar zenith angle.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>zenith</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Solar zenith angle in degrees.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The direct normal irradiance in watts per square meter (W/m2).</p>
+
+</div>
+<div role="article" class="function" id="insolation.extra(doy:)">
+    <h3>
+        <code><a href="#insolation.extra(doy:)">extra(doy:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">extra</span>(<span class="variable">doy</span>: <span class="type">Int</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates the extraterrestrial radiation in watts per square meter (W/m2) based on the day of the year (doy).</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>doy</th>
+    <td><code class="type">Int</code></td>
+    <td><p>Day of the year.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The extraterrestrial radiation in watts per square meter (W/m2).</p>
 
 </div>
 <div role="article" class="function" id="insolation.grounddiffuse(surftilt:albedo:)">
@@ -246,6 +352,38 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">groundDiffuse</span>(<span class="variable">surfTilt</span>: <span class="type">Double</span>, <span class="variable">albedo</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Calculates the ground diffuse irradiance in watts per square meter (W/m2) on a tilted surface based on the tilt angle and albedo.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>surf​Tilt</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Surface tilt angle in degrees.</p>
+</td>
+</tr>
+<tr>
+    <th>albedo</th>
+    <td><code class="type">Double</code></td>
+    <td><p>Albedo value representing the reflectivity of solar radiation on the surface.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The ground diffuse irradiance in watts per square meter (W/m2).</p>
+
 </div>
     </section>
 
@@ -256,7 +394,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-01T17:55:33+0000">August 1, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-02T11:14:49+0000">August 2, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
