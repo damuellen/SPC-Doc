@@ -37,7 +37,7 @@
 </h1>
 
 <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">BESS</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">BESS</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>A struct representing the state and functions for mapping the BESS</p>
@@ -52,7 +52,7 @@
         <code><a href="#bess.init()">init()</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>()  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">init</span>()  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -64,7 +64,7 @@
         <code><a href="#bess.energy">energy</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">energy</span>: <span class="type">Double</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">energy</span>: <span class="type">Double</span></body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Energy stored in the system in Wh</p>
@@ -76,7 +76,7 @@
         <code><a href="#bess.capacity">capacity</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">capacity</span>: <span class="type">Double</span> = .<span class="variable">zero</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">capacity</span>: <span class="type">Double</span> = .<span class="variable">zero</span></body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Maxmimum energy that the system can store in Wh</p>
@@ -88,7 +88,7 @@
         <code><a href="#bess.maximumpower">maximum​Power</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">maximumPower</span>: <span class="type">Double</span> = .<span class="variable">zero</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">maximumPower</span>: <span class="type">Double</span> = .<span class="variable">zero</span></body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Maximimum discharge charge power that you the system can handle in W</p>
@@ -100,7 +100,7 @@
         <code><a href="#bess.efficiency">efficiency</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">efficiency</span>: <span class="type">Ratio</span> = .<span class="variable">zero</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">efficiency</span>: <span class="type">Ratio</span> = .<span class="variable">zero</span></body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Efficiency of the system</p>
@@ -116,7 +116,7 @@
         <code><a href="#bess.store(energy:)">store(energy:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">store</span>(<span class="variable">energy</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">store</span>(<span class="variable">energy</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Stores energy in the battery</p>
@@ -150,7 +150,7 @@
         <code><a href="#bess.store(power:span:)">store(power:​span:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">store</span>(<span class="variable">power</span>: <span class="type">Double</span>, <span class="variable">span</span>: <span class="type">TimeInterval</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">store</span>(<span class="variable">power</span>: <span class="type">Double</span>, <span class="variable">span</span>: <span class="type">TimeInterval</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Stores the energy defined by a power during a period of time</p>
@@ -190,7 +190,7 @@
         <code><a href="#bess.retrieve(energy:)">retrieve(energy:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">retrieve</span>(<span class="variable">energy</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">retrieve</span>(<span class="variable">energy</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Retrieve energy from the storage</p>
@@ -224,7 +224,7 @@
         <code><a href="#bess.retrieve(power:span:)">retrieve(power:​span:​)</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">retrieve</span>(<span class="variable">power</span>: <span class="type">Double</span>, <span class="variable">span</span>: <span class="type">TimeInterval</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">retrieve</span>(<span class="variable">power</span>: <span class="type">Double</span>, <span class="variable">span</span>: <span class="type">TimeInterval</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 </div>
     </section>
@@ -236,7 +236,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-02T11:14:49+0000">August 2, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-03T14:46:44+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

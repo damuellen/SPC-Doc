@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#simulation.isstart">is​Start</a></li><li class="variable"><a href="#simulation.starttemperature">start​Temperature</a></li><li class="variable"><a href="#simulation.initialvalues">initial​Values</a></li><li class="variable"><a href="#simulation.tariff">tariff</a></li><li class="variable"><a href="#simulation.time">time</a></li><li class="variable"><a href="#simulation.parameter">parameter</a></li><li class="variable"><a href="#simulation.adjustmentfactor">adjustment​Factor</a></li></ul></li></ol>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#simulation.isstart">is​Start</a></li><li class="variable"><a href="#simulation.starttemperature">start​Temperature</a></li><li class="variable"><a href="#simulation.initialvalues">initial​Values</a></li><li class="variable"><a href="#simulation.tariff">tariff</a></li><li class="variable"><a href="#simulation.time">time</a></li><li class="variable"><a href="#simulation.parameter">parameter</a></li><li class="variable"><a href="#simulation.adjustmentfactor">adjustment​Factor</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#simulation.steps(perhour:)">steps(per​Hour:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -51,21 +51,7 @@ simulation process. The enum is used as a container for these simulation
 settings to organize and manage them efficiently.</p>
 
 </div>
-<section id="relationships">
-    <h2 hidden>Relationships</h2>
-        
-        <h3>Nested Types</h3>
-<dl>
-    <dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/Simulation_Parameter">Simulation.Parameter</a></code></dt>
-<dd><p>The Parameter struct represents simulation parameters and is Codable for serialization.</p>
-</dd>
-<dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/Simulation_AdjustmentFactors">Simulation.AdjustmentFactors</a></code></dt>
-<dd><p>The AdjustmentFactors struct represents adjustment factors for efficiency and heat losses and is Codable for serialization.</p>
-</dd>
-<dt class="structure"><code><a href="https://damuellen.github.io/SPC-Doc/Simulation_Period">Simulation.Period</a></code></dt>
-<dd></dd>
-</dl>
-</section>
+
     <section id="properties">
         <h2>Properties</h2>
 
@@ -114,7 +100,7 @@ flow rate in the solar field.</p>
         <code><a href="#simulation.initialvalues">initial​Values</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">initialValues</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">initialValues</span>  </body></html></code></pre>
 </div>
 </div>
 <div role="article" class="variable" id="simulation.tariff">
@@ -141,7 +127,7 @@ and seasons applicable for different time periods.</p>
         <code><a href="#simulation.time">time</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">time</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">time</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Time-related parameters for the simulation.</p>
@@ -159,7 +145,7 @@ holidays, and time steps used to model the simulation over time.</p>
         <code><a href="#simulation.parameter">parameter</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">parameter</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">parameter</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Parameters and tolerances used in the simulation.</p>
@@ -178,7 +164,7 @@ which are used to control and fine-tune the simulation behavior.</p>
         <code><a href="#simulation.adjustmentfactor">adjustment​Factor</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">adjustmentFactor</span>  </body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">adjustmentFactor</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>Adjustment factors used in the simulation.</p>
@@ -193,6 +179,49 @@ components, allowing for realistic and adjustable simulation results.</p>
 </div>
 </div>
     </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="simulation.steps(perhour:)">
+    <h3>
+        <code><a href="#simulation.steps(perhour:)">steps(per​Hour:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">steps</span>(<span class="variable">perHour</span>: <span class="type">Int</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Sets the number of simulation steps per hour.</p>
+
+</div>
+<div class="discussion">
+    <p>The <code>steps</code> function allows you to configure the number of simulation steps
+per hour, which defines the granularity of the simulation time intervals.
+The more steps per hour, the finer the simulation resolution, but it may
+also increase computational requirements. The step size influences the
+precision of time-dependent calculations during the simulation.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>per​Hour</th>
+    <td><code class="type">Int</code></td>
+    <td><p>An integer representing the number of simulation steps to be performed in one hour.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
 
 
 
@@ -201,7 +230,7 @@ components, allowing for realistic and adjustable simulation results.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-02T11:14:49+0000">August 2, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-03T14:46:44+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

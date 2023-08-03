@@ -58,6 +58,28 @@
     <p>Initializes the MeteoDataFileHandler for reading data from the file at the given path.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>path</th>
+    <td><code class="type">String</code></td>
+    <td><p>The file path to read meteorological data from.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Throws</h4>
+  <p>An error if the file is not found or there's an issue with reading it.</p>
+
 </div>
     </section>
     <section id="properties">
@@ -110,6 +132,16 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">metadata</span>() <span class="keyword">throws</span> -&gt; (<span class="variable">year</span>: <span class="type">Int</span>, <span class="variable">location</span>: <a href="https://damuellen.github.io/SPC-Doc/Location"><span class="type">Location</span></a>)   </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Retrieve metadata from the meteorological data file.</p>
+
+</div>
+  <h4>Throws</h4>
+  <p>An error if there's an issue with fetching the metadata.</p>
+
+  <h4>Returns</h4>
+  <p>A tuple containing the year and location information.</p>
+
 </div>
 <div role="article" class="function" id="meteodatafilehandler.data(valuesperhour:)">
     <h3>
@@ -122,6 +154,31 @@
     <p>Retrieve meteorological data values with the specified number of values per hour.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>values​Per​Hour</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The number of values required per hour for interpolation.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Throws</h4>
+  <p>An error if there's an issue with fetching the data.</p>
+
+  <h4>Returns</h4>
+  <p>An array of <code>MeteoData</code> containing the meteorological data.</p>
+
 </div>
     </section>
 
@@ -132,7 +189,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-02T11:14:50+0000">August 2, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-03T14:46:43+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

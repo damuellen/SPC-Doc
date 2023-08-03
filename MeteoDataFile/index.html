@@ -39,6 +39,10 @@
 <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">protocol</span> <span class="type">MeteoDataFile</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A protocol representing a meteorological data file.</p>
+
+</div>
 
 
 
@@ -53,6 +57,10 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">var</span> <span class="variable">name</span>: <span class="type">String</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The name of the meteorological data file.</p>
+
+</div>
 </div>
 <div role="article" class="function" id="meteodatafile.fetchinfo()">
     <h3>
@@ -61,6 +69,16 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">fetchInfo</span>() <span class="keyword">throws</span> -&gt; (<span class="variable">year</span>: <span class="type">Int</span>, <span class="variable">location</span>: <a href="https://damuellen.github.io/SPC-Doc/Location"><span class="type">Location</span></a>) </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Fetches metadata from the meteorological data file.</p>
+
+</div>
+  <h4>Throws</h4>
+  <p>An error if there's an issue with fetching the metadata.</p>
+
+  <h4>Returns</h4>
+  <p>A tuple containing the year and location information.</p>
+
 </div>
 <div role="article" class="function" id="meteodatafile.fetchdata()">
     <h3>
@@ -69,6 +87,16 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">fetchData</span>() <span class="keyword">throws</span> -&gt; [<a href="https://damuellen.github.io/SPC-Doc/MeteoData"><span class="type">MeteoData</span></a>] </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Fetches meteorological data from the file.</p>
+
+</div>
+  <h4>Throws</h4>
+  <p>An error if there's an issue with fetching the data.</p>
+
+  <h4>Returns</h4>
+  <p>An array of <code>MeteoData</code> containing the meteorological data.</p>
+
 </div>
     </section>
         </article>
@@ -76,7 +104,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-02T11:14:49+0000">August 2, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-03T14:46:43+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
