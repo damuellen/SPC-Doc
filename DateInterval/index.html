@@ -46,9 +46,28 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">ofYear</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Create a <code>DateInterval</code> representing the whole year for the given year.</p>
+    <p>Creates a <code>DateInterval</code> representing the whole year for the given year.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>of​Year</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The year for which the <code>DateInterval</code> is created.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="initializer" id="dateinterval.init(ofmonth:in:)">
     <h3>
@@ -58,9 +77,34 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">ofMonth</span> <span class="variable">month</span>: <span class="type">Int</span>, <span class="variable">in</span> <span class="variable">year</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Create a <code>DateInterval</code> representing the whole month for the given month and year.</p>
+    <p>Creates a <code>DateInterval</code> representing the whole month for the given month and year.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>of​Month</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The month for which the <code>DateInterval</code> is created.</p>
+</td>
+</tr>
+<tr>
+    <th>in</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The year for which the <code>DateInterval</code> is created.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="initializer" id="dateinterval.init(ofweek:in:)">
     <h3>
@@ -70,9 +114,34 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">ofWeek</span> <span class="variable">week</span>: <span class="type">Int</span>, <span class="variable">in</span> <span class="variable">year</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Create a <code>DateInterval</code> representing the whole week for the given week and year.</p>
+    <p>Creates a <code>DateInterval</code> representing the whole week for the given week and year.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>of​Week</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The week for which the <code>DateInterval</code> is created.</p>
+</td>
+</tr>
+<tr>
+    <th>in</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The year for which the <code>DateInterval</code> is created.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="initializer" id="dateinterval.init(ofday:in:)">
     <h3>
@@ -82,9 +151,34 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">ofDay</span> <span class="variable">day</span>: <span class="type">Int</span>, <span class="variable">in</span> <span class="variable">year</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Create a <code>DateInterval</code> representing a specific day for the given day and year.</p>
+    <p>Creates a <code>DateInterval</code> representing a specific day for the given day and year.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>of​Day</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The day for which the <code>DateInterval</code> is created.</p>
+</td>
+</tr>
+<tr>
+    <th>in</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The year for which the <code>DateInterval</code> is created.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
     </section>
     <section id="methods">
@@ -97,6 +191,32 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">aligned</span>(<span class="variable">to</span> <span class="variable">valuesPerHour</span>: <a href="https://damuellen.github.io/SPC-Doc/DateSeries"><span class="type">DateSeries</span></a>.<span class="type">Frequence</span>) -&gt; <span class="type">DateInterval</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Aligns the date interval to the specified frequency in values per hour.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>values​Per​Hour</th>
+    <td><code class="type">Date​Series.​Frequence</code></td>
+    <td><p>The frequency of values per hour for alignment.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>A new date interval aligned to the specified frequency.</p>
+
 </div>
     </section>
         </article>
@@ -104,7 +224,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-03T14:46:44+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-04T09:35:52+0000">August 4, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

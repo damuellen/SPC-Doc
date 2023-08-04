@@ -58,9 +58,31 @@
 <pre class="highlight"><code><html><body><span class="keyword">internal</span> <span class="keyword">func</span> <span class="function">interpolate</span>(<span class="variable">steps</span>: <span class="type">Int</span>) -&gt; [<a href="https://damuellen.github.io/SPC-Doc/MeteoData"><span class="type">MeteoData</span></a>]  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Interpolation function for meteo data</p>
+    <p>Interpolates the meteorological data with the specified number of steps.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>steps</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The number of steps for interpolation.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>An array of <code>MeteoData</code> with interpolated values.</p>
+
 </div>
 <div role="article" class="function" id="array.analyse(day:)">
     <h3>
@@ -69,6 +91,32 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">analyse</span>(<span class="variable">day</span>: <span class="type">Array</span>.<span class="type">Indices</span>) -&gt; <a href="https://damuellen.github.io/SPC-Doc/MeteoData"><span class="type">MeteoData</span></a>.<span class="type">Statistics</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Analyzes the meteorological data for a given day and calculates statistics.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>day</th>
+    <td><code class="type">Array.​Indices</code></td>
+    <td><p>An array of indices representing a day's data.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>A tuple of statistics containing the number of peaks, hours of direct normal irradiance, total irradiance sum, average irradiance, maximum irradiance, and average-to-max ratio.</p>
+
 </div>
 <div role="article" class="function" id="array.range(for:)">
     <h3>
@@ -77,6 +125,32 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">range</span>(<span class="variable">for</span> <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>) -&gt; <span class="type">Range</span>&lt;<span class="type">Int</span>&gt;  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Returns the range of indices corresponding to a given date interval.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>date​Interval</th>
+    <td><code class="type">Date​Interval</code></td>
+    <td><p>The date interval to calculate the range for.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The range of indices within the date interval.</p>
+
 </div>
     </section>
         </article>
@@ -84,7 +158,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-03T14:46:45+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-04T09:35:53+0000">August 4, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

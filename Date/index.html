@@ -46,9 +46,34 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">ofMonth</span> <span class="variable">month</span>: <span class="type">Int</span>, <span class="variable">in</span> <span class="variable">year</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Create a <code>Date</code> object representing the first day of the given month and year.</p>
+    <p>Creates a <code>Date</code> object representing the first day of the given month and year.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>of​Month</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The month for which the <code>Date</code> object is created.</p>
+</td>
+</tr>
+<tr>
+    <th>in</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The year for which the <code>Date</code> object is created.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="initializer" id="date.init(ofday:in:)">
     <h3>
@@ -58,9 +83,34 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">ofDay</span> <span class="variable">day</span>: <span class="type">Int</span>, <span class="variable">in</span> <span class="variable">year</span>: <span class="type">Int</span>)  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Create a <code>Date</code> object representing the specific day and year.</p>
+    <p>Creates a <code>Date</code> object representing the specific day and year.</p>
 
 </div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>of​Day</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The day for which the <code>Date</code> object is created.</p>
+</td>
+</tr>
+<tr>
+    <th>in</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The year for which the <code>Date</code> object is created.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
     </section>
     <section id="methods">
@@ -73,6 +123,13 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">getComponents</span>() -&gt; <span class="type">DateComponents</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Gets the date components of the date instance.</p>
+
+</div>
+  <h4>Returns</h4>
+  <p>A <code>DateComponents</code> object containing day, month, year, weekday, hour, minute, and second components.</p>
+
 </div>
 <div role="article" class="function" id="date.set(time:)">
     <h3>
@@ -81,6 +138,32 @@
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">set</span>(<span class="variable">time</span> <span class="variable">fractionalTime</span>: <span class="type">FractionalTime</span>) -&gt; <span class="type">Date</span>?  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Sets the time of the date instance to the specified fractional time.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>fractional​Time</th>
+    <td><code class="type">Fractional​Time</code></td>
+    <td><p>The fractional time value (hour with decimal fraction).</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>A new date instance with the time set to the specified fractional time.</p>
+
 </div>
     </section>
         </article>
@@ -88,7 +171,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-03T14:46:43+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-04T09:35:52+0000">August 4, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

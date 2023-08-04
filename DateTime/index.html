@@ -25,7 +25,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#datetime.monthday">Month​Day</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#datetime.init()">init()</a></li><li class="initializer"><a href="#datetime.init(_:)">init(_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#datetime.current">current</a></li><li class="variable"><a href="#datetime.nightfall">nightfall</a></li><li class="variable"><a href="#datetime.isdaytime">is​Daytime</a></li><li class="variable"><a href="#datetime.issunrise">is​Sun​Rise</a></li><li class="variable"><a href="#datetime.issunset">is​Sun​Set</a></li><li class="variable"><a href="#datetime.isnighttime">is​Nighttime</a></li><li class="variable"><a href="#datetime.indexhour">index​Hour</a></li><li class="variable"><a href="#datetime.indexday">index​Day</a></li><li class="variable"><a href="#datetime.indexmonth">index​Month</a></li><li class="variable"><a href="#datetime.isdaytime">is​Daytime</a></li><li class="variable"><a href="#datetime.issunrise">is​Sun​Rise</a></li><li class="variable"><a href="#datetime.issunset">is​Sun​Set</a></li><li class="variable"><a href="#datetime.year">year</a></li><li class="variable"><a href="#datetime.month">month</a></li><li class="variable"><a href="#datetime.day">day</a></li><li class="variable"><a href="#datetime.hour">hour</a></li><li class="variable"><a href="#datetime.minute">minute</a></li><li class="variable"><a href="#datetime.yearday">year​Day</a></li><li class="variable"><a href="#datetime.description">description</a></li><li class="variable"><a href="#datetime.commaseparatedvalues">comma​Separated​Values</a></li><li class="variable"><a href="#datetime.date">date</a></li><li class="variable"><a href="#datetime.time">time</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#datetime.setcurrent(date:)">set​Current(date:​)</a></li><li class="function"><a href="#datetime.setnight()">set​Night()</a></li><li class="function"><a href="#datetime.`is`(minute:hour:day:month:)">`is`(minute:​hour:​day:​month:​)</a></li><li class="function"><a href="#datetime.`is`(minute:hour:yearday:)">`is`(minute:​hour:​year​Day:​)</a></li><li class="function"><a href="#datetime.iswithin(start:stop:)">is​Within(start:​stop:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#datetime.monthday">Month​Day</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#datetime.init(_:)">init(_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#datetime.current">current</a></li><li class="variable"><a href="#datetime.nightfall">nightfall</a></li><li class="variable"><a href="#datetime.isdaytime">is​Daytime</a></li><li class="variable"><a href="#datetime.issunrise">is​Sun​Rise</a></li><li class="variable"><a href="#datetime.issunset">is​Sun​Set</a></li><li class="variable"><a href="#datetime.isnighttime">is​Nighttime</a></li><li class="variable"><a href="#datetime.indexhour">index​Hour</a></li><li class="variable"><a href="#datetime.indexday">index​Day</a></li><li class="variable"><a href="#datetime.indexmonth">index​Month</a></li><li class="variable"><a href="#datetime.isdaytime">is​Daytime</a></li><li class="variable"><a href="#datetime.issunrise">is​Sun​Rise</a></li><li class="variable"><a href="#datetime.issunset">is​Sun​Set</a></li><li class="variable"><a href="#datetime.year">year</a></li><li class="variable"><a href="#datetime.month">month</a></li><li class="variable"><a href="#datetime.day">day</a></li><li class="variable"><a href="#datetime.hour">hour</a></li><li class="variable"><a href="#datetime.minute">minute</a></li><li class="variable"><a href="#datetime.yearday">year​Day</a></li><li class="variable"><a href="#datetime.description">description</a></li><li class="variable"><a href="#datetime.commaseparatedvalues">comma​Separated​Values</a></li><li class="variable"><a href="#datetime.date">date</a></li><li class="variable"><a href="#datetime.time">time</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#datetime.setcurrent(date:)">set​Current(date:​)</a></li><li class="function"><a href="#datetime.setnight()">set​Night()</a></li><li class="function"><a href="#datetime.`is`(minute:hour:day:month:)">`is`(minute:​hour:​day:​month:​)</a></li><li class="function"><a href="#datetime.`is`(minute:hour:yearday:)">`is`(minute:​hour:​year​Day:​)</a></li><li class="function"><a href="#datetime.iswithin(start:stop:)">is​Within(start:​stop:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -40,13 +40,12 @@
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">DateTime</span>: <span class="type">CustomStringConvertible</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>DateTime is used to easily make the calendar data
-of the current time step available during a run.</p>
+    <p>DateTime is a struct used to represent calendar data for the current time step during a simulation.</p>
 
 </div>
 <div class="discussion">
-    <aside class="attention" title="Attention">
-    <p>Needed by <code>Availability</code> and <code>GridDemand</code> both use <code>current</code>, also used in <code>SteamTurbine</code> and <code>Storage</code> routines.</p>
+    <aside class="note" title="Note">
+    <p>This struct is utilized by several routines, including <code>Availability</code> and <code>GridDemand</code>, and also used in <code>SteamTurbine</code> and <code>Storage</code>.</p>
 
 </aside>
 </div>
@@ -58,11 +57,11 @@ of the current time step available during a run.</p>
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.40.1 (20161225.0304)
  -->
-<!-- Title: %213 Pages: 1 -->
+<!-- Title: %207 Pages: 1 -->
 <svg width="872pt" height="116pt"
  viewBox="0.00 0.00 872.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
-<title>%213</title>
+<title>%207</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 868,-112 868,4 -4,4"/>
 <!-- DateTime -->
 <g id="node1" class="node structure current">
@@ -111,21 +110,36 @@ of the current time step available during a run.</p>
     <section id="initializers">
         <h2>Initializers</h2>
 
-        <div role="article" class="initializer" id="datetime.init()">
-    <h3>
-        <code><a href="#datetime.init()">init()</a></code>
-    </h3>
-    <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">init</span>()  </body></html></code></pre>
-</div>
-</div>
-<div role="article" class="initializer" id="datetime.init(_:)">
+        <div role="article" class="initializer" id="datetime.init(_:)">
     <h3>
         <code><a href="#datetime.init(_:)">init(_:​)</a></code>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">date</span>: <span class="type">Date</span>)  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Initialize a new DateTime object with the given Date.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>date</th>
+    <td><code class="type">Date</code></td>
+    <td><p>The Date to use for creating the DateTime object.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
     </section>
     <section id="properties">
@@ -138,6 +152,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">current</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The current DateTime object representing the current time step.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.nightfall">
     <h3>
@@ -145,6 +163,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">nightfall</span> = <span class="keyword">false</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if it is currently nighttime.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.isdaytime">
@@ -154,6 +176,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">isDaytime</span>: <span class="type">Bool</span> = <span class="keyword">false</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if it is currently daytime.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.issunrise">
     <h3>
@@ -161,6 +187,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">isSunRise</span>: <span class="type">Bool</span> = <span class="keyword">false</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if the sun has risen.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.issunset">
@@ -170,6 +200,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">isSunSet</span>: <span class="type">Bool</span> = <span class="keyword">false</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if the sun has set.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.isnighttime">
     <h3>
@@ -177,6 +211,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">isNighttime</span>: <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if it is currently nighttime (opposite of isDaytime).</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.indexhour">
@@ -187,7 +225,7 @@ of the current time step available during a run.</p>
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">indexHour</span>: <span class="type">Int</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>The meteorological data suitable for today are identified with this property. <code>MeteoDataProvider.currentDay</code></p>
+    <p>The hour index in the current day for the meteorological data.</p>
 
 </div>
 </div>
@@ -198,6 +236,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">indexDay</span>: <span class="type">Int</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The day index in the current year for the meteorological data.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.indexmonth">
     <h3>
@@ -205,6 +247,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">indexMonth</span>: <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The month index in the current year for the meteorological data.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.isdaytime">
@@ -214,6 +260,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">isDaytime</span>: <span class="type">Bool</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if it is currently daytime.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.issunrise">
     <h3>
@@ -221,6 +271,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">isSunRise</span>: <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if the sun has risen.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.issunset">
@@ -230,6 +284,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">isSunSet</span>: <span class="type">Bool</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A boolean value indicating if the sun has set.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.year">
     <h3>
@@ -237,6 +295,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">year</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The year in the DateTime object.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.month">
@@ -246,6 +308,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">month</span>: <span class="type">Int</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The month in the DateTime object.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.day">
     <h3>
@@ -253,6 +319,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">day</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The day in the DateTime object.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.hour">
@@ -262,6 +332,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">hour</span>: <span class="type">Int</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The hour in the DateTime object.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.minute">
     <h3>
@@ -269,6 +343,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">minute</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The minute in the DateTime object.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.yearday">
@@ -278,6 +356,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">yearDay</span>: <span class="type">Int</span></body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>The day of the year (yearDay) in the DateTime object.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.description">
     <h3>
@@ -285,6 +367,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">description</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A string representation of the DateTime object in the format &quot;yyyy-MM-ddTHH:mm:ssZ&quot;.</p>
+
 </div>
 </div>
 <div role="article" class="variable" id="datetime.commaseparatedvalues">
@@ -294,6 +380,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">commaSeparatedValues</span>: <span class="type">String</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A comma-separated string containing the month, day, and hour of the DateTime object.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.date">
     <h3>
@@ -302,6 +392,10 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">date</span>: <span class="type">String</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>A string representation of the date in the format &quot;MM-dd&quot;.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="datetime.time">
     <h3>
@@ -309,6 +403,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">time</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A string representation of the time in the format &quot;HH:mm&quot;.</p>
+
 </div>
 </div>
     </section>
@@ -322,6 +420,29 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">setCurrent</span>(<span class="variable">date</span>: <span class="type">Date</span>)  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Set the current DateTime object based on the given date.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>date</th>
+    <td><code class="type">Date</code></td>
+    <td><p>The date to set as the current DateTime.</p>
+</td>
+</tr>
+  </tbody>
+</table>
 </div>
 <div role="article" class="function" id="datetime.setnight()">
     <h3>
@@ -329,6 +450,10 @@ of the current time step available during a run.</p>
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">setNight</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Set the current DateTime object to represent nighttime.</p>
+
 </div>
 </div>
 <div role="article" class="function" id="datetime.`is`(minute:hour:day:month:)">
@@ -338,6 +463,50 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">`is`</span>(<span class="variable">minute</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>, <span class="variable">hour</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>, <span class="variable">day</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>, <span class="variable">month</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Check if the DateTime object matches the given minute, hour, day, and month values.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>minute</th>
+    <td><code class="type">Int?</code></td>
+    <td><p>The minute value to check (default is nil to match the current minute).</p>
+</td>
+</tr>
+<tr>
+    <th>hour</th>
+    <td><code class="type">Int?</code></td>
+    <td><p>The hour value to check (default is nil to match the current hour).</p>
+</td>
+</tr>
+<tr>
+    <th>day</th>
+    <td><code class="type">Int?</code></td>
+    <td><p>The day value to check (default is nil to match the current day).</p>
+</td>
+</tr>
+<tr>
+    <th>month</th>
+    <td><code class="type">Int?</code></td>
+    <td><p>The month value to check (default is nil to match the current month).</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>A boolean value indicating if the DateTime object matches the given values.</p>
+
 </div>
 <div role="article" class="function" id="datetime.`is`(minute:hour:yearday:)">
     <h3>
@@ -346,6 +515,44 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">`is`</span>(<span class="variable">minute</span>: <span class="type">Int</span> = <span class="number literal">0</span>, <span class="variable">hour</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>, <span class="variable">yearDay</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Check if the DateTime object matches the given minute, hour, and yearDay values.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>minute</th>
+    <td><code class="type">Int</code></td>
+    <td><p>The minute value to check.</p>
+</td>
+</tr>
+<tr>
+    <th>hour</th>
+    <td><code class="type">Int?</code></td>
+    <td><p>The hour value to check (default is nil to match the current hour).</p>
+</td>
+</tr>
+<tr>
+    <th>year​Day</th>
+    <td><code class="type">Int?</code></td>
+    <td><p>The yearDay value to check (default is nil to match the current day).</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>A boolean value indicating if the DateTime object matches the given values.</p>
+
 </div>
 <div role="article" class="function" id="datetime.iswithin(start:stop:)">
     <h3>
@@ -354,6 +561,38 @@ of the current time step available during a run.</p>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">isWithin</span>(<span class="variable">start</span>: <span class="type">MonthDay</span>, <span class="variable">stop</span>: <span class="type">MonthDay</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Check if the DateTime object is within the given start and stop MonthDay values.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>start</th>
+    <td><code class="type">Month​Day</code></td>
+    <td><p>The start MonthDay value to check.</p>
+</td>
+</tr>
+<tr>
+    <th>stop</th>
+    <td><code class="type">Month​Day</code></td>
+    <td><p>The stop MonthDay value to check.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>A boolean value indicating if the DateTime object is within the given range.</p>
+
 </div>
     </section>
 
@@ -364,7 +603,7 @@ of the current time step available during a run.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-03T14:46:44+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-04T09:35:53+0000">August 4, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>

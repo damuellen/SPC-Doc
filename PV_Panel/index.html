@@ -39,6 +39,10 @@
 <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">struct</span> <span class="type">Panel</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Represents the Photovoltaic panel.</p>
+
+</div>
 
     <section id="initializers">
         <h2>Initializers</h2>
@@ -49,6 +53,10 @@
     </h3>
     <div class="declaration">
 <pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Initializes a Panel with default parameter values.</p>
+
 </div>
 </div>
     </section>
@@ -112,7 +120,7 @@
       <span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">ambient</span>: <span class="type">Temperature</span>, <span class="variable">windSpeed</span>: <span class="type">Double</span>) -&gt; <span class="type">Temperature</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>Returns the temperature of the panel.</p>
+    <p>Calculates the temperature of the panel.</p>
 
 </div>
 </div>
@@ -124,7 +132,7 @@
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">voltageFrom</span>(<span class="variable">current</span>: <span class="type">Double</span>, <span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">cell_T</span>: <span class="type">Temperature</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>The voltage from a current point within the I-V curve using the single diode model</p>
+    <p>Calculates the voltage from a given current point within the I-V curve using the single diode model.</p>
 
 </div>
 </div>
@@ -136,7 +144,7 @@
 <pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">currentFrom</span>(<span class="variable">voltage</span>: <span class="type">Double</span>, <span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">cell_T</span>: <span class="type">Temperature</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
-    <p>The current from a voltage value within the I-V curve using the single diode model</p>
+    <p>Calculates the current from a given voltage value within the I-V curve using the single diode model.</p>
 
 </div>
 </div>
@@ -149,6 +157,10 @@
       <span class="variable">radiation</span>: <span class="type">Double</span>, <span class="variable">ambient</span>: <span class="type">Temperature</span>, <span class="variable">windSpeed</span>: <span class="type">Double</span>
     ) -&gt; <span class="type">PowerPoint</span>  </body></html></code></pre>
 </div>
+<div class="summary" role="doc-abstract">
+    <p>Computes the PowerPoint for given radiation, ambient temperature, and wind speed.</p>
+
+</div>
 </div>
     </section>
 
@@ -159,7 +171,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2023-08-03T14:46:44+0000">August 3, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2023-08-04T09:35:53+0000">August 4, 2023</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
